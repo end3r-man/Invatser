@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/svg/logo-small.svg" type="image/svg+xml" />
+  <title>Chat - Admin Toolkit</title>
+  <meta name="description"
+    content="Admin Toolkit is a modern admin dashboard template based on Tailwindcss. It comes with a variety of useful ui components and pre-built pages" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet" />
+
+  <script>
+    if (
+      localStorage.getItem('theme') === 'dark' ||
+      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+  <script type="module" crossorigin src="/js/chat-70562e19.js"></script>
+  <link rel="modulepreload" crossorigin href="/js/app.js">
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+
+<body>
+  <div id="app">
+    <!-- Sidebar Starts -->
+    <aside class="sidebar">
+      <!-- Sidebar Header Starts -->
+      <a href="/">
+        <div class="sidebar-header">
+          <div class="sidebar-logo-icon">
+            <img src="/svg/logo-small.svg" alt="logo" class="h-[45px]" />
+          </div>
+
+          <div class="sidebar-logo-text">
+            <h1 class="flex text-xl">
+              <span class="font-bold text-slate-800 dark:text-slate-200"> Admin </span>
+              <span class="font-semibold text-primary-500">Toolkit</span>
+            </h1>
+
+            <p class="whitespace-nowrap text-xs text-slate-400">Simple &amp; Customizable</p>
+          </div>
+        </div>
+      </a>
+      <!-- Sidebar Header Ends -->
+
+      <!-- Sidebar Menu Starts -->
+      <ul class="sidebar-content">
+        <!-- Dashboard -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="home"></i>
+            </span>
+            <span class="sidebar-menu-text">Dashboard</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="/" class="sidebar-submenu-item"> Analytics </a>
+            </li>
+            <li>
+              <a href="./ecommerce.html" class="sidebar-submenu-item">Ecommerce</a>
+            </li>
+          </ul>
+        </li>
+
+        <div class="sidebar-menu-header">Applications</div>
+
+        <!-- Email -->
+        <li>
+          <a href="./email.html" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="mail"></i>
+            </span>
+            <span class="sidebar-menu-text">Email</span>
+          </a>
+        </li>
+        <!-- Chat -->
+        <li>
+          <a href="./chat.html" class="sidebar-menu active">
+            <span class="sidebar-menu-icon">
+              <i data-feather="message-square"></i>
+            </span>
+            <span class="sidebar-menu-text">Chat</span>
+          </a>
+        </li>
+        <!-- Calendar -->
+        <li>
+          <a href="./calendar.html" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="calendar"></i>
+            </span>
+            <span class="sidebar-menu-text">Calendar</span>
+          </a>
+        </li>
+        <!-- Invoice -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="file-text"></i>
+            </span>
+            <span class="sidebar-menu-text">Invoice</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./invoice-create.html" class="sidebar-submenu-item"> Create </a>
+            </li>
+
+            <li>
+              <a href="./invoice-details.html" class="sidebar-submenu-item"> Details </a>
+            </li>
+          </ul>
+        </li>
+        <!-- ecommnerce -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="shopping-bag"></i>
+            </span>
+            <span class="sidebar-menu-text">Ecommerce</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./product-list.html" class="sidebar-submenu-item"> Product List </a>
+            </li>
+
+            <li>
+              <a href="./product-edit.html" class="sidebar-submenu-item"> Product Edit </a>
+            </li>
+            <li>
+              <a href="./order-list.html" class="sidebar-submenu-item"> Order List </a>
+            </li>
+            <li>
+              <a href="./order-details.html" class="sidebar-submenu-item"> Order Details </a>
+            </li>
+            <li>
+              <a href="./customer-list.html" class="sidebar-submenu-item"> Customer List </a>
+            </li>
+          </ul>
+        </li>
+        <!-- Users -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="users"></i>
+            </span>
+            <span class="sidebar-menu-text">Users</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./user-list.html" class="sidebar-submenu-item">List</a>
+            </li>
+            <li>
+              <a href="./profile.html" class="sidebar-submenu-item"> Profile </a>
+            </li>
+          </ul>
+        </li>
+        <!--  Commponents  -->
+        <div class="sidebar-menu-header">Components</div>
+        <!-- Common  -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="box"></i>
+            </span>
+            <span class="sidebar-menu-text">Common</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./accordion.html" class="sidebar-submenu-item"> Accordion </a>
+            </li>
+            <li>
+              <a href="./alert.html" class="sidebar-submenu-item">Alert</a>
+            </li>
+            <li>
+              <a href="./avatar.html" class="sidebar-submenu-item">Avatar</a>
+            </li>
+            <li>
+              <a href="./badge.html" class="sidebar-submenu-item">Badge</a>
+            </li>
+            <li>
+              <a href="./button.html" class="sidebar-submenu-item">Button</a>
+            </li>
+            <li>
+              <a href="./card.html" class="sidebar-submenu-item">Card</a>
+            </li>
+            <li>
+              <a href="./carousel.html" class="sidebar-submenu-item"> Carousel </a>
+            </li>
+
+            <li>
+              <a href="./drawer.html" class="sidebar-submenu-item">Drawer</a>
+            </li>
+            <li>
+              <a href="./dropdown.html" class="sidebar-submenu-item"> Dropdown </a>
+            </li>
+            <li>
+              <a href="./list-group.html" class="sidebar-submenu-item"> List Group </a>
+            </li>
+            <li>
+              <a href="./modal.html" class="sidebar-submenu-item">Modal</a>
+            </li>
+            <li>
+              <a href="./pagination.html" class="sidebar-submenu-item"> Pagination </a>
+            </li>
+            <li>
+              <a href="./progress-bar.html" class="sidebar-submenu-item"> Progress </a>
+            </li>
+
+            <li>
+              <a href="./skeleton.html" class="sidebar-submenu-item"> Skeleton </a>
+            </li>
+            <li>
+              <a href="./spinner.html" class="sidebar-submenu-item"> Spinner </a>
+            </li>
+            <li>
+              <a href="./tabs.html" class="sidebar-submenu-item">Tab</a>
+            </li>
+            <li>
+              <a href="./toast.html" class="sidebar-submenu-item">Toast</a>
+            </li>
+            <li>
+              <a href="./tooltip.html" class="sidebar-submenu-item"> Tooltip </a>
+            </li>
+          </ul>
+        </li>
+        <!-- Forms  -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="edit"></i>
+            </span>
+            <span class="sidebar-menu-text">Forms</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./input.html" class="sidebar-submenu-item">Input</a>
+            </li>
+            <li>
+              <a href="./input-group.html" class="sidebar-submenu-item"> Input Group </a>
+            </li>
+            <li>
+              <a href="./textarea.html" class="sidebar-submenu-item"> Textarea </a>
+            </li>
+            <li>
+              <a href="./checkbox.html" class="sidebar-submenu-item"> Checkbox </a>
+            </li>
+            <li>
+              <a href="./radio.html" class="sidebar-submenu-item">Radio</a>
+            </li>
+            <li>
+              <a href="./toggle.html" class="sidebar-submenu-item">Toggle</a>
+            </li>
+            <li>
+              <a href="./select.html" class="sidebar-submenu-item">Select</a>
+            </li>
+
+            <li>
+              <a href="./datepicker.html" class="sidebar-submenu-item"> Datepicker </a>
+            </li>
+            <li>
+              <a href="./editor.html" class="sidebar-submenu-item">Editor</a>
+            </li>
+            <li>
+              <a href="./uploader.html" class="sidebar-submenu-item"> Uploader </a>
+            </li>
+            <li>
+              <a href="./form-layout.html" class="sidebar-submenu-item">Layout</a>
+            </li>
+            <li>
+              <a href="./form-validation.html" class="sidebar-submenu-item"> Validation </a>
+            </li>
+          </ul>
+        </li>
+        <!-- Tables  -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="list"></i>
+            </span>
+            <span class="sidebar-menu-text">Tables</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./basic-table.html" class="sidebar-submenu-item"> Basic Table </a>
+            </li>
+            <li>
+              <a href="./data-table.html" class="sidebar-submenu-item"> Data Table </a>
+            </li>
+          </ul>
+        </li>
+        <!-- Charts  -->
+        <li>
+          <a href="./chart.html" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="pie-chart"></i>
+            </span>
+            <span class="sidebar-menu-text">Charts</span>
+          </a>
+        </li>
+        <!-- Icons-->
+        <li>
+          <a href="./icons.html" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="italic"></i>
+            </span>
+            <span class="sidebar-menu-text">Icons</span>
+          </a>
+        </li>
+        <!-- Typography-->
+        <li>
+          <a href="./typography.html" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="type"></i>
+            </span>
+            <span class="sidebar-menu-text">Typography</span>
+          </a>
+        </li>
+        <!--  Pages  -->
+        <div class="sidebar-menu-header">Pages</div>
+        <!-- Authentication  -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="lock"></i>
+            </span>
+            <span class="sidebar-menu-text">Authentication</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./login.html" class="sidebar-submenu-item">Login</a>
+            </li>
+            <li>
+              <a href="./register.html" class="sidebar-submenu-item"> Register </a>
+            </li>
+            <li>
+              <a href="./recover-password.html" class="sidebar-submenu-item"> Forgot Password </a>
+            </li>
+            <li>
+              <a href="./reset-password.html" class="sidebar-submenu-item"> Reset Password </a>
+            </li>
+          </ul>
+        </li>
+        <!-- Miscellaneous  -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="grid"></i>
+            </span>
+            <span class="sidebar-menu-text">Miscellaneous</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./starter.html" class="sidebar-submenu-item"> Starter Page </a>
+            </li>
+            <li>
+              <a href="./comming-soon.html" class="sidebar-submenu-item"> Coming Soon </a>
+            </li>
+            <li>
+              <a href="./maintenance.html" class="sidebar-submenu-item"> Maintenance </a>
+            </li>
+            <li>
+              <a href="./404-error.html" class="sidebar-submenu-item"> Error 404 </a>
+            </li>
+            <li>
+              <a href="./500-error.html" class="sidebar-submenu-item"> Error 500 </a>
+            </li>
+            <li>
+              <a href="./not-authorized.html" class="sidebar-submenu-item"> Not Authorized </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <!-- Sidebar Menu Ends -->
+    </aside>
+    <!-- Sidebar Ends -->
+
+    <!-- Wrapper Starts -->
+    <div class="wrapper">
+      <!-- Header Starts -->
+      <header class="header">
+        <div class="container-fluid flex items-center justify-between">
+          <!-- Sidebar Toggle & Search Starts -->
+          <div class="flex items-center space-x-6">
+            <button class="sidebar-toggle">
+              <span class="flex space-x-4">
+                <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="22" width="22"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16">
+                  </path>
+                </svg>
+              </span>
+            </button>
+
+            <!-- Mobile Search Starts -->
+            <div class="sm:hidden">
+              <button type="button" data-trigger="search-modal"
+                class="flex items-center justify-center rounded-full text-slate-500 transition-colors duration-150 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300">
+                <i width="22" height="22" data-feather="search"></i>
+              </button>
+            </div>
+            <!-- Mobile Search Ends -->
+
+            <!-- Searchbar Start -->
+            <button type="button" data-trigger="search-modal"
+              class="group hidden h-10 w-72 items-center overflow-hidden rounded-primary bg-slate-100 px-3 shadow-sm dark:border-transparent dark:bg-slate-700 sm:flex">
+              <i class="text-slate-400" width="1em" height="1em" data-feather="search"></i>
+              <span class="ml-2 text-sm text-slate-400">Search</span>
+            </button>
+            <!-- Searchbar Ends -->
+          </div>
+          <!-- Sidebar Toggle & Search Ends -->
+
+          <!-- Header Options Starts -->
+          <div class="flex items-center">
+            <!-- Language Dropdown Starts -->
+            <div class="dropdown" data-strategy="absolute">
+              <div class="dropdown-toggle px-3">
+                <button type="button"
+                  class="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-slate-700 focus:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-slate-300">
+                  <span class="fi fi-gb"></span>
+                  <span class="hidden font-medium md:inline-block">English</span>
+                  <span class="inline-block font-medium md:hidden">EN</span>
+                </button>
+              </div>
+
+              <div class="dropdown-content mt-3 w-40">
+                <ul class="dropdown-list">
+                  <li class="dropdown-list-item">
+                    <button class="dropdown-btn" type="button">
+                      <span class="fi fi-gb"></span>
+                      <span class="">English</span>
+                    </button>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <button class="dropdown-btn" type="button">
+                      <span class="fi fi-de"></span>
+                      <span class="">German</span>
+                    </button>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <button class="dropdown-btn" type="button">
+                      <span class="fi fi-gf"></span>
+                      <span class="">French</span>
+                    </button>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <button class="dropdown-btn" type="button">
+                      <span class="fi fi-sa"></span>
+                      <span class="">Arabic</span>
+                    </button>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <button class="dropdown-btn" type="button">
+                      <span class="fi fi-cn"></span>
+                      <span class="">Chinese</span>
+                    </button>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <button class="dropdown-btn" type="button">
+                      <span class="fi fi-bd"></span>
+                      <span class="">Bangla</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Language Dropdown Ends -->
+
+            <!-- Dark Mood Toggle Starts -->
+            <div class="dropdown" data-strategy="absolute" id="theme-switcher-dropdown">
+              <button
+                class="dropdown-toggle px-3 text-slate-500 hover:text-slate-700 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500"
+                type="button">
+                <i class="hidden dark:block" width="24" height="24" data-feather="moon"></i>
+                <i class="block dark:hidden" width="24" height="24" data-feather="sun"></i>
+              </button>
+
+              <div class="dropdown-content mt-3 w-36">
+                <ul class="dropdown-list">
+                  <li class="dropdown-list-item">
+                    <button type="buttton" class="dropdown-btn" data-theme-mode="light">
+                      <i width="16" height="16" data-feather="sun"></i>
+                      <span>Light</span>
+                    </button>
+                  </li>
+
+                  <li class="dropdown-list-item">
+                    <button type="buttton" class="dropdown-btn" data-theme-mode="dark">
+                      <i width="16" height="16" data-feather="moon"></i>
+                      <span>Dark</span>
+                    </button>
+                  </li>
+
+                  <li class="dropdown-list-item">
+                    <button type="buttton" class="dropdown-btn" data-theme-mode="system">
+                      <i width="16" height="16" data-feather="monitor"></i>
+                      <span>System</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Dark Mood Toggle Ends -->
+
+            <!-- Notification Dropdown Starts -->
+            <div class="dropdown -mt-0.5" data-strategy="absolute">
+              <div class="dropdown-toggle px-3">
+                <button
+                  class="relative mt-1 flex items-center justify-center rounded-full text-slate-500 transition-colors duration-150 hover:text-slate-700 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500">
+                  <i width="24" height="24" data-feather="bell"></i>
+                  <span
+                    class="absolute -right-1 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-danger-500 text-[11px] text-slate-200">
+                    5
+                  </span>
+                </button>
+              </div>
+
+              <div class="dropdown-content mt-3 w-[17.5rem] divide-y dark:divide-slate-700 sm:w-80">
+                <div class="flex items-center justify-between px-4 py-4">
+                  <h6 class="text-slate-800 dark:text-slate-300">Notifications</h6>
+                  <button class="text-xs font-medium text-slate-600 hover:text-primary-500 dark:text-slate-300">
+                    Clear All
+                  </button>
+                </div>
+
+                <div class="h-80 w-full" data-simplebar>
+                  <ul>
+                    <li
+                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
+                      <div
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-500">
+                        <i data-feather="alert-circle" width="20" height="20"></i>
+                      </div>
+
+                      <div>
+                        <h6 class="text-sm font-normal">New order received</h6>
+                        <p class="text-xs text-slate-400">Order #1234 has been placed</p>
+                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                          <i data-feather="clock" width="1em" height="1em"></i>
+                          <span>2 min ago</span>
+                        </p>
+                      </div>
+                    </li>
+
+                    <li
+                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
+                      <div
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-yellow-100 text-yellow-500">
+                        <i data-feather="alert-triangle" width="20" height="20"></i>
+                      </div>
+
+                      <div>
+                        <h6 class="text-sm font-normal">High CPU usage</h6>
+                        <p class="text-xs text-slate-400">CPU usage is at 92%</p>
+                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                          <i data-feather="clock" width="1em" height="1em"></i>
+                          <span>5 min ago</span>
+                        </p>
+                      </div>
+                    </li>
+
+                    <li
+                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
+                      <div
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-500">
+                        <i data-feather="check-circle" width="20" height="20"></i>
+                      </div>
+
+                      <div>
+                        <h6 class="text-sm font-normal">Your order has been shipped</h6>
+                        <p class="text-xs text-slate-400">Order #1234 has been shipped</p>
+                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                          <i data-feather="clock" width="1em" height="1em"></i>
+                          <span>10 min ago</span>
+                        </p>
+                      </div>
+                    </li>
+
+                    <li
+                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
+                      <div
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-danger-100 text-danger-500">
+                        <i data-feather="x-circle" width="20" height="20"></i>
+                      </div>
+
+                      <div>
+                        <h6 class="text-sm font-normal">Something went wrong</h6>
+                        <p class="text-xs text-slate-400">Order #1234 has been placed</p>
+                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                          <i data-feather="clock" width="1em" height="1em"></i>
+                          <span>1 hour ago</span>
+                        </p>
+                      </div>
+                    </li>
+
+                    <li
+                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
+                      <div
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-500">
+                        <i data-feather="check-circle" width="20" height="20"></i>
+                      </div>
+
+                      <div>
+                        <h6 class="text-sm font-normal">Your order has been shipped</h6>
+                        <p class="text-xs text-slate-400">Order #1234 has been shipped</p>
+                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                          <i data-feather="clock" width="1em" height="1em"></i>
+                          <span>10 min ago</span>
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="px-4 py-2">
+                  <button class="btn btn-primary-plain btn-sm w-full" type="button">
+                    <span>View More</span>
+                    <i data-feather="arrow-right" width="1rem" height="1rem"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Notification Dropdown Ends -->
+
+            <!-- Profile Dropdown Starts -->
+            <div class="dropdown" data-strategy="absolute">
+              <div class="dropdown-toggle pl-3">
+                <button class="group relative flex items-center gap-x-1.5" type="button">
+                  <div class="avatar avatar-circle avatar-indicator avatar-indicator-online">
+                    <img class="avatar-img group-focus-within:ring group-focus-within:ring-primary-500"
+                      src="/images/avatar1.png" alt="Avatar 1" />
+                  </div>
+                </button>
+              </div>
+
+              <div class="dropdown-content mt-1 w-56 divide-y dark:divide-slate-600">
+                <div class="px-4 py-3">
+                  <p class="text-sm">Signed in as</p>
+                  <p class="truncate text-sm font-medium">admin@example.com</p>
+                </div>
+                <div class="py-1">
+                  <a href="javascript:void(0)" class="dropdown-link">
+                    <i width="18" height="18" data-feather="user" class="text-slate-500"></i>
+                    <span>Profile</span>
+                  </a>
+                  <a href="javascript:void(0)" class="dropdown-link">
+                    <i width="18" height="18" data-feather="settings" class="text-slate-500"></i>
+                    <span>Settings</span>
+                  </a>
+                  <a href="javascript:void(0)" class="dropdown-link">
+                    <i width="18" height="18" data-feather="help-circle" class="text-slate-500"></i>
+                    <span>Support</span>
+                  </a>
+                </div>
+                <div class="py-1">
+                  <form method="POST" action="#">
+                    <button type="submit" class="dropdown-btn">
+                      <i width="18" height="18" data-feather="log-out" class="text-slate-500"></i>
+                      <span>Sign out</span>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-- Profile Dropdown Ends -->
+          </div>
+          <!-- Header Options Ends -->
+        </div>
+      </header>
+      <!-- Header Ends -->
+
+      <!-- Page Content Starts -->
+      <div class="content">
+        <!-- Main Content Starts -->
+        <main class="container flex flex-grow items-start p-6">
+          <!-- Chat Starts -->
+          <div
+            class="relative h-full w-full overflow-hidden xl:grid xl:grid-cols-6 xl:gap-x-6 xl:overflow-visible 2xl:grid-cols-4">
+            <!-- Chat Sidebar Starts -->
+            <div id="chat-sidebar"
+              class="invisible absolute bottom-0 top-0 z-20 h-auto w-3/4 -translate-x-full bg-white transition-transform duration-300 ease-in-out dark:bg-slate-800 sm:w-72 xl:visible xl:relative xl:col-span-2 xl:w-auto xl:translate-x-0 xl:rounded-primary xl:shadow 2xl:col-span-1">
+              <!-- Chat Sidebar Header Starts -->
+              <div class="relative border-b border-b-slate-200 p-4 dark:border-b-slate-600">
+                <form
+                  class="group flex h-10 w-full items-center overflow-hidden rounded-primary border border-transparent bg-slate-100 shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-700 dark:focus-within:border-primary-500"
+                  action="">
+                  <div class="flex h-full items-center px-3">
+                    <i class="text-slate-400 group-focus-within:text-primary-500" width="1em" height="1em"
+                      data-feather="search"></i>
+                  </div>
+                  <input
+                    class="h-full w-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0"
+                    type="text" placeholder="Search" />
+                </form>
+
+                <!-- Chat Sidebar Close Button Starts -->
+                <button id="chat-btn-hide-sidebar" type="button"
+                  class="-translate-x-1/5 absolute left-full top-1/2 z-20 ml-2 inline-flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full text-white dark:text-slate-300 xl:hidden">
+                  <i width="20" height="20" data-feather="x"></i>
+                </button>
+                <!-- Chat Sidebar Close Button Ends -->
+              </div>
+              <!-- Chat Sidebar Header Ends -->
+
+              <!-- Chat Sidebar Body Starts -->
+              <div class="max-h-[calc(100vh-18rem)] overflow-auto md:max-h-[calc(100vh-17rem)]" data-simplebar>
+                <ul id="chat-list">
+                  <li class="active group">
+                    <a href="javascript:void(0);"
+                      class="inline-flex w-full items-start justify-between bg-transparent px-4 py-4 transition-colors duration-150 hover:bg-slate-100 group-[.active]:bg-slate-100 dark:hover:bg-slate-700 group-[.active]:dark:bg-slate-700">
+                      <div class="avatar avatar-circle avatar-indicator avatar-indicator-online shrink-0">
+                        <img class="avatar-img" src="/images/avatar2.png" alt="profile-img" />
+                      </div>
+                      <div class="ml-4 mr-2 flex-grow overflow-x-hidden">
+                        <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
+                          James Cook
+                        </h6>
+                        <p class="truncate text-sm font-normal text-slate-500 dark:text-slate-400">
+                          You: I’m happy to help you. If you have any questions, please feel free to contact me.
+                        </p>
+                      </div>
+                      <span class="whitespace-nowrap text-xs font-normal text-slate-400">30 min ago</span>
+                    </a>
+                  </li>
+                  <li class="group">
+                    <a href="javascript:void(0);"
+                      class="inline-flex w-full items-start justify-between bg-transparent px-4 py-4 transition-colors duration-150 hover:bg-slate-100 group-[.active]:bg-slate-100 dark:hover:bg-slate-700 group-[.active]:dark:bg-slate-700">
+                      <div class="avatar avatar-circle shrink-0">
+                        <img class="avatar-img" src="/images/avatar3.png" alt="profile-img" />
+                      </div>
+                      <div class="ml-4 mr-2 flex-grow overflow-x-hidden">
+                        <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
+                          Maxwell Alston
+                        </h6>
+                        <p class="truncate text-sm font-normal text-slate-500 dark:text-slate-400">
+                          Learn something interesting.
+                        </p>
+                      </div>
+                      <span class="whitespace-nowrap text-xs font-normal text-slate-400">1 day ago</span>
+                    </a>
+                  </li>
+                  <li class="group">
+                    <a href="javascript:void(0);"
+                      class="inline-flex w-full items-start justify-between bg-transparent px-4 py-4 transition-colors duration-150 hover:bg-slate-100 group-[.active]:bg-slate-100 dark:hover:bg-slate-700 group-[.active]:dark:bg-slate-700">
+                      <div class="avatar avatar-circle shrink-0">
+                        <img class="avatar-img" src="/images/avatar4.png" alt="profile-img" />
+                      </div>
+                      <div class="ml-4 mr-2 flex-grow overflow-x-hidden">
+                        <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
+                          Jhon Doe
+                        </h6>
+                        <p class="truncate text-sm font-normal text-slate-500 dark:text-slate-400">
+                          Tour plan is ready, Let's explore the journey.
+                        </p>
+                      </div>
+                      <span class="whitespace-nowrap text-xs font-normal text-slate-400">Feb 7</span>
+                    </a>
+                  </li>
+                  <li class="group">
+                    <a href="javascript:void(0);"
+                      class="inline-flex w-full items-start justify-between bg-transparent px-4 py-4 transition-colors duration-150 hover:bg-slate-100 group-[.active]:bg-slate-100 dark:hover:bg-slate-700 group-[.active]:dark:bg-slate-700">
+                      <div class="avatar avatar-circle shrink-0">
+                        <img class="avatar-img"
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDYuMC1jMDAyIDc5LjE2NDM2MCwgMjAyMC8wMi8xMy0wMTowNzoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIxLjEgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjIzMDI1RUZBQ0YwRDExRUQ5NThFOUFFOUVBRjFEOTc5IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjIzMDI1RUZCQ0YwRDExRUQ5NThFOUFFOUVBRjFEOTc5Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MjMwMjVFRjhDRjBEMTFFRDk1OEU5QUU5RUFGMUQ5NzkiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MjMwMjVFRjlDRjBEMTFFRDk1OEU5QUU5RUFGMUQ5NzkiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz49cjvrAAALx0lEQVR42sRaa2wc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"
+                          alt="profile-img" />
+                      </div>
+                      <div class="ml-4 mr-2 flex-grow overflow-x-hidden">
+                        <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
+                          Albert Wilson
+                        </h6>
+                        <p class="truncate text-sm font-normal text-slate-500 dark:text-slate-400">
+                          Your order is delivered.
+                        </p>
+                      </div>
+                      <span class="whitespace-nowrap text-xs font-normal text-slate-400">May 25</span>
+                    </a>
+                  </li>
+                  <li class="group">
+                    <a href="javascript:void(0);"
+                      class="inline-flex w-full items-start justify-between bg-transparent px-4 py-4 transition-colors duration-150 hover:bg-slate-100 group-[.active]:bg-slate-100 dark:hover:bg-slate-700 group-[.active]:dark:bg-slate-700">
+                      <div class="avatar avatar-circle avatar-warning avatar-indicator avatar-indicator-busy shrink-0">
+                        <span class="avatar-text">
+                          <span>FN</span>
+                        </span>
+                      </div>
+                      <div class="ml-4 mr-2 flex-grow overflow-x-hidden">
+                        <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
+                          Francis Nicola
+                        </h6>
+                        <p class="truncate text-sm font-normal text-slate-500 dark:text-slate-400">
+                          It will take some time.
+                        </p>
+                      </div>
+                      <span class="whitespace-nowrap text-xs font-normal text-slate-400">Jun 30</span>
+                    </a>
+                  </li>
+                  <li class="group">
+                    <a href="javascript:void(0);"
+                      class="inline-flex w-full items-start justify-between bg-transparent px-4 py-4 transition-colors duration-150 hover:bg-slate-100 group-[.active]:bg-slate-100 dark:hover:bg-slate-700 group-[.active]:dark:bg-slate-700">
+                      <div class="avatar avatar-circle shrink-0">
+                        <img class="avatar-img"
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDYuMC1jMDAyIDc5LjE2NDM2MCwgMjAyMC8wMi8xMy0wMTowNzoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QTY0RjZEMUFDRjBEMTFFRDk1MEFENkVFMkYwREY1RkMiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QTY0RjZEMTlDRjBEMTFFRDk1MEFENkVFMkYwREY1RkMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIxLjEgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RkJGMEIyQjlDRjBDMTFFRDlGNkFCQTVFRjQwREYxRkQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RkJGMEIyQkFDRjBDMTFFRDlGNkFCQTVFRjQwREYxRkQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5HckJwAAAKBklEQVR42uxYe4xc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"
+                          alt="profile-img" />
+                      </div>
+                      <div class="ml-4 mr-2 flex-grow overflow-x-hidden">
+                        <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
+                          Calvin Moore
+                        </h6>
+                        <p class="truncate text-sm font-normal text-slate-500 dark:text-slate-400">Are you there?</p>
+                      </div>
+                      <span class="whitespace-nowrap text-xs font-normal text-slate-400">Jun 30</span>
+                    </a>
+                  </li>
+                  <li class="group">
+                    <a href="javascript:void(0);"
+                      class="inline-flex w-full items-start justify-between bg-transparent px-4 py-4 transition-colors duration-150 hover:bg-slate-100 group-[.active]:bg-slate-100 dark:hover:bg-slate-700 group-[.active]:dark:bg-slate-700">
+                      <div class="avatar avatar-circle avatar-danger avatar-indicator avatar-indicator-away shrink-0">
+                        <span class="avatar-text">
+                          <span>NA</span>
+                        </span>
+                      </div>
+                      <div class="ml-4 mr-2 flex-grow overflow-x-hidden">
+                        <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
+                          Neil Amstrong
+                        </h6>
+                        <p class="truncate text-sm font-normal text-slate-500 dark:text-slate-400">
+                          Hello, How is going there?
+                        </p>
+                      </div>
+                      <span class="whitespace-nowrap text-xs font-normal text-slate-400">Dec 25</span>
+                    </a>
+                  </li>
+                  <li class="group">
+                    <a href="javascript:void(0);"
+                      class="inline-flex w-full items-start justify-between bg-transparent px-4 py-4 transition-colors duration-150 hover:bg-slate-100 group-[.active]:bg-slate-100 dark:hover:bg-slate-700 group-[.active]:dark:bg-slate-700">
+                      <div class="avatar avatar-circle shrink-0">
+                        <img class="avatar-img" src="/images/avatar3.png" alt="profile-img" />
+                      </div>
+                      <div class="ml-4 mr-2 flex-grow overflow-x-hidden">
+                        <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
+                          Maxwell Alston
+                        </h6>
+                        <p class="truncate text-sm font-normal text-slate-500 dark:text-slate-400">
+                          Learn something interesting.
+                        </p>
+                      </div>
+                      <span class="whitespace-nowrap text-xs font-normal text-slate-400">1 day ago</span>
+                    </a>
+                  </li>
+                  <li class="group">
+                    <a href="javascript:void(0);"
+                      class="inline-flex w-full items-start justify-between bg-transparent px-4 py-4 transition-colors duration-150 hover:bg-slate-100 group-[.active]:bg-slate-100 dark:hover:bg-slate-700 group-[.active]:dark:bg-slate-700">
+                      <div class="avatar avatar-circle shrink-0">
+                        <img class="avatar-img" src="/images/avatar4.png" alt="profile-img" />
+                      </div>
+                      <div class="ml-4 mr-2 flex-grow overflow-x-hidden">
+                        <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
+                          Jhon Doe
+                        </h6>
+                        <p class="truncate text-sm font-normal text-slate-500 dark:text-slate-400">
+                          Tour plan is ready, Let's explore the journey.
+                        </p>
+                      </div>
+                      <span class="whitespace-nowrap text-xs font-normal text-slate-400">Feb 7</span>
+                    </a>
+                  </li>
+                  <li class="group">
+                    <a href="javascript:void(0);"
+                      class="inline-flex w-full items-start justify-between bg-transparent px-4 py-4 transition-colors duration-150 hover:bg-slate-100 group-[.active]:bg-slate-100 dark:hover:bg-slate-700 group-[.active]:dark:bg-slate-700">
+                      <div class="avatar avatar-circle shrink-0">
+                        <img class="avatar-img"
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDYuMC1jMDAyIDc5LjE2NDM2MCwgMjAyMC8wMi8xMy0wMTowNzoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIxLjEgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjIzMDI1RUZBQ0YwRDExRUQ5NThFOUFFOUVBRjFEOTc5IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjIzMDI1RUZCQ0YwRDExRUQ5NThFOUFFOUVBRjFEOTc5Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MjMwMjVFRjhDRjBEMTFFRDk1OEU5QUU5RUFGMUQ5NzkiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MjMwMjVFRjlDRjBEMTFFRDk1OEU5QUU5RUFGMUQ5NzkiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz49cjvrAAALx0lEQVR42sRaa2wcVxX+5s7Mzj5tZ+1kd5M4zrNp3kkTNaW0aVqpKlEhVKpUBL8QAiHRikoVKiCK+AE/+INUVQgQSJUKf6oCrahArUoT2pCkSVNBmjQv5+E4fttre73vnZ0H371rJ06cJt61E2Y1u+vxzJ3z3fOdc74zd7WXu97oAxDD3DcxueuTn9rk5/TN5+5N293Jz7luOYNvizGfG001LB3BmAXT0tUhu+ygnK3AsV1NE5rA/G8xCSQ3Hx7xXA9WNIBYWwS5kQJ6TgxirGcCpayNxJo4OralEG8JweV51VIVhfEy3KoLAsN8eWRuG+3wPR+xhRHljQOv/gdnP+hCujsDh55YtjWFYqaE/jNpCF2DbgokVrdi2Zakujw/WpwXMHMCIg1wqx6aFoZRztv460v70HmwG6GWIEJRC82JqDrn9P4u5SXpAQk8EDKx9uEO7PrWdjQlIwRahqZp/ycgvK9NigRJp8xgHvt+cxRn6InF6xZeNapSsEmhEmPFQHMyevW6SqGKU+9foocE9v50twKcGcipv+86EHlTp+JibDyLT948jbP/uozUvW21ePf9q+cEQmJGMpDgddLs7IddKE5U8JWf7EJ8aTPGeicaBiMaDWzdEFi9uR0jXeM4d+AyYyQ8ayNkTJmkV5jBf3r/Jfzpub8jO5RHSyqmxr47QDijgbAJKxLA2y9/iA9+/4n6bgQNZeCsh+G5Mn5Sa1sx2DmKN378T9jFKkJNwVq1udNA5D2aFkVx9PWTePdXhxWNwjET+SJQrPiolxme62PRyjguHunFEY4pPevfDSChJgtDF0Zx7C+n0NrRTL5byBc8rO3QYZk60hPeDDAyu5ZtoESg8vuNhvp8yex1et8lRVUZQ3ccSLjFQtexPlUnIvGQ8kjfOLBnk4tXnhUYLpg41e1jPO8jW/QxnPFxpheo+gK+0HGyR8PFYYEL/cB4ruZBTY0bwigLaM+JIYSarTuftTzHV7WjraNFZS2DBa5U1ZRXdn25jP2GhV//w8CFPp7HuG0OAztW+3jmQQ+dAwb6R13EF/joGdfxziHWmF4HqxZJQAJVFtA0PSIMceeBZIcL2PrkPRjvq6VdmWlMptKtHZzXIR/3by7jjxsNFIc02A7QEiGP2oiIE7B1LQtidEqQaXhur4nvv2Li7aNVrEnITKirrNVI5jIaSb2ReLSmk2jQlTTwyHofj3+BNx/jTFak/nWZAEgXObEEg2EZGFqNQ9nJqii9lSrjtectPPBDHb29ZbQtCitJY5ecOx8jsmo7SuwJCkAGsaPhB3s4w3Hu5Unx7vGtxL0gy7h2LZ36N9x5gOq4zcHTOxlnI54SnKl7FypReefTL4PbCBiw2prQMwp8aYuP3Q9weke0+keT59s+NrRr0DwH4WQTgsyKru3eeSDC95DjLK/YmICrB7FrjQwE1LzRyMbLk80eTHItujzBGGJ2cBsDUpfszOphtI5cwYurPsKDO4IQsjDIij4H8ZorUX+1hPHSPWexbOIKciJcNw5Rb8DnRQjrCpcQ8zrx/F4DIsjiVfYbR8HLD3bq2LnJwrb1l9E+eA45PVR30jLqpZdOamV1NlHpMJ7ZXsFQlpdnGnSHzANFTRXOH+2RmcrCqB9R96hz00W9QCJeGZ8FltOIJlpRQCJOA5zGeVVlkvj2bheP3UexNhrD6eByhL1K/T1e3UD8MnqMhTgU2cyMw6JQKk+O0AAYqaQNH2uWEkQlgyOhTejm2FG/VDcQo34LNCzwcng/uAW652Jn6VOmThoiQg2CKaqacyy0C++Ft3LsQkMkNRqYRFi+5HMF74R34HBwPZ4ofowN5c/I1AWYfTNB0G4GZ4Lr8G74fkyIKL1d4tg2E7FoKP3W3yHSiIBfRZyeGdOjeDO6C0VSAu7ELIfkOW4WJaMVb/HatN6svGxxTA93sdWteaZGo4Q7ThWi463IQ6gEqAi12cgLG7YZwZsRToBmIumOXTdmo0DmUASgZnAhZ/eEtQLnKu3MYOS4fguD5P8YU+crS3Ay0KGu9TDnh4++mI9nr1WGWgITWFIYoJS32YfIh1f69bEvv/OY+t9QFSmem0QGtjb3Z4RTQObkEUELsxQHscJltMaZ/6MRVPuzsEdLymifpUru8rs8Vh1gyo6EEI9XESz1Ig9djTEfQNy5jODSoT5ndXt0BV3DmtIaoTIOQas4cEaLsNMltTujBR6rwooHeU5NGO6I3UNP6ey53LkCcadan4a3ETuDnZEE7lvyFHyLMZLtghYKwkxFYS2w1AM6uVsL5LEYtDDrTfYKfHMRdqT24IHoUqSrE/MCpC5qsXOgDyjlWcjGGKjyCcjmUKrm345n6R3GRrG3JltMHVokoHb5XR0r9tcWSZZ9T12zOZxS8TPmTagxPZXc66aaa9QDwGaelzcLagEs0xNoN5NoFc1IBmqPSkVkHbz1rwDnfwatcI7avINZavKJiNRPpW54AfYca38JEduoDieNNnwj+gSGmIJ7vSH0uyMosShGtTAspmZ/lvNszBZAlgKxSUSww1yH1cZSpPQ2hDQLJc9m13htBkVsM/xNr8Lv/QPBHKYMqMj+mFKfsZT8KrDkOxCTwKey2TIjiVUcs8JXv5vGeacHnc4VpL0MmrSIAuTdBpBxKwByNsZlxeVAOwMbscFcSQCtKjjzlBNFv8KYdRHwYtcNpZmUKitehFc4C+/47+C7DsS270KPbZpBGofXTzj52toJX8v0JFYaS7DFXYNT1Us4Wb1I2mXRImJXbZo1EJkOy8oLeawx2vGQtRXt+iLlcjmor2pwjcmyh6/e0Jraly/CfeM1VNnUe0MDqoMUyd/CWNwM8bVvIrhq7TQgjAqOIZOwjI8Jel6jrQtEEx4P7sQ6cwUOVo4rD0nvSFrfzDvGTBCCs11Us/5YcAfuD2xQJqcZjNcAaNM8J2DblCXhWtYYLVVRzlcQ+fOrSh2LJctr/Dl6DLbHJPHk12GWbLRZOgyhq2tvrJuqE6UN0uuLKESfDj+Kj+3TOFg+zhTrqvjxbqjjM7SB5KU09KnwI9hlbaMXKopeU3SboTjkOonjwfHkWkkOhfEstI3r4b7wCwZ7CJ5BfstG1AzAeeHnEFs2o8Lz0jxPTpa8VghxU2rLu014eUXhh8mKvZT6ki1Fv3x7j7SJFjwa3I61RgeGKbN9pYQ+Px2qZw+kTnosC9fx2SjJ5Tjmw527ETrwt5qbaKi2IIbKfV+ErH2WQfBVT10jn4GJW6whTiWbYYrT9YGViIow3i4duL36lS4rsp2VeR2TVLpdfyLPkSBqBmnqmJEdgynkgo6ldkNzYI70qWd3vmqyKVuqnKZZ9OdTQS5f3e7gTW26qez8yD6JPubzejq+6bPqmwQy1McKnpn8iQDfikUe673ujvKa2RQ/CUAy5bjdiRP2+fr6kYOVT+mVDLmnN6QZjPFhpiSnVkMmOSjyE9BcXDs2i250iu4yax2unKi/sZKzsL/8CV05ALMeqU0jySJlNDPBtDuxSuQztb5Lm50XZEqWID6lF/aVjzVe2WW+PsRZkFljnbFc/e3drn0h94XtQc+RVvq04c0gjLERgmEjZQR4TvmWIMJaUO37Ksdwrto9P63uf+1zOGSfQJVZXFLtVrz2pZG5cehjpFYgOO2JIo8zAQgJ0Ax8LgBZx+IshvJerxffmxWIutZHup0BCrtRbDJXU2u1k/Ia64Azo8Z6NNIc6efMk1qmOa3gGNDKRYhijmD1GbEgaRQVtaW8fzM+z1a7bquvGl7oKVOiHGOFvej04l5zudJFusYO0PcU5XzlEQG9mOfJRY4+HQiNzxcU5XzjWlqVOi7AvcJaIbPSZ9RW8j6NrFjV/csgqbdkBjmpXcBSI6EkvRR1hiQGWRNkLCA7zk4wcf0SLr0UHu6Hp8uVN0tV9gF6ubN6BYNeWoFpcFM/c+pHgz9zkr3JGVJA7gSiszfRI7mESLkjIplKaJYV03SntkTnUqbYixf7g1rGv5I97+cqg27azbiUG3Puc6Up/xNgABBSPdtlz5HJAAAAAElFTkSuQmCC"
+                          alt="profile-img" />
+                      </div>
+                      <div class="ml-4 mr-2 flex-grow overflow-x-hidden">
+                        <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
+                          Albert Wilson
+                        </h6>
+                        <p class="truncate text-sm font-normal text-slate-500 dark:text-slate-400">
+                          Your order is delivered.
+                        </p>
+                      </div>
+                      <span class="whitespace-nowrap text-xs font-normal text-slate-400">May 25</span>
+                    </a>
+                  </li>
+                  <li class="group">
+                    <a href="javascript:void(0);"
+                      class="inline-flex w-full items-start justify-between bg-transparent px-4 py-4 transition-colors duration-150 hover:bg-slate-100 group-[.active]:bg-slate-100 dark:hover:bg-slate-700 group-[.active]:dark:bg-slate-700">
+                      <div class="avatar avatar-circle shrink-0">
+                        <img class="avatar-img"
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDYuMC1jMDAyIDc5LjE2NDM2MCwgMjAyMC8wMi8xMy0wMTowNzoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIxLjEgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjIzMDI1RUZBQ0YwRDExRUQ5NThFOUFFOUVBRjFEOTc5IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjIzMDI1RUZCQ0YwRDExRUQ5NThFOUFFOUVBRjFEOTc5Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MjMwMjVFRjhDRjBEMTFFRDk1OEU5QUU5RUFGMUQ5NzkiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MjMwMjVFRjlDRjBEMTFFRDk1OEU5QUU5RUFGMUQ5NzkiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz49cjvrAAALx0lEQVR42sRaa2wc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"
+                          alt="profile-img" />
+                      </div>
+                      <div class="ml-4 mr-2 flex-grow overflow-x-hidden">
+                        <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
+                          Albert Wilson
+                        </h6>
+                        <p class="truncate text-sm font-normal text-slate-500 dark:text-slate-400">
+                          Your order is delivered.
+                        </p>
+                      </div>
+                      <span class="whitespace-nowrap text-xs font-normal text-slate-400">May 25</span>
+                    </a>
+                  </li>
+                  <li class="group">
+                    <a href="javascript:void(0);"
+                      class="inline-flex w-full items-start justify-between bg-transparent px-4 py-4 transition-colors duration-150 hover:bg-slate-100 group-[.active]:bg-slate-100 dark:hover:bg-slate-700 group-[.active]:dark:bg-slate-700">
+                      <div class="avatar avatar-circle avatar-warning avatar-indicator avatar-indicator-busy shrink-0">
+                        <span class="avatar-text">
+                          <span>FN</span>
+                        </span>
+                      </div>
+                      <div class="ml-4 mr-2 flex-grow overflow-x-hidden">
+                        <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
+                          Francis Nicola
+                        </h6>
+                        <p class="truncate text-sm font-normal text-slate-500 dark:text-slate-400">
+                          It will take some time.
+                        </p>
+                      </div>
+                      <span class="whitespace-nowrap text-xs font-normal text-slate-400">Jun 30</span>
+                    </a>
+                  </li>
+                  <li class="group">
+                    <a href="javascript:void(0);"
+                      class="inline-flex w-full items-start justify-between bg-transparent px-4 py-4 transition-colors duration-150 hover:bg-slate-100 group-[.active]:bg-slate-100 dark:hover:bg-slate-700 group-[.active]:dark:bg-slate-700">
+                      <div class="avatar avatar-circle shrink-0">
+                        <img class="avatar-img"
+                          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDYuMC1jMDAyIDc5LjE2NDM2MCwgMjAyMC8wMi8xMy0wMTowNzoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QTY0RjZEMUFDRjBEMTFFRDk1MEFENkVFMkYwREY1RkMiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QTY0RjZEMTlDRjBEMTFFRDk1MEFENkVFMkYwREY1RkMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIxLjEgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RkJGMEIyQjlDRjBDMTFFRDlGNkFCQTVFRjQwREYxRkQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RkJGMEIyQkFDRjBDMTFFRDlGNkFCQTVFRjQwREYxRkQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5HckJwAAAKBklEQVR42uxYe4xc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"
+                          alt="profile-img" />
+                      </div>
+                      <div class="ml-4 mr-2 flex-grow overflow-x-hidden">
+                        <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
+                          Calvin Moore
+                        </h6>
+                        <p class="truncate text-sm font-normal text-slate-500 dark:text-slate-400">Are you there?</p>
+                      </div>
+                      <span class="whitespace-nowrap text-xs font-normal text-slate-400">Jun 30</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- Chat Sidebar Body Ends -->
+            </div>
+            <!-- Chat Sidebar Ends -->
+
+            <!-- Chat Wrapper Starts -->
+            <div class="relative rounded-primary bg-white shadow dark:bg-slate-800 xl:col-span-4 2xl:col-span-3">
+              <!-- Chat Wrapper Header Starts -->
+              <div
+                class="flex items-center justify-between rounded-t-primary border-b border-b-slate-200 p-4 dark:border-b-slate-600">
+                <!-- Avatar and Menu Button Start -->
+                <div class="flex items-center justify-start gap-x-3">
+                  <button id="chat-btn-show-sidebar"
+                    class="text-slate-500 hover:text-slate-700 focus:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-slate-300 xl:hidden">
+                    <i width="20" height="20" data-feather="menu"></i>
+                  </button>
+                  <div class="avatar avatar-circle avatar-indicator avatar-indicator-online">
+                    <img class="avatar-img" src="/images/avatar2.png" alt="profile-img" />
+                  </div>
+
+                  <div>
+                    <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
+                      James Cook
+                    </h6>
+                    <p class="truncate text-sm font-normal text-slate-500 dark:text-slate-400">Sales Executive</p>
+                  </div>
+                </div>
+                <!-- Avatar and Menu Button End -->
+
+                <!-- Actions and More Dropdown Start -->
+                <div class="flex items-center gap-x-6">
+                  <button
+                    class="hidden text-slate-500 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-primary-500 dark:focus:text-primary-500 sm:block">
+                    <i width="18" height="18" data-feather="phone-call"></i>
+                  </button>
+                  <button
+                    class="hidden text-slate-500 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-primary-500 dark:focus:text-primary-500 sm:block">
+                    <i width="18" height="18" data-feather="video"></i>
+                  </button>
+                  <button
+                    class="hidden text-slate-500 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-primary-500 dark:focus:text-primary-500 sm:block">
+                    <i width="18" height="18" data-feather="search"></i>
+                  </button>
+
+                  <div class="dropdown">
+                    <div class="dropdown-toggle">
+                      <i width="20" height="20"
+                        class="text-slate-500 hover:text-slate-700 focus:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-slate-300"
+                        data-feather="more-vertical"></i>
+                    </div>
+                    <div class="dropdown-content w-52">
+                      <ul class="dropdown-list">
+                        <li class="dropdown-list-item block md:hidden">
+                          <a href="javascript:void(0)" class="dropdown-link gap-3">
+                            <i width="18" height="18" class="text-slate-600 dark:text-slate-400"
+                              data-feather="phone-call"></i>
+                            <span class="text-sm">Audio Call</span>
+                          </a>
+                        </li>
+                        <li class="dropdown-list-item block md:hidden">
+                          <a href="javascript:void(0)" class="dropdown-link gap-3">
+                            <i width="18" height="18" class="text-slate-600 dark:text-slate-400"
+                              data-feather="video"></i>
+                            <span class="text-sm">Video Call</span>
+                          </a>
+                        </li>
+                        <li class="dropdown-list-item block md:hidden">
+                          <a href="javascript:void(0)" class="dropdown-link gap-3">
+                            <i width="18" height="18" class="text-slate-600 dark:text-slate-400"
+                              data-feather="search"></i>
+                            <span class="text-sm">Search</span>
+                          </a>
+                        </li>
+                        <li class="dropdown-list-item">
+                          <a href="javascript:void(0)" class="dropdown-link gap-3">
+                            <i width="18" height="18" class="text-slate-600 dark:text-slate-400"
+                              data-feather="users"></i>
+                            <span class="text-sm">View Contact</span>
+                          </a>
+                        </li>
+                        <li class="dropdown-list-item">
+                          <a href="javascript:void(0)" class="dropdown-link gap-3">
+                            <i width="18" height="18" class="text-slate-600 dark:text-slate-400"
+                              data-feather="bell-off"></i>
+                            <span class="text-sm">Mute Notification</span>
+                          </a>
+                        </li>
+                        <li class="dropdown-list-item">
+                          <a href="javascript:void(0)" class="dropdown-link gap-3">
+                            <i width="18" height="18" class="text-slate-600 dark:text-slate-400"
+                              data-feather="slash"></i>
+                            <span class="text-sm">Block Contact</span>
+                          </a>
+                        </li>
+                        <li class="dropdown-list-item">
+                          <a href="javascript:void(0)" class="dropdown-link gap-3">
+                            <i width="18" height="18" class="text-slate-600 dark:text-slate-400"
+                              data-feather="trash"></i>
+                            <span class="text-sm">Clear Chat</span>
+                          </a>
+                        </li>
+                        <li class="dropdown-list-item">
+                          <a href="javascript:void(0)" class="dropdown-link gap-3">
+                            <i width="18" height="18" class="text-slate-600 dark:text-slate-400"
+                              data-feather="flag"></i>
+                            <span class="text-sm">Report Contact</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- Actions and More Dropdown End -->
+              </div>
+              <!-- Chat Wrapper Header Ends -->
+
+              <!-- Chat Wrapper Body Starts -->
+              <div class="relative max-h-[calc(100vh-18rem)] overflow-auto px-4 pb-28 md:max-h-[calc(100vh-17rem)]"
+                data-simplebar>
+                <ul class="space-y-3">
+                  <!-- Friend Chat -->
+                  <li class="group">
+                    <div class="flex gap-x-3 group-[.pr]:flex-row-reverse">
+                      <div class="avatar avatar-circle avatar-sm shrink-0">
+                        <img src="/images/avatar2.png" class="avatar-img" alt="profile-img" />
+                      </div>
+                      <div class="flex max-w-sm flex-col items-start gap-y-2 group-[.pr]:items-end">
+                        <p
+                          class="rounded-primary rounded-tl-none bg-slate-100 p-2 text-sm text-slate-600 group-[.pr]:rounded-tl-primary group-[.pr]:rounded-tr-none group-[.pr]:bg-primary-500 group-[.pr]:text-slate-100 dark:bg-slate-700 dark:text-slate-300">
+                          Hello!, Max
+                        </p>
+                        <span class="text-xs font-normal text-slate-400">10:00AM</span>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- User Chat (Position Right) -->
+                  <li class="pr group">
+                    <div class="flex gap-x-3 group-[.pr]:flex-row-reverse">
+                      <div class="avatar avatar-circle avatar-sm shrink-0">
+                        <img src="/images/avatar1.png" class="avatar-img" alt="profile-img" />
+                      </div>
+                      <div class="flex max-w-sm flex-col items-start gap-y-2 group-[.pr]:items-end">
+                        <p
+                          class="rounded-primary rounded-tl-none bg-slate-100 p-2 text-sm text-slate-600 group-[.pr]:rounded-tl-primary group-[.pr]:rounded-tr-none group-[.pr]:bg-primary-500 group-[.pr]:text-slate-100 dark:bg-slate-700 dark:text-slate-300">
+                          Hi, How can I help you?
+                        </p>
+                        <span class="text-xs font-normal text-slate-400">10:01AM</span>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- Friend Chat -->
+                  <li class="group">
+                    <div class="flex gap-x-3 group-[.pr]:flex-row-reverse">
+                      <div class="avatar avatar-circle avatar-sm shrink-0">
+                        <img src="/images/avatar2.png" class="avatar-img" alt="profile-img" />
+                      </div>
+                      <div class="flex max-w-sm flex-col items-start gap-y-2 group-[.pr]:items-end">
+                        <p
+                          class="rounded-primary rounded-tl-none bg-slate-100 p-2 text-sm text-slate-600 group-[.pr]:rounded-tl-primary group-[.pr]:rounded-tr-none group-[.pr]:bg-primary-500 group-[.pr]:text-slate-100 dark:bg-slate-700 dark:text-slate-300">
+                          Hi Max, I’m interested to purchase a template. Do you have any available?
+                        </p>
+                        <p
+                          class="rounded-primary rounded-tl-none bg-slate-100 p-2 text-sm text-slate-600 group-[.pr]:rounded-tl-primary group-[.pr]:rounded-tr-none group-[.pr]:bg-primary-500 group-[.pr]:text-slate-100 dark:bg-slate-700 dark:text-slate-300">
+                          It should be based on TailwindCSS.
+                        </p>
+                        <span class="text-xs font-normal text-slate-400">10:02AM</span>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- User Chat (Position Right) -->
+                  <li class="pr group">
+                    <div class="flex gap-x-3 group-[.pr]:flex-row-reverse">
+                      <div class="avatar avatar-circle avatar-sm shrink-0">
+                        <img src="/images/avatar1.png" class="avatar-img" alt="profile-img" />
+                      </div>
+                      <div class="flex max-w-sm flex-col items-start gap-y-2 group-[.pr]:items-end">
+                        <p
+                          class="rounded-primary rounded-tl-none bg-slate-100 p-2 text-sm text-slate-600 group-[.pr]:rounded-tl-primary group-[.pr]:rounded-tr-none group-[.pr]:bg-primary-500 group-[.pr]:text-slate-100 dark:bg-slate-700 dark:text-slate-300">
+                          Yes, we have a few templates that matches your description. Admin Toolkit is one the best of
+                          them.
+                        </p>
+                        <span class="text-xs font-normal text-slate-400">10:04AM</span>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- Friend Chat -->
+                  <li class="group">
+                    <div class="flex gap-x-3 group-[.pr]:flex-row-reverse">
+                      <div class="avatar avatar-circle avatar-sm shrink-0">
+                        <img src="/images/avatar2.png" class="avatar-img" alt="profile-img" />
+                      </div>
+                      <div class="flex max-w-sm flex-col items-start gap-y-2 group-[.pr]:items-end">
+                        <p
+                          class="rounded-primary rounded-tl-none bg-slate-100 p-2 text-sm text-slate-600 group-[.pr]:rounded-tl-primary group-[.pr]:rounded-tr-none group-[.pr]:bg-primary-500 group-[.pr]:text-slate-100 dark:bg-slate-700 dark:text-slate-300">
+                          Sounds great, Could you please tell me a little bit more about this template?
+                        </p>
+                        <span class="text-xs font-normal text-slate-400">10:06AM</span>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- User Chat (Position Right) -->
+                  <li class="pr group">
+                    <div class="flex gap-x-3 group-[.pr]:flex-row-reverse">
+                      <div class="avatar avatar-circle avatar-sm shrink-0">
+                        <img src="/images/avatar1.png" class="avatar-img" alt="profile-img" />
+                      </div>
+                      <div class="flex max-w-sm flex-col items-start gap-y-2 group-[.pr]:items-end">
+                        <p
+                          class="rounded-primary rounded-tl-none bg-slate-100 p-2 text-sm text-slate-600 group-[.pr]:rounded-tl-primary group-[.pr]:rounded-tr-none group-[.pr]:bg-primary-500 group-[.pr]:text-slate-100 dark:bg-slate-700 dark:text-slate-300">
+                          Of course, In this template you can fully customize fonts, colours, component, layouts
+                          and
+                          everything else that you need.
+                        </p>
+                        <span class="text-xs font-normal text-slate-400">10:07AM</span>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- Friend Chat -->
+                  <li class="group">
+                    <div class="flex gap-x-3 group-[.pr]:flex-row-reverse">
+                      <div class="avatar avatar-circle avatar-sm shrink-0">
+                        <img src="/images/avatar2.png" class="avatar-img" alt="profile-img" />
+                      </div>
+                      <div class="flex max-w-sm flex-col items-start gap-y-2 group-[.pr]:items-end">
+                        <p
+                          class="rounded-primary rounded-tl-none bg-slate-100 p-2 text-sm text-slate-600 group-[.pr]:rounded-tl-primary group-[.pr]:rounded-tr-none group-[.pr]:bg-primary-500 group-[.pr]:text-slate-100 dark:bg-slate-700 dark:text-slate-300">
+                          That's good, I will purchase it for sure.
+                        </p>
+                        <p
+                          class="rounded-primary rounded-tl-none bg-slate-100 p-2 text-sm text-slate-600 group-[.pr]:rounded-tl-primary group-[.pr]:rounded-tr-none group-[.pr]:bg-primary-500 group-[.pr]:text-slate-100 dark:bg-slate-700 dark:text-slate-300">
+                          Thanks for your information
+                        </p>
+                        <span class="text-xs font-normal text-slate-400">10:08AM</span>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- User Chat (Position Right) -->
+                  <li class="pr group">
+                    <div class="flex gap-x-3 group-[.pr]:flex-row-reverse">
+                      <div class="avatar avatar-circle avatar-sm shrink-0">
+                        <img src="/images/avatar1.png" class="avatar-img" alt="profile-img" />
+                      </div>
+                      <div class="flex max-w-sm flex-col items-start gap-y-2 group-[.pr]:items-end">
+                        <p
+                          class="rounded-primary rounded-tl-none bg-slate-100 p-2 text-sm text-slate-600 group-[.pr]:rounded-tl-primary group-[.pr]:rounded-tr-none group-[.pr]:bg-primary-500 group-[.pr]:text-slate-100 dark:bg-slate-700 dark:text-slate-300">
+                          I’m happy to help you. If you have any questions, please feel free to contact me.
+                        </p>
+                        <span class="text-xs font-normal text-slate-400">10:10AM</span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <!-- For Div: Scroll To Bottom  -->
+                <div id="chat-scroll-view"></div>
+              </div>
+              <!-- Chat Wrapper Body Ends -->
+
+              <!-- Chat Wrapper Footer Starts -->
+              <div
+                class="absolute bottom-[-0.5px] left-0 right-0 z-10 rounded-b-primary bg-white py-4 dark:bg-slate-800">
+                <form
+                  class="mx-4 flex h-[4.5rem] items-center rounded-primary border border-slate-200 shadow dark:border-slate-600">
+                  <input
+                    class="h-full w-full border-transparent bg-transparent px-4 text-sm text-slate-700 placeholder:text-slate-500 focus:border-transparent focus:ring-0 dark:text-slate-300 dark:placeholder:text-slate-400"
+                    type="text" placeholder="Type your message here" />
+                  <div class="flex items-center gap-x-4 px-4">
+                    <button type="button"
+                      class="text-slate-500 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-primary-500 dark:focus:text-primary-500">
+                      <i width="20" height="20" data-feather="mic"></i>
+                    </button>
+                    <div class="flex">
+                      <button id="btn-upload-media" type="button"
+                        class="text-slate-500 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-primary-500 dark:focus:text-primary-500">
+                        <i width="20" height="20" data-feather="image"></i>
+                      </button>
+                      <input class="sr-only" type="file" id="input-upload-media" />
+                    </div>
+                    <button type="button" class="btn btn-sm btn-primary">
+                      <i width="18" height="18" data-feather="send"></i>
+                      <span class="hidden md:inline-block">Send</span>
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <!-- Chat Wrapper Footer Ends -->
+            </div>
+            <!-- Chat Wrapper Ends -->
+
+            <!-- Chat Overlay Starts -->
+            <div id="chat-overlay"
+              class="absolute inset-0 z-10 hidden h-full w-full bg-black bg-opacity-0 transition-colors duration-300 ease-in-out xl:hidden">
+            </div>
+            <!-- Email Overlay Ends -->
+          </div>
+          <!-- Chat Ends -->
+        </main>
+        <!-- Main Content Ends -->
+
+        <!-- Footer Starts -->
+        <footer class="footer">
+          <p class="text-sm">
+            Copyright © 2023
+            <a class="text-primary-500 hover:underline" href="https://getadmintoolkit.com" target="_blank">
+              Admin Toolkit
+            </a>
+          </p>
+
+          <p class="flex items-center gap-1 text-sm">
+            Hand-crafted &amp; Made with
+            <i class="text-danger-500" data-feather="heart" height="1em" width="1em"></i>
+          </p>
+        </footer>
+        <!-- Footer Ends -->
+      </div>
+      <!-- Page Content Ends -->
+    </div>
+    <!-- Wrapper Ends -->
+
+    <!-- Search Modal Start -->
+    <div class="modal" id="search-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header px-4 sm:px-6">
+            <div class="group flex items-center">
+              <i data-feather="search"
+                class="text-slate-500 group-focus-within:text-slate-600 dark:text-slate-400 dark:group-focus-within:text-slate-300"></i>
+              <input type="text"
+                class="w-full border-none bg-transparent text-sm text-slate-700 outline-none placeholder:text-slate-400 focus:ring-0 dark:text-slate-200"
+                placeholder="Search" />
+              <button
+                class="rounded-primary bg-slate-100 px-2 py-1 text-[10px] font-semibold text-slate-600 hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600"
+                data-dismiss="modal">
+                ESC
+              </button>
+            </div>
+          </div>
+          <div class="modal-body max-h-[600px] px-4 py-6 sm:px-6"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Search Modal Ends -->
+  </div>
+
+
+</body>
+
+</html>

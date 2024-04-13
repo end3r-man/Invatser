@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/svg/logo-small.svg" type="image/svg+xml" />
+  <title>Avatar - Admin Toolkit</title>
+  <meta name="description"
+    content="Admin Toolkit is a modern admin dashboard template based on Tailwindcss. It comes with a variety of useful ui components and pre-built pages" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet" />
+
+  <script>
+    if (
+      localStorage.getItem('theme') === 'dark' ||
+      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+  <script type="module" crossorigin src="/js/app.js"></script>
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+
+<body>
+  <div id="app">
+    <!-- Sidebar Starts -->
+    <aside class="sidebar">
+      <!-- Sidebar Header Starts -->
+      <a href="/">
+        <div class="sidebar-header">
+          <div class="sidebar-logo-icon">
+            <img src="/svg/logo-small.svg" alt="logo" class="h-[45px]" />
+          </div>
+
+          <div class="sidebar-logo-text">
+            <h1 class="flex text-xl">
+              <span class="font-bold text-slate-800 dark:text-slate-200"> Admin </span>
+              <span class="font-semibold text-primary-500">Toolkit</span>
+            </h1>
+
+            <p class="whitespace-nowrap text-xs text-slate-400">Simple &amp; Customizable</p>
+          </div>
+        </div>
+      </a>
+      <!-- Sidebar Header Ends -->
+
+      <!-- Sidebar Menu Starts -->
+      <ul class="sidebar-content">
+        <!-- Dashboard -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="home"></i>
+            </span>
+            <span class="sidebar-menu-text">Dashboard</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="/" class="sidebar-submenu-item"> Analytics </a>
+            </li>
+            <li>
+              <a href="./ecommerce.html" class="sidebar-submenu-item">Ecommerce</a>
+            </li>
+          </ul>
+        </li>
+
+        <div class="sidebar-menu-header">Applications</div>
+
+        <!-- Email -->
+        <li>
+          <a href="./email.html" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="mail"></i>
+            </span>
+            <span class="sidebar-menu-text">Email</span>
+          </a>
+        </li>
+        <!-- Chat -->
+        <li>
+          <a href="./chat.html" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="message-square"></i>
+            </span>
+            <span class="sidebar-menu-text">Chat</span>
+          </a>
+        </li>
+        <!-- Calendar -->
+        <li>
+          <a href="./calendar.html" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="calendar"></i>
+            </span>
+            <span class="sidebar-menu-text">Calendar</span>
+          </a>
+        </li>
+        <!-- Invoice -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="file-text"></i>
+            </span>
+            <span class="sidebar-menu-text">Invoice</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./invoice-create.html" class="sidebar-submenu-item"> Create </a>
+            </li>
+
+            <li>
+              <a href="./invoice-details.html" class="sidebar-submenu-item"> Details </a>
+            </li>
+          </ul>
+        </li>
+        <!-- ecommnerce -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="shopping-bag"></i>
+            </span>
+            <span class="sidebar-menu-text">Ecommerce</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./product-list.html" class="sidebar-submenu-item"> Product List </a>
+            </li>
+
+            <li>
+              <a href="./product-edit.html" class="sidebar-submenu-item"> Product Edit </a>
+            </li>
+            <li>
+              <a href="./order-list.html" class="sidebar-submenu-item"> Order List </a>
+            </li>
+            <li>
+              <a href="./order-details.html" class="sidebar-submenu-item"> Order Details </a>
+            </li>
+            <li>
+              <a href="./customer-list.html" class="sidebar-submenu-item"> Customer List </a>
+            </li>
+          </ul>
+        </li>
+        <!-- Users -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="users"></i>
+            </span>
+            <span class="sidebar-menu-text">Users</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./user-list.html" class="sidebar-submenu-item">List</a>
+            </li>
+            <li>
+              <a href="./profile.html" class="sidebar-submenu-item"> Profile </a>
+            </li>
+          </ul>
+        </li>
+        <!--  Commponents  -->
+        <div class="sidebar-menu-header">Components</div>
+        <!-- Common  -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu active">
+            <span class="sidebar-menu-icon">
+              <i data-feather="box"></i>
+            </span>
+            <span class="sidebar-menu-text">Common</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./accordion.html" class="sidebar-submenu-item"> Accordion </a>
+            </li>
+            <li>
+              <a href="./alert.html" class="sidebar-submenu-item">Alert</a>
+            </li>
+            <li>
+              <a href="./avatar.html" class="sidebar-submenu-item active"> Avatar </a>
+            </li>
+            <li>
+              <a href="./badge.html" class="sidebar-submenu-item">Badge</a>
+            </li>
+            <li>
+              <a href="./button.html" class="sidebar-submenu-item">Button</a>
+            </li>
+            <li>
+              <a href="./card.html" class="sidebar-submenu-item">Card</a>
+            </li>
+            <li>
+              <a href="./carousel.html" class="sidebar-submenu-item"> Carousel </a>
+            </li>
+
+            <li>
+              <a href="./drawer.html" class="sidebar-submenu-item">Drawer</a>
+            </li>
+            <li>
+              <a href="./dropdown.html" class="sidebar-submenu-item"> Dropdown </a>
+            </li>
+            <li>
+              <a href="./list-group.html" class="sidebar-submenu-item"> List Group </a>
+            </li>
+            <li>
+              <a href="./modal.html" class="sidebar-submenu-item">Modal</a>
+            </li>
+            <li>
+              <a href="./pagination.html" class="sidebar-submenu-item"> Pagination </a>
+            </li>
+            <li>
+              <a href="./progress-bar.html" class="sidebar-submenu-item"> Progress </a>
+            </li>
+
+            <li>
+              <a href="./skeleton.html" class="sidebar-submenu-item"> Skeleton </a>
+            </li>
+            <li>
+              <a href="./spinner.html" class="sidebar-submenu-item"> Spinner </a>
+            </li>
+            <li>
+              <a href="./tabs.html" class="sidebar-submenu-item">Tab</a>
+            </li>
+            <li>
+              <a href="./toast.html" class="sidebar-submenu-item">Toast</a>
+            </li>
+            <li>
+              <a href="./tooltip.html" class="sidebar-submenu-item"> Tooltip </a>
+            </li>
+          </ul>
+        </li>
+        <!-- Forms  -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="edit"></i>
+            </span>
+            <span class="sidebar-menu-text">Forms</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./input.html" class="sidebar-submenu-item">Input</a>
+            </li>
+            <li>
+              <a href="./input-group.html" class="sidebar-submenu-item"> Input Group </a>
+            </li>
+            <li>
+              <a href="./textarea.html" class="sidebar-submenu-item"> Textarea </a>
+            </li>
+            <li>
+              <a href="./checkbox.html" class="sidebar-submenu-item"> Checkbox </a>
+            </li>
+            <li>
+              <a href="./radio.html" class="sidebar-submenu-item">Radio</a>
+            </li>
+            <li>
+              <a href="./toggle.html" class="sidebar-submenu-item">Toggle</a>
+            </li>
+            <li>
+              <a href="./select.html" class="sidebar-submenu-item">Select</a>
+            </li>
+
+            <li>
+              <a href="./datepicker.html" class="sidebar-submenu-item"> Datepicker </a>
+            </li>
+            <li>
+              <a href="./editor.html" class="sidebar-submenu-item">Editor</a>
+            </li>
+            <li>
+              <a href="./uploader.html" class="sidebar-submenu-item"> Uploader </a>
+            </li>
+            <li>
+              <a href="./form-layout.html" class="sidebar-submenu-item">Layout</a>
+            </li>
+            <li>
+              <a href="./form-validation.html" class="sidebar-submenu-item"> Validation </a>
+            </li>
+          </ul>
+        </li>
+        <!-- Tables  -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="list"></i>
+            </span>
+            <span class="sidebar-menu-text">Tables</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./basic-table.html" class="sidebar-submenu-item"> Basic Table </a>
+            </li>
+            <li>
+              <a href="./data-table.html" class="sidebar-submenu-item"> Data Table </a>
+            </li>
+          </ul>
+        </li>
+        <!-- Charts  -->
+        <li>
+          <a href="./chart.html" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="pie-chart"></i>
+            </span>
+            <span class="sidebar-menu-text">Charts</span>
+          </a>
+        </li>
+        <!-- Icons-->
+        <li>
+          <a href="./icons.html" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="italic"></i>
+            </span>
+            <span class="sidebar-menu-text">Icons</span>
+          </a>
+        </li>
+        <!-- Typography-->
+        <li>
+          <a href="./typography.html" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="type"></i>
+            </span>
+            <span class="sidebar-menu-text">Typography</span>
+          </a>
+        </li>
+        <!--  Pages  -->
+        <div class="sidebar-menu-header">Pages</div>
+        <!-- Authentication  -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="lock"></i>
+            </span>
+            <span class="sidebar-menu-text">Authentication</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./login.html" class="sidebar-submenu-item">Login</a>
+            </li>
+            <li>
+              <a href="./register.html" class="sidebar-submenu-item"> Register </a>
+            </li>
+            <li>
+              <a href="./recover-password.html" class="sidebar-submenu-item"> Forgot Password </a>
+            </li>
+            <li>
+              <a href="./reset-password.html" class="sidebar-submenu-item"> Reset Password </a>
+            </li>
+          </ul>
+        </li>
+        <!-- Miscellaneous  -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="grid"></i>
+            </span>
+            <span class="sidebar-menu-text">Miscellaneous</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./starter.html" class="sidebar-submenu-item"> Starter Page </a>
+            </li>
+            <li>
+              <a href="./comming-soon.html" class="sidebar-submenu-item"> Coming Soon </a>
+            </li>
+            <li>
+              <a href="./maintenance.html" class="sidebar-submenu-item"> Maintenance </a>
+            </li>
+            <li>
+              <a href="./404-error.html" class="sidebar-submenu-item"> Error 404 </a>
+            </li>
+            <li>
+              <a href="./500-error.html" class="sidebar-submenu-item"> Error 500 </a>
+            </li>
+            <li>
+              <a href="./not-authorized.html" class="sidebar-submenu-item"> Not Authorized </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <!-- Sidebar Menu Ends -->
+    </aside>
+    <!-- Sidebar Ends -->
+
+    <!-- Wrapper Starts -->
+    <div class="wrapper">
+      <!-- Header Starts -->
+      <header class="header">
+        <div class="container-fluid flex items-center justify-between">
+          <!-- Sidebar Toggle & Search Starts -->
+          <div class="flex items-center space-x-6">
+            <button class="sidebar-toggle">
+              <span class="flex space-x-4">
+                <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="22" width="22"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16">
+                  </path>
+                </svg>
+              </span>
+            </button>
+
+            <!-- Mobile Search Starts -->
+            <div class="sm:hidden">
+              <button type="button" data-trigger="search-modal"
+                class="flex items-center justify-center rounded-full text-slate-500 transition-colors duration-150 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300">
+                <i width="22" height="22" data-feather="search"></i>
+              </button>
+            </div>
+            <!-- Mobile Search Ends -->
+
+            <!-- Searchbar Start -->
+            <button type="button" data-trigger="search-modal"
+              class="group hidden h-10 w-72 items-center overflow-hidden rounded-primary bg-slate-100 px-3 shadow-sm dark:border-transparent dark:bg-slate-700 sm:flex">
+              <i class="text-slate-400" width="1em" height="1em" data-feather="search"></i>
+              <span class="ml-2 text-sm text-slate-400">Search</span>
+            </button>
+            <!-- Searchbar Ends -->
+          </div>
+          <!-- Sidebar Toggle & Search Ends -->
+
+          <!-- Header Options Starts -->
+          <div class="flex items-center">
+            <!-- Language Dropdown Starts -->
+            <div class="dropdown" data-strategy="absolute">
+              <div class="dropdown-toggle px-3">
+                <button type="button"
+                  class="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-slate-700 focus:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-slate-300">
+                  <span class="fi fi-gb"></span>
+                  <span class="hidden font-medium md:inline-block">English</span>
+                  <span class="inline-block font-medium md:hidden">EN</span>
+                </button>
+              </div>
+
+              <div class="dropdown-content mt-3 w-40">
+                <ul class="dropdown-list">
+                  <li class="dropdown-list-item">
+                    <button class="dropdown-btn" type="button">
+                      <span class="fi fi-gb"></span>
+                      <span class="">English</span>
+                    </button>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <button class="dropdown-btn" type="button">
+                      <span class="fi fi-de"></span>
+                      <span class="">German</span>
+                    </button>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <button class="dropdown-btn" type="button">
+                      <span class="fi fi-gf"></span>
+                      <span class="">French</span>
+                    </button>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <button class="dropdown-btn" type="button">
+                      <span class="fi fi-sa"></span>
+                      <span class="">Arabic</span>
+                    </button>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <button class="dropdown-btn" type="button">
+                      <span class="fi fi-cn"></span>
+                      <span class="">Chinese</span>
+                    </button>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <button class="dropdown-btn" type="button">
+                      <span class="fi fi-bd"></span>
+                      <span class="">Bangla</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Language Dropdown Ends -->
+
+            <!-- Dark Mood Toggle Starts -->
+            <div class="dropdown" data-strategy="absolute" id="theme-switcher-dropdown">
+              <button
+                class="dropdown-toggle px-3 text-slate-500 hover:text-slate-700 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500"
+                type="button">
+                <i class="hidden dark:block" width="24" height="24" data-feather="moon"></i>
+                <i class="block dark:hidden" width="24" height="24" data-feather="sun"></i>
+              </button>
+
+              <div class="dropdown-content mt-3 w-36">
+                <ul class="dropdown-list">
+                  <li class="dropdown-list-item">
+                    <button type="buttton" class="dropdown-btn" data-theme-mode="light">
+                      <i width="16" height="16" data-feather="sun"></i>
+                      <span>Light</span>
+                    </button>
+                  </li>
+
+                  <li class="dropdown-list-item">
+                    <button type="buttton" class="dropdown-btn" data-theme-mode="dark">
+                      <i width="16" height="16" data-feather="moon"></i>
+                      <span>Dark</span>
+                    </button>
+                  </li>
+
+                  <li class="dropdown-list-item">
+                    <button type="buttton" class="dropdown-btn" data-theme-mode="system">
+                      <i width="16" height="16" data-feather="monitor"></i>
+                      <span>System</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Dark Mood Toggle Ends -->
+
+            <!-- Notification Dropdown Starts -->
+            <div class="dropdown -mt-0.5" data-strategy="absolute">
+              <div class="dropdown-toggle px-3">
+                <button
+                  class="relative mt-1 flex items-center justify-center rounded-full text-slate-500 transition-colors duration-150 hover:text-slate-700 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500">
+                  <i width="24" height="24" data-feather="bell"></i>
+                  <span
+                    class="absolute -right-1 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-danger-500 text-[11px] text-slate-200">
+                    5
+                  </span>
+                </button>
+              </div>
+
+              <div class="dropdown-content mt-3 w-[17.5rem] divide-y dark:divide-slate-700 sm:w-80">
+                <div class="flex items-center justify-between px-4 py-4">
+                  <h6 class="text-slate-800 dark:text-slate-300">Notifications</h6>
+                  <button class="text-xs font-medium text-slate-600 hover:text-primary-500 dark:text-slate-300">
+                    Clear All
+                  </button>
+                </div>
+
+                <div class="h-80 w-full" data-simplebar>
+                  <ul>
+                    <li
+                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
+                      <div
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-500">
+                        <i data-feather="alert-circle" width="20" height="20"></i>
+                      </div>
+
+                      <div>
+                        <h6 class="text-sm font-normal">New order received</h6>
+                        <p class="text-xs text-slate-400">Order #1234 has been placed</p>
+                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                          <i data-feather="clock" width="1em" height="1em"></i>
+                          <span>2 min ago</span>
+                        </p>
+                      </div>
+                    </li>
+
+                    <li
+                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
+                      <div
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-yellow-100 text-yellow-500">
+                        <i data-feather="alert-triangle" width="20" height="20"></i>
+                      </div>
+
+                      <div>
+                        <h6 class="text-sm font-normal">High CPU usage</h6>
+                        <p class="text-xs text-slate-400">CPU usage is at 92%</p>
+                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                          <i data-feather="clock" width="1em" height="1em"></i>
+                          <span>5 min ago</span>
+                        </p>
+                      </div>
+                    </li>
+
+                    <li
+                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
+                      <div
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-500">
+                        <i data-feather="check-circle" width="20" height="20"></i>
+                      </div>
+
+                      <div>
+                        <h6 class="text-sm font-normal">Your order has been shipped</h6>
+                        <p class="text-xs text-slate-400">Order #1234 has been shipped</p>
+                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                          <i data-feather="clock" width="1em" height="1em"></i>
+                          <span>10 min ago</span>
+                        </p>
+                      </div>
+                    </li>
+
+                    <li
+                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
+                      <div
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-danger-100 text-danger-500">
+                        <i data-feather="x-circle" width="20" height="20"></i>
+                      </div>
+
+                      <div>
+                        <h6 class="text-sm font-normal">Something went wrong</h6>
+                        <p class="text-xs text-slate-400">Order #1234 has been placed</p>
+                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                          <i data-feather="clock" width="1em" height="1em"></i>
+                          <span>1 hour ago</span>
+                        </p>
+                      </div>
+                    </li>
+
+                    <li
+                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
+                      <div
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-500">
+                        <i data-feather="check-circle" width="20" height="20"></i>
+                      </div>
+
+                      <div>
+                        <h6 class="text-sm font-normal">Your order has been shipped</h6>
+                        <p class="text-xs text-slate-400">Order #1234 has been shipped</p>
+                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                          <i data-feather="clock" width="1em" height="1em"></i>
+                          <span>10 min ago</span>
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="px-4 py-2">
+                  <button class="btn btn-primary-plain btn-sm w-full" type="button">
+                    <span>View More</span>
+                    <i data-feather="arrow-right" width="1rem" height="1rem"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Notification Dropdown Ends -->
+
+            <!-- Profile Dropdown Starts -->
+            <div class="dropdown" data-strategy="absolute">
+              <div class="dropdown-toggle pl-3">
+                <button class="group relative flex items-center gap-x-1.5" type="button">
+                  <div class="avatar avatar-circle avatar-indicator avatar-indicator-online">
+                    <img class="avatar-img group-focus-within:ring group-focus-within:ring-primary-500"
+                      src="/images/avatar1.png" alt="Avatar 1" />
+                  </div>
+                </button>
+              </div>
+
+              <div class="dropdown-content mt-1 w-56 divide-y dark:divide-slate-600">
+                <div class="px-4 py-3">
+                  <p class="text-sm">Signed in as</p>
+                  <p class="truncate text-sm font-medium">admin@example.com</p>
+                </div>
+                <div class="py-1">
+                  <a href="javascript:void(0)" class="dropdown-link">
+                    <i width="18" height="18" data-feather="user" class="text-slate-500"></i>
+                    <span>Profile</span>
+                  </a>
+                  <a href="javascript:void(0)" class="dropdown-link">
+                    <i width="18" height="18" data-feather="settings" class="text-slate-500"></i>
+                    <span>Settings</span>
+                  </a>
+                  <a href="javascript:void(0)" class="dropdown-link">
+                    <i width="18" height="18" data-feather="help-circle" class="text-slate-500"></i>
+                    <span>Support</span>
+                  </a>
+                </div>
+                <div class="py-1">
+                  <form method="POST" action="#">
+                    <button type="submit" class="dropdown-btn">
+                      <i width="18" height="18" data-feather="log-out" class="text-slate-500"></i>
+                      <span>Sign out</span>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-- Profile Dropdown Ends -->
+          </div>
+          <!-- Header Options Ends -->
+        </div>
+      </header>
+      <!-- Header Ends -->
+
+      <!-- Page Content Starts -->
+      <div class="content">
+        <!-- Main Content Starts -->
+        <main class="container flex-grow p-4 sm:p-6">
+          <!-- Page Title Starts -->
+          <div class="mb-6 flex flex-col justify-between gap-y-1 sm:flex-row sm:gap-y-0">
+            <h5>Avatar</h5>
+
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="/">Home</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="#">Components</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="#">Avatar</a>
+              </li>
+            </ol>
+          </div>
+          <!-- Page Title Ends -->
+
+          <!-- Avatar Starts -->
+          <div class="space-y-6">
+            <!-- Card: Avatar Shape Starts -->
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Avatar Shapes</h4>
+
+                <p class="card-subtitle">
+                  Use <code>avatar</code> class to style an avatar. Your can also use the following classes
+                  <code>avatar-square</code>, <code>avatar-rounded</code>, <code>avatar-circle</code> to change the
+                  shape of the avatar.
+                </p>
+
+                <div class="code-viewer mt-4">
+                  <div class="flex flex-wrap items-center gap-6">
+                    <div class="avatar avatar-square">
+                      <img class="avatar-img" src="/images/avatar1.png" alt="Avatar 1" />
+                    </div>
+                    <div class="avatar avatar-rounded">
+                      <img class="avatar-img" src="/images/avatar2.png" alt="Avatar 2" />
+                    </div>
+                    <div class="avatar avatar-circle">
+                      <img class="avatar-img" src="/images/avatar3.png" alt="Avatar 3" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card: Avatar Shape Ends -->
+
+            <!-- Card: Avatar Size Starts -->
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Avatar Sizes</h4>
+
+                <p class="card-subtitle">
+                  Use
+                  <code>avatar-sm</code>
+                  ,
+                  <code>avatar-md</code>
+                  and
+                  <code>avatar-lg</code>
+                  to size avatars. Default is
+                  <code>avatar-md</code>.
+                </p>
+
+                <div class="code-viewer mt-4">
+                  <div class="flex flex-wrap items-center gap-6">
+                    <div class="avatar avatar-circle avatar-xs">
+                      <img class="avatar-img" src="/images/avatar1.png" alt="Avatar 1" />
+                    </div>
+                    <div class="avatar avatar-circle avatar-sm">
+                      <img class="avatar-img" src="/images/avatar2.png" alt="Avatar 2" />
+                    </div>
+                    <div class="avatar avatar-circle avatar-md">
+                      <img class="avatar-img" src="/images/avatar3.png" alt="Avatar 3" />
+                    </div>
+                    <div class="avatar avatar-circle avatar-lg">
+                      <img class="avatar-img" src="/images/avatar4.png" alt="Avatar 4" />
+                    </div>
+                    <div class="avatar avatar-circle avatar-xl">
+                      <img class="avatar-img"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDYuMC1jMDAyIDc5LjE2NDM2MCwgMjAyMC8wMi8xMy0wMTowNzoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIxLjEgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjIzMDI1RUZBQ0YwRDExRUQ5NThFOUFFOUVBRjFEOTc5IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjIzMDI1RUZCQ0YwRDExRUQ5NThFOUFFOUVBRjFEOTc5Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MjMwMjVFRjhDRjBEMTFFRDk1OEU5QUU5RUFGMUQ5NzkiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MjMwMjVFRjlDRjBEMTFFRDk1OEU5QUU5RUFGMUQ5NzkiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz49cjvrAAALx0lEQVR42sRaa2wc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"
+                        alt="Avatar 5" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card: Avatar Size Ends -->
+
+            <!-- Card: Avatar With Placeholder Icon Starts -->
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Avatar With Placeholder Icons</h4>
+
+                <p class="card-subtitle">Example of avatar with placeholder icons.</p>
+
+                <div class="code-viewer mt-4">
+                  <div class="flex flex-wrap items-center gap-6">
+                    <div class="avatar avatar-square">
+                      <span class="avatar-icon">
+                        <i data-feather="user"></i>
+                      </span>
+                    </div>
+                    <div class="avatar avatar-rounded">
+                      <span class="avatar-icon">
+                        <i data-feather="user"></i>
+                      </span>
+                    </div>
+                    <div class="avatar avatar-circle">
+                      <span class="avatar-icon">
+                        <i data-feather="user"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card: Avatar With Placeholder Icon Ends -->
+
+            <!-- Card: Avatar With Placeholder Text Starts -->
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Avatar With Placeholder Text</h4>
+
+                <p class="card-subtitle">Example of avatar with placeholder text.</p>
+
+                <div class="code-viewer mt-4">
+                  <div class="flex flex-wrap items-center gap-6">
+                    <div class="avatar avatar-square">
+                      <span class="avatar-text">
+                        <span>AB</span>
+                      </span>
+                    </div>
+                    <div class="avatar avatar-rounded">
+                      <span class="avatar-text">
+                        <span>AB</span>
+                      </span>
+                    </div>
+                    <div class="avatar avatar-circle">
+                      <span class="avatar-text">
+                        <span>AB</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card: Avatar With Placeholder Text Ends -->
+
+            <!-- Card: Avatar With Theme Color Starts -->
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Avatar With Theme Color</h4>
+
+                <p class="card-subtitle">
+                  Use any contextual color class <code>avatar-*</code> to change the background color of the avatar.
+                </p>
+
+                <div class="code-viewer mt-4">
+                  <div class="flex flex-col justify-center gap-6">
+                    <!-- Icon Avatars -->
+                    <div class="flex flex-wrap items-center gap-6">
+                      <div class="avatar avatar-circle avatar-primary">
+                        <span class="avatar-icon">
+                          <i data-feather="user"></i>
+                        </span>
+                      </div>
+                      <div class="avatar avatar-circle avatar-secondary">
+                        <span class="avatar-icon">
+                          <i data-feather="user"></i>
+                        </span>
+                      </div>
+                      <div class="avatar avatar-circle avatar-success">
+                        <span class="avatar-icon">
+                          <i data-feather="user"></i>
+                        </span>
+                      </div>
+                      <div class="avatar avatar-circle avatar-danger">
+                        <span class="avatar-icon">
+                          <i data-feather="user"></i>
+                        </span>
+                      </div>
+                      <div class="avatar avatar-circle avatar-warning">
+                        <span class="avatar-icon">
+                          <i data-feather="user"></i>
+                        </span>
+                      </div>
+                      <div class="avatar avatar-circle avatar-info">
+                        <span class="avatar-icon">
+                          <i data-feather="user"></i>
+                        </span>
+                      </div>
+                      <div class="avatar avatar-circle avatar-dark">
+                        <span class="avatar-icon">
+                          <i data-feather="user"></i>
+                        </span>
+                      </div>
+                    </div>
+                    <!-- Text Avatars -->
+                    <div class="flex flex-wrap items-center gap-6">
+                      <div class="avatar avatar-circle avatar-primary">
+                        <span class="avatar-text">
+                          <span>AB</span>
+                        </span>
+                      </div>
+                      <div class="avatar avatar-circle avatar-secondary">
+                        <span class="avatar-text">
+                          <span>AB</span>
+                        </span>
+                      </div>
+                      <div class="avatar avatar-circle avatar-success">
+                        <span class="avatar-text">
+                          <span>AB</span>
+                        </span>
+                      </div>
+                      <div class="avatar avatar-circle avatar-danger">
+                        <span class="avatar-text">
+                          <span>AB</span>
+                        </span>
+                      </div>
+                      <div class="avatar avatar-circle avatar-warning">
+                        <span class="avatar-text">
+                          <span>AB</span>
+                        </span>
+                      </div>
+                      <div class="avatar avatar-circle avatar-info">
+                        <span class="avatar-text">
+                          <span>AB</span>
+                        </span>
+                      </div>
+                      <div class="avatar avatar-circle avatar-dark">
+                        <span class="avatar-text">
+                          <span>AB</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card: Avatar With Theme Color Ends -->
+
+            <!-- Card: Avatar With Status Indicator Starts -->
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Avatar With Status Indicator</h4>
+
+                <p class="card-subtitle">Example of avatar with status indicator.</p>
+
+                <div class="code-viewer mt-4">
+                  <div class="flex gap-6">
+                    <div class="avatar avatar-circle avatar-indicator avatar-indicator-online">
+                      <img class="avatar-img" src="/images/avatar1.png" alt="Avatar 1" />
+                    </div>
+                    <div class="avatar avatar-circle avatar-indicator avatar-indicator-offline">
+                      <img class="avatar-img" src="/images/avatar2.png" alt="Avatar 2" />
+                    </div>
+                    <div class="avatar avatar-circle avatar-indicator avatar-indicator-top avatar-indicator-busy">
+                      <img class="avatar-img" src="/images/avatar3.png" alt="Avatar 3" />
+                    </div>
+                    <div class="avatar avatar-circle avatar-indicator avatar-indicator-top avatar-indicator-away">
+                      <img class="avatar-img" src="/images/avatar4.png" alt="Avatar 4" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card: Avatar With Status Indicator Ends -->
+
+            <!-- Card: Avatar Group Starts -->
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Avatar Group</h4>
+
+                <p class="card-subtitle">Use <code>avatar-group</code> to group avatars.</p>
+
+                <div class="code-viewer mt-4">
+                  <div class="avatar-group">
+                    <div class="avatar avatar-circle avatar-md">
+                      <img class="avatar-img" src="/images/avatar1.png" alt="Avatar 1" />
+                    </div>
+                    <div class="avatar avatar-circle avatar-md">
+                      <img class="avatar-img" src="/images/avatar2.png" alt="Avatar 2" />
+                    </div>
+                    <div class="avatar avatar-circle avatar-md">
+                      <img class="avatar-img" src="/images/avatar3.png" alt="Avatar 3" />
+                    </div>
+                    <div class="avatar avatar-circle avatar-md">
+                      <img class="avatar-img" src="/images/avatar4.png" alt="Avatar 4" />
+                    </div>
+                    <div class="avatar avatar-circle avatar-md">
+                      <img class="avatar-img"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDYuMC1jMDAyIDc5LjE2NDM2MCwgMjAyMC8wMi8xMy0wMTowNzoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIxLjEgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjIzMDI1RUZBQ0YwRDExRUQ5NThFOUFFOUVBRjFEOTc5IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjIzMDI1RUZCQ0YwRDExRUQ5NThFOUFFOUVBRjFEOTc5Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MjMwMjVFRjhDRjBEMTFFRDk1OEU5QUU5RUFGMUQ5NzkiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MjMwMjVFRjlDRjBEMTFFRDk1OEU5QUU5RUFGMUQ5NzkiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz49cjvrAAALx0lEQVR42sRaa2wc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"
+                        alt="Avatar 5" />
+                    </div>
+                    <div class="avatar avatar-circle">
+                      <span class="avatar-text">
+                        <span>2+</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card: Avatar Group Ends -->
+          </div>
+          <!-- Avatar Ends -->
+        </main>
+        <!-- Main Content Ends -->
+
+        <!-- Footer Starts -->
+        <footer class="footer">
+          <p class="text-sm">
+            Copyright © 2023
+            <a class="text-primary-500 hover:underline" href="https://getadmintoolkit.com" target="_blank">
+              Admin Toolkit
+            </a>
+          </p>
+
+          <p class="flex items-center gap-1 text-sm">
+            Hand-crafted &amp; Made with
+            <i class="text-danger-500" data-feather="heart" height="1em" width="1em"></i>
+          </p>
+        </footer>
+        <!-- Footer Ends -->
+      </div>
+      <!-- Page Content Ends -->
+    </div>
+    <!-- Wrapper Ends -->
+    <!-- Search Modal Start -->
+    <div class="modal" id="search-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header px-4 sm:px-6">
+            <div class="group flex items-center">
+              <i data-feather="search"
+                class="text-slate-500 group-focus-within:text-slate-600 dark:text-slate-400 dark:group-focus-within:text-slate-300"></i>
+              <input type="text"
+                class="w-full border-none bg-transparent text-sm text-slate-700 outline-none placeholder:text-slate-400 focus:ring-0 dark:text-slate-200"
+                placeholder="Search" />
+              <button
+                class="rounded-primary bg-slate-100 px-2 py-1 text-[10px] font-semibold text-slate-600 hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600"
+                data-dismiss="modal">
+                ESC
+              </button>
+            </div>
+          </div>
+          <div class="modal-body max-h-[600px] px-4 py-6 sm:px-6"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Search Modal Ends -->
+  </div>
+
+</body>
+
+</html>

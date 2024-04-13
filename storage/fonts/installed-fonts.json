@@ -1,0 +1,22 @@
+{
+    "noto sans": {
+        "100_italic": "\/home\/enderman\/Documents\/laravel\/invatser\/storage\/fonts\/noto_sans_100_italic_37dae1b3d3a25652ec53c487eb0723d9",
+        "200_italic": "\/home\/enderman\/Documents\/laravel\/invatser\/storage\/fonts\/noto_sans_200_italic_d434047342d7f47c5f0683dd619a0197",
+        "300_italic": "\/home\/enderman\/Documents\/laravel\/invatser\/storage\/fonts\/noto_sans_300_italic_d8996f3575f214970c4f701c83c359a5",
+        "italic": "\/home\/enderman\/Documents\/laravel\/invatser\/storage\/fonts\/noto_sans_italic_814c9c31dfffb17fbfbb4d4b8032dd08",
+        "500_italic": "\/home\/enderman\/Documents\/laravel\/invatser\/storage\/fonts\/noto_sans_500_italic_d798ab9e9d934de299a6c6325289dad6",
+        "600_italic": "\/home\/enderman\/Documents\/laravel\/invatser\/storage\/fonts\/noto_sans_600_italic_380400cd204c5affd0c7ad098d0b7942",
+        "bold_italic": "\/home\/enderman\/Documents\/laravel\/invatser\/storage\/fonts\/noto_sans_bold_italic_ed96b326ef7a54d2b45f0fdf958f6c8a",
+        "800_italic": "\/home\/enderman\/Documents\/laravel\/invatser\/storage\/fonts\/noto_sans_800_italic_17ca81c5839e027ec6a495b7e788a52e",
+        "900_italic": "\/home\/enderman\/Documents\/laravel\/invatser\/storage\/fonts\/noto_sans_900_italic_b75d55e2a575d77a88d00e18ec6af839",
+        "100": "\/home\/enderman\/Documents\/laravel\/invatser\/storage\/fonts\/noto_sans_100_645c26d3407f8a7839921c91e4cda62a",
+        "200": "\/home\/enderman\/Documents\/laravel\/invatser\/storage\/fonts\/noto_sans_200_e5037b81b099fef7de2913a6ae4da711",
+        "300": "\/home\/enderman\/Documents\/laravel\/invatser\/storage\/fonts\/noto_sans_300_84d7f647e3c7a2f3afa4ddbd39171721",
+        "normal": "\/home\/enderman\/Documents\/laravel\/invatser\/storage\/fonts\/noto_sans_normal_b3f5cddfd313100d76ebe4cb06deabfb",
+        "500": "\/home\/enderman\/Documents\/laravel\/invatser\/storage\/fonts\/noto_sans_500_ccccc44f93909eea9aa2b6984ff77dae",
+        "600": "\/home\/enderman\/Documents\/laravel\/invatser\/storage\/fonts\/noto_sans_600_2f9100ddb5885ff084cc554ed6fe2602",
+        "bold": "\/home\/enderman\/Documents\/laravel\/invatser\/storage\/fonts\/noto_sans_bold_595dc4c733528ac8b18fdc3b02b0bd1d",
+        "800": "\/home\/enderman\/Documents\/laravel\/invatser\/storage\/fonts\/noto_sans_800_424f8918135654188beebd1fe63b4b95",
+        "900": "noto_sans_900_27597c44c9b9e0371bb57d1bd8b6f6ea"
+    }
+}

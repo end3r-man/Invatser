@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/svg/logo-small.svg" type="image/svg+xml" />
+  <title>Order Details - Admin Toolkit</title>
+  <meta name="description"
+    content="Admin Toolkit is a modern admin dashboard template based on Tailwindcss. It comes with a variety of useful ui components and pre-built pages" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet" />
+
+  <script>
+    if (
+      localStorage.getItem('theme') === 'dark' ||
+      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+  <script type="module" crossorigin src="/js/app.js"></script>
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+
+<body>
+  <div id="app">
+    <!-- Sidebar Starts -->
+    <aside class="sidebar">
+      <!-- Sidebar Header Starts -->
+      <a href="/">
+        <div class="sidebar-header">
+          <div class="sidebar-logo-icon">
+            <img src="/svg/logo-small.svg" alt="logo" class="h-[45px]" />
+          </div>
+
+          <div class="sidebar-logo-text">
+            <h1 class="flex text-xl">
+              <span class="font-bold text-slate-800 dark:text-slate-200"> Admin </span>
+              <span class="font-semibold text-primary-500">Toolkit</span>
+            </h1>
+
+            <p class="whitespace-nowrap text-xs text-slate-400">Simple &amp; Customizable</p>
+          </div>
+        </div>
+      </a>
+      <!-- Sidebar Header Ends -->
+
+      <!-- Sidebar Menu Starts -->
+      <ul class="sidebar-content">
+        <!-- Dashboard -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="home"></i>
+            </span>
+            <span class="sidebar-menu-text">Dashboard</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="/" class="sidebar-submenu-item"> Analytics </a>
+            </li>
+            <li>
+              <a href="./ecommerce.html" class="sidebar-submenu-item">Ecommerce</a>
+            </li>
+          </ul>
+        </li>
+
+        <div class="sidebar-menu-header">Applications</div>
+
+        <!-- Email -->
+        <li>
+          <a href="./email.html" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="mail"></i>
+            </span>
+            <span class="sidebar-menu-text">Email</span>
+          </a>
+        </li>
+        <!-- Chat -->
+        <li>
+          <a href="./chat.html" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="message-square"></i>
+            </span>
+            <span class="sidebar-menu-text">Chat</span>
+          </a>
+        </li>
+        <!-- Calendar -->
+        <li>
+          <a href="./calendar.html" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="calendar"></i>
+            </span>
+            <span class="sidebar-menu-text">Calendar</span>
+          </a>
+        </li>
+        <!-- Invoice -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="file-text"></i>
+            </span>
+            <span class="sidebar-menu-text">Invoice</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./invoice-create.html" class="sidebar-submenu-item"> Create </a>
+            </li>
+
+            <li>
+              <a href="./invoice-details.html" class="sidebar-submenu-item"> Details </a>
+            </li>
+          </ul>
+        </li>
+        <!-- ecommnerce -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu active">
+            <span class="sidebar-menu-icon">
+              <i data-feather="shopping-bag"></i>
+            </span>
+            <span class="sidebar-menu-text">Ecommerce</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./product-list.html" class="sidebar-submenu-item"> Product List </a>
+            </li>
+            <li>
+              <a href="./product-edit.html" class="sidebar-submenu-item"> Product Edit </a>
+            </li>
+            <li>
+              <a href="./order-list.html" class="sidebar-submenu-item"> Order List </a>
+            </li>
+            <li>
+              <a href="./order-details.html" class="sidebar-submenu-item active"> Order Details </a>
+            </li>
+            <li>
+              <a href="./customer-list.html" class="sidebar-submenu-item"> Customer List </a>
+            </li>
+          </ul>
+        </li>
+        <!-- Users -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="users"></i>
+            </span>
+            <span class="sidebar-menu-text">Users</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./user-list.html" class="sidebar-submenu-item">List</a>
+            </li>
+            <li>
+              <a href="./profile.html" class="sidebar-submenu-item"> Profile </a>
+            </li>
+          </ul>
+        </li>
+        <!--  Commponents  -->
+        <div class="sidebar-menu-header">Components</div>
+        <!-- Common  -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="box"></i>
+            </span>
+            <span class="sidebar-menu-text">Common</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./accordion.html" class="sidebar-submenu-item"> Accordion </a>
+            </li>
+            <li>
+              <a href="./alert.html" class="sidebar-submenu-item">Alert</a>
+            </li>
+            <li>
+              <a href="./avatar.html" class="sidebar-submenu-item">Avatar</a>
+            </li>
+            <li>
+              <a href="./badge.html" class="sidebar-submenu-item">Badge</a>
+            </li>
+            <li>
+              <a href="./button.html" class="sidebar-submenu-item">Button</a>
+            </li>
+            <li>
+              <a href="./card.html" class="sidebar-submenu-item">Card</a>
+            </li>
+            <li>
+              <a href="./carousel.html" class="sidebar-submenu-item"> Carousel </a>
+            </li>
+
+            <li>
+              <a href="./drawer.html" class="sidebar-submenu-item">Drawer</a>
+            </li>
+            <li>
+              <a href="./dropdown.html" class="sidebar-submenu-item"> Dropdown </a>
+            </li>
+            <li>
+              <a href="./list-group.html" class="sidebar-submenu-item"> List Group </a>
+            </li>
+            <li>
+              <a href="./modal.html" class="sidebar-submenu-item">Modal</a>
+            </li>
+            <li>
+              <a href="./pagination.html" class="sidebar-submenu-item"> Pagination </a>
+            </li>
+            <li>
+              <a href="./progress-bar.html" class="sidebar-submenu-item"> Progress </a>
+            </li>
+            <li>
+              <a href="./skeleton.html" class="sidebar-submenu-item"> Skeleton </a>
+            </li>
+            <li>
+              <a href="./skeleton.html" class="sidebar-submenu-item"> Skeleton </a>
+            </li>
+            <li>
+              <a href="./spinner.html" class="sidebar-submenu-item"> Spinner </a>
+            </li>
+            <li>
+              <a href="./tabs.html" class="sidebar-submenu-item">Tab</a>
+            </li>
+            <li>
+              <a href="./toast.html" class="sidebar-submenu-item">Toast</a>
+            </li>
+            <li>
+              <a href="./tooltip.html" class="sidebar-submenu-item"> Tooltip </a>
+            </li>
+          </ul>
+        </li>
+        <!-- Forms  -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="edit"></i>
+            </span>
+            <span class="sidebar-menu-text">Forms</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./input.html" class="sidebar-submenu-item">Input</a>
+            </li>
+            <li>
+              <a href="./input-group.html" class="sidebar-submenu-item"> Input Group </a>
+            </li>
+            <li>
+              <a href="./textarea.html" class="sidebar-submenu-item"> Textarea </a>
+            </li>
+            <li>
+              <a href="./checkbox.html" class="sidebar-submenu-item"> Checkbox </a>
+            </li>
+            <li>
+              <a href="./radio.html" class="sidebar-submenu-item">Radio</a>
+            </li>
+            <li>
+              <a href="./toggle.html" class="sidebar-submenu-item">Toggle</a>
+            </li>
+            <li>
+              <a href="./select.html" class="sidebar-submenu-item">Select</a>
+            </li>
+
+            <li>
+              <a href="./datepicker.html" class="sidebar-submenu-item"> Datepicker </a>
+            </li>
+            <li>
+              <a href="./editor.html" class="sidebar-submenu-item">Editor</a>
+            </li>
+            <li>
+              <a href="./uploader.html" class="sidebar-submenu-item"> Uploader </a>
+            </li>
+            <li>
+              <a href="./form-layout.html" class="sidebar-submenu-item">Layout</a>
+            </li>
+            <li>
+              <a href="./form-validation.html" class="sidebar-submenu-item"> Validation </a>
+            </li>
+          </ul>
+        </li>
+        <!-- Tables  -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="list"></i>
+            </span>
+            <span class="sidebar-menu-text">Tables</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./basic-table.html" class="sidebar-submenu-item"> Basic Table </a>
+            </li>
+            <li>
+              <a href="./data-table.html" class="sidebar-submenu-item"> Data Table </a>
+            </li>
+          </ul>
+        </li>
+        <!-- Charts  -->
+        <li>
+          <a href="./chart.html" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="pie-chart"></i>
+            </span>
+            <span class="sidebar-menu-text">Charts</span>
+          </a>
+        </li>
+        <!-- Icons-->
+        <li>
+          <a href="./icons.html" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="italic"></i>
+            </span>
+            <span class="sidebar-menu-text">Icons</span>
+          </a>
+        </li>
+        <!-- Typography-->
+        <li>
+          <a href="./typography.html" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="type"></i>
+            </span>
+            <span class="sidebar-menu-text">Typography</span>
+          </a>
+        </li>
+        <!--  Pages  -->
+        <div class="sidebar-menu-header">Pages</div>
+        <!-- Authentication  -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="lock"></i>
+            </span>
+            <span class="sidebar-menu-text">Authentication</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./login.html" class="sidebar-submenu-item">Login</a>
+            </li>
+            <li>
+              <a href="./register.html" class="sidebar-submenu-item"> Register </a>
+            </li>
+            <li>
+              <a href="./recover-password.html" class="sidebar-submenu-item"> Forgot Password </a>
+            </li>
+            <li>
+              <a href="./reset-password.html" class="sidebar-submenu-item"> Reset Password </a>
+            </li>
+          </ul>
+        </li>
+        <!-- Miscellaneous  -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="grid"></i>
+            </span>
+            <span class="sidebar-menu-text">Miscellaneous</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./starter.html" class="sidebar-submenu-item"> Starter Page </a>
+            </li>
+            <li>
+              <a href="./comming-soon.html" class="sidebar-submenu-item"> Coming Soon </a>
+            </li>
+            <li>
+              <a href="./maintenance.html" class="sidebar-submenu-item"> Maintenance </a>
+            </li>
+            <li>
+              <a href="./404-error.html" class="sidebar-submenu-item"> Error 404 </a>
+            </li>
+            <li>
+              <a href="./500-error.html" class="sidebar-submenu-item"> Error 500 </a>
+            </li>
+            <li>
+              <a href="./not-authorized.html" class="sidebar-submenu-item"> Not Authorized </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <!-- Sidebar Menu Ends -->
+    </aside>
+    <!-- Sidebar Ends -->
+
+    <!-- Wrapper Starts -->
+    <div class="wrapper">
+      <!-- Header Starts -->
+      <header class="header">
+        <div class="container-fluid flex items-center justify-between">
+          <!-- Sidebar Toggle & Search Starts -->
+          <div class="flex items-center space-x-6">
+            <button class="sidebar-toggle">
+              <span class="flex space-x-4">
+                <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="22" width="22"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16">
+                  </path>
+                </svg>
+              </span>
+            </button>
+
+            <!-- Mobile Search Starts -->
+            <div class="sm:hidden">
+              <button type="button" data-trigger="search-modal"
+                class="flex items-center justify-center rounded-full text-slate-500 transition-colors duration-150 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300">
+                <i width="22" height="22" data-feather="search"></i>
+              </button>
+            </div>
+            <!-- Mobile Search Ends -->
+
+            <!-- Searchbar Start -->
+            <button type="button" data-trigger="search-modal"
+              class="group hidden h-10 w-72 items-center overflow-hidden rounded-primary bg-slate-100 px-3 shadow-sm dark:border-transparent dark:bg-slate-700 sm:flex">
+              <i class="text-slate-400" width="1em" height="1em" data-feather="search"></i>
+              <span class="ml-2 text-sm text-slate-400">Search</span>
+            </button>
+            <!-- Searchbar Ends -->
+          </div>
+          <!-- Sidebar Toggle & Search Ends -->
+
+          <!-- Header Options Starts -->
+          <div class="flex items-center">
+            <!-- Language Dropdown Starts -->
+            <div class="dropdown" data-strategy="absolute">
+              <div class="dropdown-toggle px-3">
+                <button type="button"
+                  class="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-slate-700 focus:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-slate-300">
+                  <span class="fi fi-gb"></span>
+                  <span class="hidden font-medium md:inline-block">English</span>
+                  <span class="inline-block font-medium md:hidden">EN</span>
+                </button>
+              </div>
+
+              <div class="dropdown-content mt-3 w-40">
+                <ul class="dropdown-list">
+                  <li class="dropdown-list-item">
+                    <button class="dropdown-btn" type="button">
+                      <span class="fi fi-gb"></span>
+                      <span class="">English</span>
+                    </button>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <button class="dropdown-btn" type="button">
+                      <span class="fi fi-de"></span>
+                      <span class="">German</span>
+                    </button>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <button class="dropdown-btn" type="button">
+                      <span class="fi fi-gf"></span>
+                      <span class="">French</span>
+                    </button>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <button class="dropdown-btn" type="button">
+                      <span class="fi fi-sa"></span>
+                      <span class="">Arabic</span>
+                    </button>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <button class="dropdown-btn" type="button">
+                      <span class="fi fi-cn"></span>
+                      <span class="">Chinese</span>
+                    </button>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <button class="dropdown-btn" type="button">
+                      <span class="fi fi-bd"></span>
+                      <span class="">Bangla</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Language Dropdown Ends -->
+
+            <!-- Dark Mood Toggle Starts -->
+            <div class="dropdown" data-strategy="absolute" id="theme-switcher-dropdown">
+              <button
+                class="dropdown-toggle px-3 text-slate-500 hover:text-slate-700 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500"
+                type="button">
+                <i class="hidden dark:block" width="24" height="24" data-feather="moon"></i>
+                <i class="block dark:hidden" width="24" height="24" data-feather="sun"></i>
+              </button>
+
+              <div class="dropdown-content mt-3 w-36">
+                <ul class="dropdown-list">
+                  <li class="dropdown-list-item">
+                    <button type="buttton" class="dropdown-btn" data-theme-mode="light">
+                      <i width="16" height="16" data-feather="sun"></i>
+                      <span>Light</span>
+                    </button>
+                  </li>
+
+                  <li class="dropdown-list-item">
+                    <button type="buttton" class="dropdown-btn" data-theme-mode="dark">
+                      <i width="16" height="16" data-feather="moon"></i>
+                      <span>Dark</span>
+                    </button>
+                  </li>
+
+                  <li class="dropdown-list-item">
+                    <button type="buttton" class="dropdown-btn" data-theme-mode="system">
+                      <i width="16" height="16" data-feather="monitor"></i>
+                      <span>System</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Dark Mood Toggle Ends -->
+
+            <!-- Notification Dropdown Starts -->
+            <div class="dropdown -mt-0.5" data-strategy="absolute">
+              <div class="dropdown-toggle px-3">
+                <button
+                  class="relative mt-1 flex items-center justify-center rounded-full text-slate-500 transition-colors duration-150 hover:text-slate-700 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500">
+                  <i width="24" height="24" data-feather="bell"></i>
+                  <span
+                    class="absolute -right-1 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-danger-500 text-[11px] text-slate-200">
+                    5
+                  </span>
+                </button>
+              </div>
+
+              <div class="dropdown-content mt-3 w-[17.5rem] divide-y dark:divide-slate-700 sm:w-80">
+                <div class="flex items-center justify-between px-4 py-4">
+                  <h6 class="text-slate-800 dark:text-slate-300">Notifications</h6>
+                  <button class="text-xs font-medium text-slate-600 hover:text-primary-500 dark:text-slate-300">
+                    Clear All
+                  </button>
+                </div>
+
+                <div class="h-80 w-full" data-simplebar>
+                  <ul>
+                    <li
+                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
+                      <div
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-500">
+                        <i data-feather="alert-circle" width="20" height="20"></i>
+                      </div>
+
+                      <div>
+                        <h6 class="text-sm font-normal">New order received</h6>
+                        <p class="text-xs text-slate-400">Order #1234 has been placed</p>
+                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                          <i data-feather="clock" width="1em" height="1em"></i>
+                          <span>2 min ago</span>
+                        </p>
+                      </div>
+                    </li>
+
+                    <li
+                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
+                      <div
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-yellow-100 text-yellow-500">
+                        <i data-feather="alert-triangle" width="20" height="20"></i>
+                      </div>
+
+                      <div>
+                        <h6 class="text-sm font-normal">High CPU usage</h6>
+                        <p class="text-xs text-slate-400">CPU usage is at 92%</p>
+                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                          <i data-feather="clock" width="1em" height="1em"></i>
+                          <span>5 min ago</span>
+                        </p>
+                      </div>
+                    </li>
+
+                    <li
+                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
+                      <div
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-500">
+                        <i data-feather="check-circle" width="20" height="20"></i>
+                      </div>
+
+                      <div>
+                        <h6 class="text-sm font-normal">Your order has been shipped</h6>
+                        <p class="text-xs text-slate-400">Order #1234 has been shipped</p>
+                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                          <i data-feather="clock" width="1em" height="1em"></i>
+                          <span>10 min ago</span>
+                        </p>
+                      </div>
+                    </li>
+
+                    <li
+                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
+                      <div
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-danger-100 text-danger-500">
+                        <i data-feather="x-circle" width="20" height="20"></i>
+                      </div>
+
+                      <div>
+                        <h6 class="text-sm font-normal">Something went wrong</h6>
+                        <p class="text-xs text-slate-400">Order #1234 has been placed</p>
+                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                          <i data-feather="clock" width="1em" height="1em"></i>
+                          <span>1 hour ago</span>
+                        </p>
+                      </div>
+                    </li>
+
+                    <li
+                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
+                      <div
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-500">
+                        <i data-feather="check-circle" width="20" height="20"></i>
+                      </div>
+
+                      <div>
+                        <h6 class="text-sm font-normal">Your order has been shipped</h6>
+                        <p class="text-xs text-slate-400">Order #1234 has been shipped</p>
+                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                          <i data-feather="clock" width="1em" height="1em"></i>
+                          <span>10 min ago</span>
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="px-4 py-2">
+                  <button class="btn btn-primary-plain btn-sm w-full" type="button">
+                    <span>View More</span>
+                    <i data-feather="arrow-right" width="1rem" height="1rem"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Notification Dropdown Ends -->
+
+            <!-- Profile Dropdown Starts -->
+            <div class="dropdown" data-strategy="absolute">
+              <div class="dropdown-toggle pl-3">
+                <button class="group relative flex items-center gap-x-1.5" type="button">
+                  <div class="avatar avatar-circle avatar-indicator avatar-indicator-online">
+                    <img class="avatar-img group-focus-within:ring group-focus-within:ring-primary-500"
+                      src="/images/avatar1.png" alt="Avatar 1" />
+                  </div>
+                </button>
+              </div>
+
+              <div class="dropdown-content mt-1 w-56 divide-y dark:divide-slate-600">
+                <div class="px-4 py-3">
+                  <p class="text-sm">Signed in as</p>
+                  <p class="truncate text-sm font-medium">admin@example.com</p>
+                </div>
+                <div class="py-1">
+                  <a href="javascript:void(0)" class="dropdown-link">
+                    <i width="18" height="18" data-feather="user" class="text-slate-500"></i>
+                    <span>Profile</span>
+                  </a>
+                  <a href="javascript:void(0)" class="dropdown-link">
+                    <i width="18" height="18" data-feather="settings" class="text-slate-500"></i>
+                    <span>Settings</span>
+                  </a>
+                  <a href="javascript:void(0)" class="dropdown-link">
+                    <i width="18" height="18" data-feather="help-circle" class="text-slate-500"></i>
+                    <span>Support</span>
+                  </a>
+                </div>
+                <div class="py-1">
+                  <form method="POST" action="#">
+                    <button type="submit" class="dropdown-btn">
+                      <i width="18" height="18" data-feather="log-out" class="text-slate-500"></i>
+                      <span>Sign out</span>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-- Profile Dropdown Ends -->
+          </div>
+          <!-- Header Options Ends -->
+        </div>
+      </header>
+      <!-- Header Ends -->
+
+      <!-- Page Content Starts -->
+      <div class="content">
+        <!-- Main Content Starts -->
+        <main class="container flex-grow p-4 sm:p-6">
+          <!-- Order Details Header Start -->
+          <div class="flex items-center justify-between">
+            <div class="flex flex-col gap-1">
+              <div>
+                <a class="flex items-center gap-0 text-slate-400 transition duration-150 ease-in-out hover:text-primary-500"
+                  href="#">
+                  <i class="m-0 h-4 w-4 p-0" data-feather="chevron-left"></i>
+                  <p class="text-xs">Orders</p>
+                </a>
+
+                <div class="flex items-center gap-1">
+                  <h2 class="text-xl font-semibold">Order#1001</h2>
+                  <div class="badge badge-soft-primary">Processing</div>
+                </div>
+              </div>
+
+              <!-- Date -->
+              <div class="flex items-center gap-1">
+                <i class="h-4 w-6 text-slate-400" data-feather="calendar"></i>
+                <span class="text-xs text-slate-400">Fri 04 Mar 2023, 06:15 PM</span>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropdown-toggle btn btn-primary flex gap-2">
+                Actions <i class="w-4" data-feather="chevron-down"></i>
+              </button>
+              <div class="dropdown-content w-[200px]">
+                <ul class="dropdown-list">
+                  <li class="dropdown-list-item">
+                    <a href="javascript:void(0)" class="dropdown-link gap-4">
+                      <i class="h-5 text-slate-500" data-feather="printer"></i>
+                      Print Invoice
+                    </a>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <a href="javascript:void(0)" class="dropdown-link gap-4">
+                      <i class="h-5 text-slate-500" data-feather="credit-card"></i>
+                      Add Payment
+                    </a>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <a href="javascript:void(0)" class="dropdown-link gap-4">
+                      <i class="h-5 text-slate-500" data-feather="corner-up-left"></i>
+                      Add Refound
+                    </a>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <a href="javascript:void(0)" class="dropdown-link gap-4">
+                      <i class="h-5 text-slate-500" data-feather="truck"></i>
+                      Add Shipment
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Order Details Header End -->
+
+          <!-- Order Details Start  -->
+          <div class="my-4 grid grid-cols-1 place-content-start gap-6 lg:grid-cols-3">
+            <div class="col-span-1 flex flex-col gap-4 lg:col-span-2">
+              <div class="card my-2">
+                <div class="table-responsive">
+                  <div class="min-w-[35rem]">
+                    <table class="table shadow-none">
+                      <thead>
+                        <tr>
+                          <th>Product Name</th>
+                          <th>
+                            <p class="text-right uppercase">Price</p>
+                          </th>
+                          <th>
+                            <p class="text-right uppercase">Qty</p>
+                          </th>
+                          <th>
+                            <p class="text-right uppercase">Line Total</p>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="flex items-center gap-2">
+                              <img src="/images/product1.png" class="h-12 w-12 rounded-primary" alt="product-img" />
+                              <div class="flex flex-col items-start justify-center">
+                                <h4 class="m-0 p-0 text-sm font-medium text-slate-700">Product One</h4>
+                                <p class="text-xs font-normal text-slate-400 dark:text-slate-400">
+                                  Delivery Date: 31/01/3023
+                                </p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-right text-sm font-normal text-slate-400 dark:text-slate-400">$24.00</p>
+                          </td>
+                          <td>
+                            <p class="text-right text-sm font-normal text-slate-400 dark:text-slate-400">1 pcs</p>
+                          </td>
+                          <td>
+                            <p class="text-right text-sm font-semibold text-slate-700 dark:text-slate-200">$24.00</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="flex items-center gap-2">
+                              <img src="/images/product2.png" class="h-12 w-12 rounded-primary" alt="product-img" />
+                              <div class="flex flex-col items-start justify-center">
+                                <h4 class="m-0 p-0 text-sm font-medium text-slate-700">Product Two</h4>
+                                <p class="text-xs font-normal text-slate-400 dark:text-slate-400">
+                                  Delivery Date: 31/01/3023
+                                </p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-right text-sm font-normal text-slate-400 dark:text-slate-400">$24.00</p>
+                          </td>
+                          <td>
+                            <p class="text-right text-sm font-normal text-slate-400 dark:text-slate-400">1 pcs</p>
+                          </td>
+                          <td>
+                            <p class="text-right text-sm font-semibold text-slate-700 dark:text-slate-200">$24.00</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="flex items-center gap-2">
+                              <img src="/images/product3.png" class="h-12 w-12 rounded-primary" alt="product-img" />
+                              <div class="flex flex-col items-start justify-center">
+                                <h4 class="m-0 p-0 text-sm font-medium text-slate-700">Product Three</h4>
+                                <p class="text-xs font-normal text-slate-400 dark:text-slate-400">
+                                  Delivery Date: 31/01/3023
+                                </p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p class="text-right text-sm font-normal text-slate-400 dark:text-slate-400">$24.00</p>
+                          </td>
+                          <td>
+                            <p class="text-right text-sm font-normal text-slate-400 dark:text-slate-400">1 pcs</p>
+                          </td>
+                          <td>
+                            <p class="text-right text-sm font-semibold text-slate-700 dark:text-slate-200">$24.00</p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="border-b border-slate-200 dark:border-slate-600"></div>
+                    <div class="my-2 flex items-center justify-between">
+                      <div class="w-2/3 px-6 pb-2">
+                        <div class="flex flex-col gap-1 py-4">
+                          <p class="text-sm font-semibold text-slate-700 dark:text-slate-300">Payment Method:</p>
+                          <div class="flex items-center gap-1">
+                            <img
+                              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGsSURBVHgB7VRRTsJAEJ1pMTEhhfILGHsDuYFwAtoTiCdQToDcAE6AnKDlBnAC8QSuCfjdlB8U3HGmLYohRkhEY8JLNrs7Mzvv7exkAQ74a2DRCnwEsGFPyCCCC3uEAXvG7xEQ0KMMfo9wm4MSJ/Hfxb0TIOEDktGaRG6BEFTCio1p5CIRBDKzoclWhQbVJO4p8hwEaqcpbiXmyKDCOkFmTVIVUGPJGnAePRLDdFbvlyy/wYZCKuKckLqT0BuWuftYiENpBzJpX2YVemExHygkcD7dIFV8dmTqASfK826YMl8w1zhxyyHjVNZLk5qcRPHSEX9Mmhu0EiE02ihRCnsJUAGTuq8v1HayfkVuxiVKydgHdF2ygt7xHGAycz0Qn8aOY/u2Bn1p88xx480SraChOom8G1mWckEvVmSCErKF1J9grJFqz8dwD3PosAA1jer99LQTq8z6w4X5BQFxneNI23cWGhqynobe+MTyXVarYtWJ3+aSXK1ux2LukvegvmKB5VwQyh7ZQbADpD01D66tTVt8MRnYEbGqJPlW+P9fRQY+WvDHse23c8B+8Qb9WbCm8h/ZgwAAAABJRU5ErkJggg=="
+                              class="h-6 w-6" alt="visa-img" />
+                            <p class="text-sm font-medium text-slate-700 dark:text-slate-300">**** **** **** 4567</p>
+                          </div>
+                        </div>
+                        <p class="m-0 p-0 text-sm font-semibold text-slate-700 dark:text-slate-300">Note:</p>
+                        <blockquote class="text-sm font-normal text-slate-600 dark:text-slate-300">
+                          It was a pleasure working with you and your team.
+                          <br />
+                          We hope you will keep us in mind for future projects.
+                        </blockquote>
+                      </div>
+                      <div class="my-1 flex w-1/3 flex-col items-end">
+                        <div
+                          class="flex w-full flex-col items-end gap-2 border-b border-slate-200 py-2 pr-6 dark:border-slate-600">
+                          <h4 class="text-sm font-medium text-slate-400 dark:text-slate-400">
+                            Subtotal:
+                            <span class="font-semibold text-slate-700 dark:text-slate-200">$72.00</span>
+                          </h4>
+                          <h4 class="text-sm font-medium text-slate-400 dark:text-slate-400">
+                            Discount:
+                            <span class="font-semibold text-slate-700 dark:text-slate-200">$00.00</span>
+                          </h4>
+                          <h4 class="text-sm font-medium text-slate-400 dark:text-slate-400">
+                            Tax:
+                            <span class="font-semibold text-slate-700 dark:text-slate-200">$02.00</span>
+                          </h4>
+                        </div>
+                        <h4 class="my-2 pr-6 text-sm font-medium text-slate-400 dark:text-slate-500">
+                          Total:
+                          <span class="font-semibold text-slate-700 dark:text-slate-200">$74.00</span>
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Shipments Start   -->
+              <div class="flex flex-col gap-4">
+                <h2 class="text-sm font-semibold">Shipments</h2>
+                <div class="table-responsive shadow">
+                  <table class="table min-w-[37rem]">
+                    <thead>
+                      <tr>
+                        <th>Carrier</th>
+                        <th>
+                          <p class="text-right uppercase">Qty</p>
+                        </th>
+                        <th>
+                          <p class="text-right uppercase">Total</p>
+                        </th>
+                        <th>
+                          <p class="text-right uppercase">Status</p>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="flex items-center gap-2">
+                            <img
+                              src="data:image/png;base64,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"
+                              class="w-20" alt="carrier-img" />
+                            <div class="flex flex-col items-start justify-center">
+                              <h4 class="m-0 p-0 text-sm font-medium text-slate-700">FedEx Express</h4>
+                              <p class="text-sm font-normal text-slate-400 dark:text-slate-400">
+                                Delivers in 1 ~ 3 days
+                              </p>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-right text-sm font-normal text-slate-400 dark:text-slate-400">2 pcs</p>
+                        </td>
+                        <td>
+                          <p class="text-right text-sm font-semibold text-slate-700 dark:text-slate-200">$48.00</p>
+                        </td>
+                        <td>
+                          <div class="flex justify-end">
+                            <div class="badge badge-soft-primary">Processing</div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="flex items-center gap-2">
+                            <img
+                              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEkAAAAVCAYAAAAKP8NQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARvSURBVFhH7ZhbaBxVGMf/Z2Znd2Z3k5i9JI21UcEWKxYVpIoPVd+EoiBWjHitF4r1xRf1wT74YixIVfCCQkUFUSgi+iKoBRG1UixFQRF8kGjbTXez2WTvMzs3v3Mymt2ZyWZnFV/cHxwymcs35/zPd5vFiBH/Csw9hZe94xEbwEVyveMRGyB5f0f0IbIn1b5S0PhWget4JwaEyUAs52J8TweJHTYY8y4Q3Fb18ziap2LemXWYAkw90kYs68LRgeX3VXQKwb1VL7MxeWuHHgBKb6iwW10v8JCTQOYuHfGt0SYfSSRzScJv+8dgLQ/vgHLaxdZnmhi7yfTOAO2fYzhzKAXzfK9dLuzkbQZmnmoJIVc/SaDwAq3UN2OmupidbyB1rYXyuypKb2nelXUYmc7eo2P6sbYQMgoDr9auMyzSBP+JQBy7wVD5OAGH7In/qwzF1zVYxaDd5FUW8o+S+xDNkzGU31MDAnGydxtI7bbQ+E5B+QO6J4TUbhOZfWQrokCcgT2p84eEVQoJ2N4Jm4U+yHeMrIpj43cZtS/pGR/aFTZmD9chZ1wUX0li+VgisHg56SL3kI7kLguOwVB+R0XzdDAcU9dYmD3SECF49lAaxkJQbP6eS15qQN1heWeiMVR16yzIqHyUgLUa3JYL9naQvs6EWZZQfFVD9bNekZjkYuqAjsydhshvhedTcCmVBCDT7C9NaIYu3xzfTJUpB9sONynH2CjMp4Q9P0xxMfNkS8xLbOAQRH6M54YSxf3yhwlUv4j3jOZpBYlL11ytRl5XOx70Ih4WmdsN4ZlLR7VwgThcGEpbYnAH8AkkaeRpD+rQdlrCE+vfBAXiqxu/2RQJfViBOJE9qUITKr6mwen0epFEyfPCp1uYuIVWTRZ5pdJ/pczrsz52o4n4NgftX2S0ePhEevs68iRVShKAe8oK5TjX8C50wWiP+D2xfMRS7IMV5ij4B0C93EbySgsLB6m6rQTDjMVdqNttSJRewohlHeQfoPJLnlY5pqL+dXDn5XEHW55oQ5l2YFElLR2lcn+WhPah0Tzy9+twqMwvHkmKohIVXmWnD7bQWZTDvbALVjpAfrsJyoxDlcbEuedSaP0YTJ6bwXNH9l7KQ3cYaJxQcG6eFrbS6/980jlaeO4+nbyCYYlCmg/4nECecHExT8LbLZTe1NYqXkRYzEV2zkD6BhPtn2Jw9f4iS9KEg35DzjlUFWysUI8yjEDJqy1c9GwT2X2G2PHzLwYF4qSvp1xFInJq5GUVynl+gbi35ve3RR7iYcrbiWFI7rKpbdBFO8MSbui6uwc7szfV15PG95hUsmnX3lbFDg+CRC9WqKtNU2+i7VxL5KKr/jSOxvchYUZelJ2jUKRcxRO56JtChIzPOph6mJpBD56Hqsdp836QAzlyQ+i2LY+3UT8RE4VmEJhzsn/qFFWB7nA3Dcp1eKcchviUCbNDExefKXzwd22UZ2ku3Z8zf9PvmRD4/ERLMSBD9Un/N7hIo9+TRoz4DwD+BG2jz+6cmChUAAAAAElFTkSuQmCC"
+                              class="w-20" alt="carrier-img" />
+                            <div class="flex flex-col items-start justify-center">
+                              <h4 class="m-0 p-0 text-sm font-medium text-slate-700">DHL Express</h4>
+                              <p class="text-sm font-normal text-slate-400 dark:text-slate-400">
+                                Delivers in 1 ~ 3 days
+                              </p>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-right text-sm font-normal text-slate-400 dark:text-slate-400">1 pcs</p>
+                        </td>
+                        <td>
+                          <p class="text-right text-sm font-semibold text-slate-700 dark:text-slate-200">$24.00</p>
+                        </td>
+                        <td>
+                          <div class="flex justify-end">
+                            <div class="badge badge-soft-success">Shipped</div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <!-- Shipment End  -->
+              <!-- Order Activity Start  -->
+              <div class="flex flex-col gap-4">
+                <h2 class="text-sm font-semibold">Order Activity</h2>
+                <div class="card w-full overflow-auto p-6">
+                  <div class="flex w-full">
+                    <!-- Line  -->
+                    <div class="mb-6 mt-6 w-1 border-r border-slate-300 dark:border-slate-600 md:mb-3 md:mt-3"></div>
+                    <!-- Order Items Start -->
+                    <div class="flex w-full flex-col items-center gap-8 md:gap-11">
+                      <div class="relative w-full">
+                        <div
+                          class="absolute -left-3 top-[50%] translate-y-[-50%] rounded-full bg-white p-1 dark:bg-slate-800">
+                          <i class="h-4 w-4 rounded-full bg-success-500 p-[2px] text-slate-100" stroke-width="3px"
+                            data-feather="check"></i>
+                        </div>
+                        <div
+                          class="flex w-full flex-col items-start gap-1 md:flex-row md:items-center md:justify-between md:gap-0">
+                          <div class="flex flex-col gap-1 px-4 md:gap-0 md:px-5">
+                            <h4 class="text-sm font-medium text-slate-700 dark:text-slate-200">Order Placed</h4>
+                            <p class="text-xs font-normal text-slate-400">Mar 14, 2023 09:45 am</p>
+                          </div>
+                          <p class="px-4 text-sm font-medium text-slate-700 dark:text-slate-200 md:px-0">
+                            Order#1001
+                          </p>
+                        </div>
+                      </div>
+                      <div class="relative w-full">
+                        <div
+                          class="absolute -left-3 top-[50%] translate-y-[-50%] rounded-full bg-white p-1 dark:bg-slate-800">
+                          <i class="h-4 w-4 rounded-full bg-success-500 p-[2px] text-slate-100" stroke-width="3px"
+                            data-feather="check"></i>
+                        </div>
+                        <div
+                          class="flex w-full flex-col items-start gap-1 md:flex-row md:items-center md:justify-between md:gap-0">
+                          <div class="flex flex-col gap-1 px-4 md:px-5">
+                            <div class="flex flex-col gap-1 md:flex-row">
+                              <h4 class="text-sm font-medium text-slate-700 dark:text-slate-200">
+                                Payment Successful
+                              </h4>
+                              <p class="text-sm font-normal text-slate-400">(2 x $24.00)</p>
+                            </div>
+                            <p class="text-xs font-normal text-slate-400">Mar 14, 2023 09:45 am</p>
+                          </div>
+                          <div class="flex items-center gap-1 px-4 md:px-0">
+                            <img
+                              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGsSURBVHgB7VRRTsJAEJ1pMTEhhfILGHsDuYFwAtoTiCdQToDcAE6AnKDlBnAC8QSuCfjdlB8U3HGmLYohRkhEY8JLNrs7Mzvv7exkAQ74a2DRCnwEsGFPyCCCC3uEAXvG7xEQ0KMMfo9wm4MSJ/Hfxb0TIOEDktGaRG6BEFTCio1p5CIRBDKzoclWhQbVJO4p8hwEaqcpbiXmyKDCOkFmTVIVUGPJGnAePRLDdFbvlyy/wYZCKuKckLqT0BuWuftYiENpBzJpX2YVemExHygkcD7dIFV8dmTqASfK826YMl8w1zhxyyHjVNZLk5qcRPHSEX9Mmhu0EiE02ihRCnsJUAGTuq8v1HayfkVuxiVKydgHdF2ygt7xHGAycz0Qn8aOY/u2Bn1p88xx480SraChOom8G1mWckEvVmSCErKF1J9grJFqz8dwD3PosAA1jer99LQTq8z6w4X5BQFxneNI23cWGhqynobe+MTyXVarYtWJ3+aSXK1ux2LukvegvmKB5VwQyh7ZQbADpD01D66tTVt8MRnYEbGqJPlW+P9fRQY+WvDHse23c8B+8Qb9WbCm8h/ZgwAAAABJRU5ErkJggg=="
+                              class="h-6 w-6" alt="visa-img" />
+                            <p class="text-sm font-medium text-slate-700 dark:text-slate-300">**** **** **** 4567</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="relative w-full">
+                        <div
+                          class="absolute -left-3 top-[50%] translate-y-[-50%] rounded-full bg-white p-1 dark:bg-slate-800">
+                          <i class="h-4 w-4 rounded-full bg-success-500 p-[2px] text-slate-100" stroke-width="3px"
+                            data-feather="check"></i>
+                        </div>
+                        <div
+                          class="flex w-full flex-col items-start gap-1 md:flex-row md:items-center md:justify-between md:gap-0">
+                          <div class="flex flex-col gap-1 px-4 md:px-5">
+                            <div class="flex flex-col gap-1 md:flex-row">
+                              <h4 class="text-sm font-medium text-slate-700 dark:text-slate-200">
+                                New Shipment Created
+                              </h4>
+                              <p class="text-sm font-normal text-slate-400">(2 x $24.00)</p>
+                            </div>
+                            <p class="text-xs font-normal text-slate-400">Mar 15, 2023 08:40 am</p>
+                          </div>
+                          <div class="flex items-center px-4 md:px-0">
+                            <img
+                              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEkAAAAVCAYAAAAKP8NQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARvSURBVFhH7ZhbaBxVGMf/Z2Znd2Z3k5i9JI21UcEWKxYVpIoPVd+EoiBWjHitF4r1xRf1wT74YixIVfCCQkUFUSgi+iKoBRG1UixFQRF8kGjbTXez2WTvMzs3v3Mymt2ZyWZnFV/cHxwymcs35/zPd5vFiBH/Csw9hZe94xEbwEVyveMRGyB5f0f0IbIn1b5S0PhWget4JwaEyUAs52J8TweJHTYY8y4Q3Fb18ziap2LemXWYAkw90kYs68LRgeX3VXQKwb1VL7MxeWuHHgBKb6iwW10v8JCTQOYuHfGt0SYfSSRzScJv+8dgLQ/vgHLaxdZnmhi7yfTOAO2fYzhzKAXzfK9dLuzkbQZmnmoJIVc/SaDwAq3UN2OmupidbyB1rYXyuypKb2nelXUYmc7eo2P6sbYQMgoDr9auMyzSBP+JQBy7wVD5OAGH7In/qwzF1zVYxaDd5FUW8o+S+xDNkzGU31MDAnGydxtI7bbQ+E5B+QO6J4TUbhOZfWQrokCcgT2p84eEVQoJ2N4Jm4U+yHeMrIpj43cZtS/pGR/aFTZmD9chZ1wUX0li+VgisHg56SL3kI7kLguOwVB+R0XzdDAcU9dYmD3SECF49lAaxkJQbP6eS15qQN1heWeiMVR16yzIqHyUgLUa3JYL9naQvs6EWZZQfFVD9bNekZjkYuqAjsydhshvhedTcCmVBCDT7C9NaIYu3xzfTJUpB9sONynH2CjMp4Q9P0xxMfNkS8xLbOAQRH6M54YSxf3yhwlUv4j3jOZpBYlL11ytRl5XOx70Ih4WmdsN4ZlLR7VwgThcGEpbYnAH8AkkaeRpD+rQdlrCE+vfBAXiqxu/2RQJfViBOJE9qUITKr6mwen0epFEyfPCp1uYuIVWTRZ5pdJ/pczrsz52o4n4NgftX2S0ePhEevs68iRVShKAe8oK5TjX8C50wWiP+D2xfMRS7IMV5ij4B0C93EbySgsLB6m6rQTDjMVdqNttSJRewohlHeQfoPJLnlY5pqL+dXDn5XEHW55oQ5l2YFElLR2lcn+WhPah0Tzy9+twqMwvHkmKohIVXmWnD7bQWZTDvbALVjpAfrsJyoxDlcbEuedSaP0YTJ6bwXNH9l7KQ3cYaJxQcG6eFrbS6/980jlaeO4+nbyCYYlCmg/4nECecHExT8LbLZTe1NYqXkRYzEV2zkD6BhPtn2Jw9f4iS9KEg35DzjlUFWysUI8yjEDJqy1c9GwT2X2G2PHzLwYF4qSvp1xFInJq5GUVynl+gbi35ve3RR7iYcrbiWFI7rKpbdBFO8MSbui6uwc7szfV15PG95hUsmnX3lbFDg+CRC9WqKtNU2+i7VxL5KKr/jSOxvchYUZelJ2jUKRcxRO56JtChIzPOph6mJpBD56Hqsdp836QAzlyQ+i2LY+3UT8RE4VmEJhzsn/qFFWB7nA3Dcp1eKcchviUCbNDExefKXzwd22UZ2ku3Z8zf9PvmRD4/ERLMSBD9Un/N7hIo9+TRoz4DwD+BG2jz+6cmChUAAAAAElFTkSuQmCC"
+                              class="w-20" alt="dhl-img" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="relative w-full">
+                        <div
+                          class="absolute -left-3 top-[50%] translate-y-[-50%] rounded-full bg-white p-1 dark:bg-slate-800">
+                          <i class="h-4 w-4 rounded-full bg-success-500 p-[2px] text-slate-100" stroke-width="3px"
+                            data-feather="check"></i>
+                        </div>
+                        <div
+                          class="flex w-full flex-col items-start gap-1 md:flex-row md:items-center md:justify-between md:gap-0">
+                          <div class="flex flex-col gap-1 px-4 md:px-5">
+                            <div class="flex flex-col gap-1 md:flex-row">
+                              <h4 class="text-sm font-medium text-slate-700 dark:text-slate-200">
+                                Shipped Successfully
+                              </h4>
+                              <p class="text-sm font-normal text-slate-400">(2 x $24.00)</p>
+                            </div>
+                            <p class="text-xs font-normal text-slate-400">Mar 16, 2023 04:30 pm</p>
+                          </div>
+                          <div class="flex items-center px-4 md:px-0">
+                            <img
+                              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEkAAAAVCAYAAAAKP8NQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARvSURBVFhH7ZhbaBxVGMf/Z2Znd2Z3k5i9JI21UcEWKxYVpIoPVd+EoiBWjHitF4r1xRf1wT74YixIVfCCQkUFUSgi+iKoBRG1UixFQRF8kGjbTXez2WTvMzs3v3Mymt2ZyWZnFV/cHxwymcs35/zPd5vFiBH/Csw9hZe94xEbwEVyveMRGyB5f0f0IbIn1b5S0PhWget4JwaEyUAs52J8TweJHTYY8y4Q3Fb18ziap2LemXWYAkw90kYs68LRgeX3VXQKwb1VL7MxeWuHHgBKb6iwW10v8JCTQOYuHfGt0SYfSSRzScJv+8dgLQ/vgHLaxdZnmhi7yfTOAO2fYzhzKAXzfK9dLuzkbQZmnmoJIVc/SaDwAq3UN2OmupidbyB1rYXyuypKb2nelXUYmc7eo2P6sbYQMgoDr9auMyzSBP+JQBy7wVD5OAGH7In/qwzF1zVYxaDd5FUW8o+S+xDNkzGU31MDAnGydxtI7bbQ+E5B+QO6J4TUbhOZfWQrokCcgT2p84eEVQoJ2N4Jm4U+yHeMrIpj43cZtS/pGR/aFTZmD9chZ1wUX0li+VgisHg56SL3kI7kLguOwVB+R0XzdDAcU9dYmD3SECF49lAaxkJQbP6eS15qQN1heWeiMVR16yzIqHyUgLUa3JYL9naQvs6EWZZQfFVD9bNekZjkYuqAjsydhshvhedTcCmVBCDT7C9NaIYu3xzfTJUpB9sONynH2CjMp4Q9P0xxMfNkS8xLbOAQRH6M54YSxf3yhwlUv4j3jOZpBYlL11ytRl5XOx70Ih4WmdsN4ZlLR7VwgThcGEpbYnAH8AkkaeRpD+rQdlrCE+vfBAXiqxu/2RQJfViBOJE9qUITKr6mwen0epFEyfPCp1uYuIVWTRZ5pdJ/pczrsz52o4n4NgftX2S0ePhEevs68iRVShKAe8oK5TjX8C50wWiP+D2xfMRS7IMV5ij4B0C93EbySgsLB6m6rQTDjMVdqNttSJRewohlHeQfoPJLnlY5pqL+dXDn5XEHW55oQ5l2YFElLR2lcn+WhPah0Tzy9+twqMwvHkmKohIVXmWnD7bQWZTDvbALVjpAfrsJyoxDlcbEuedSaP0YTJ6bwXNH9l7KQ3cYaJxQcG6eFrbS6/980jlaeO4+nbyCYYlCmg/4nECecHExT8LbLZTe1NYqXkRYzEV2zkD6BhPtn2Jw9f4iS9KEg35DzjlUFWysUI8yjEDJqy1c9GwT2X2G2PHzLwYF4qSvp1xFInJq5GUVynl+gbi35ve3RR7iYcrbiWFI7rKpbdBFO8MSbui6uwc7szfV15PG95hUsmnX3lbFDg+CRC9WqKtNU2+i7VxL5KKr/jSOxvchYUZelJ2jUKRcxRO56JtChIzPOph6mJpBD56Hqsdp836QAzlyQ+i2LY+3UT8RE4VmEJhzsn/qFFWB7nA3Dcp1eKcchviUCbNDExefKXzwd22UZ2ku3Z8zf9PvmRD4/ERLMSBD9Un/N7hIo9+TRoz4DwD+BG2jz+6cmChUAAAAAElFTkSuQmCC"
+                              class="w-20" alt="dhl-img" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="relative w-full">
+                        <div
+                          class="absolute -left-3 top-[50%] translate-y-[-50%] rounded-full bg-white p-1 dark:bg-slate-800">
+                          <i class="h-4 w-4 rounded-full bg-slate-400 p-[2px] text-slate-100" stroke-width="3px"
+                            data-feather="check"></i>
+                        </div>
+                        <div
+                          class="flex w-full flex-col items-start gap-1 md:flex-row md:items-center md:justify-between md:gap-0">
+                          <div class="flex flex-col gap-1 px-4 md:px-5">
+                            <div class="flex flex-col gap-1 md:flex-row">
+                              <h4 class="text-sm font-medium text-slate-700 dark:text-slate-200">
+                                Order Delivered Successfully
+                              </h4>
+                            </div>
+                            <p class="text-xs font-normal text-slate-400">Mar 16, 2023 04:30 pm</p>
+                          </div>
+                          <div class="flex items-center px-4 md:px-0"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Order Items End -->
+                  </div>
+                </div>
+              </div>
+              <!-- Order Activity End  -->
+            </div>
+            <div class="h-full py-2 lg:col-span-1">
+              <div class="sticky top-20 min-h-max rounded-primary bg-white shadow dark:bg-slate-800">
+                <!-- User  -->
+                <div class="flex items-center gap-2 border-b border-slate-200 px-6 py-4 dark:border-slate-700">
+                  <img src="/images/avatar1.png" class="h-10 w-10 rounded-full" alt="avatar-img" />
+                  <div class="flex flex-col gap-0">
+                    <h4 class="text-sm font-medium">John William</h4>
+                    <p class="text-xs text-slate-400">Dhaka, Bnagladesh</p>
+                  </div>
+                </div>
+                <!-- Contact Address  -->
+                <div class="flex flex-col gap-2 border-b border-slate-200 px-6 py-4 dark:border-slate-700">
+                  <div class="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+                    <i class="h-4 w-4" data-feather="mail"></i>
+                    <p class="text-sm font-normal">john@example.com</p>
+                  </div>
+                  <div class="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+                    <i class="h-4 w-4" data-feather="phone-call"></i>
+                    <p class="text-sm font-normal">+(386)-259-8589</p>
+                  </div>
+                </div>
+                <!-- shipping Address  -->
+                <div class="flex flex-col gap-2 border-b border-slate-200 px-6 py-4 dark:border-slate-700">
+                  <h6 class="text-sm font-semibold uppercase text-slate-700 dark:text-slate-300">SHIPPING ADDRESS</h6>
+                  <p class="text-sm font-normal leading-5">
+                    4517 Washington Ave. <br />
+                    Manchester, <br />
+                    Kentucky 39495,<br />
+                    United States of America
+                  </p>
+                </div>
+                <!-- shipping Adress  -->
+                <div class="flex flex-col gap-2 px-6 py-4">
+                  <h6 class="text-sm font-semibold uppercase text-slate-700 dark:text-slate-300">BILLING ADDRESS</h6>
+                  <p class="text-sm font-normal leading-5">
+                    2972 Westheimer Rd. <br />
+                    Santa Ana, <br />
+                    Illinois 85486,<br />
+                    United States of America
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Order Details End  -->
+        </main>
+        <!-- Main Content Ends -->
+
+        <!-- Footer Starts -->
+        <footer class="footer">
+          <p class="text-sm">
+            Copyright © 2023
+            <a class="text-primary-500 hover:underline" href="https://getadmintoolkit.com" target="_blank">
+              Admin Toolkit
+            </a>
+          </p>
+
+          <p class="flex items-center gap-1 text-sm">
+            Hand-crafted &amp; Made with
+            <i class="text-danger-500" data-feather="heart" height="1em" width="1em"></i>
+          </p>
+        </footer>
+        <!-- Footer Ends -->
+      </div>
+      <!-- Page Content Ends -->
+    </div>
+    <!-- Wrapper Ends -->
+
+    <!-- Search Modal Start -->
+    <div class="modal" id="search-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header px-4 sm:px-6">
+            <div class="group flex items-center">
+              <i data-feather="search"
+                class="text-slate-500 group-focus-within:text-slate-600 dark:text-slate-400 dark:group-focus-within:text-slate-300"></i>
+              <input type="text"
+                class="w-full border-none bg-transparent text-sm text-slate-700 outline-none placeholder:text-slate-400 focus:ring-0 dark:text-slate-200"
+                placeholder="Search" />
+              <button
+                class="rounded-primary bg-slate-100 px-2 py-1 text-[10px] font-semibold text-slate-600 hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600"
+                data-dismiss="modal">
+                ESC
+              </button>
+            </div>
+          </div>
+          <div class="modal-body max-h-[600px] px-4 py-6 sm:px-6"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Search Modal Ends -->
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/svg/logo-small.svg" type="image/svg+xml" />
+  <title>Order List - Admin Toolkit</title>
+  <meta name="description"
+    content="Admin Toolkit is a modern admin dashboard template based on Tailwindcss. It comes with a variety of useful ui components and pre-built pages" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet" />
+
+  <script>
+    if (
+      localStorage.getItem('theme') === 'dark' ||
+      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+  <script type="module" crossorigin src="/js/app.js"></script>
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+
+<body>
+  <div id="app">
+    <!-- Sidebar Starts -->
+    <aside class="sidebar">
+      <!-- Sidebar Header Starts -->
+      <a href="/">
+        <div class="sidebar-header">
+          <div class="sidebar-logo-icon">
+            <img src="/svg/logo-small.svg" alt="logo" class="h-[45px]" />
+          </div>
+
+          <div class="sidebar-logo-text">
+            <h1 class="flex text-xl">
+              <span class="font-bold text-slate-800 dark:text-slate-200"> Admin </span>
+              <span class="font-semibold text-primary-500">Toolkit</span>
+            </h1>
+
+            <p class="whitespace-nowrap text-xs text-slate-400">Simple &amp; Customizable</p>
+          </div>
+        </div>
+      </a>
+      <!-- Sidebar Header Ends -->
+
+      <!-- Sidebar Menu Starts -->
+      <ul class="sidebar-content">
+        <!-- Dashboard -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="home"></i>
+            </span>
+            <span class="sidebar-menu-text">Dashboard</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="/" class="sidebar-submenu-item"> Analytics </a>
+            </li>
+            <li>
+              <a href="./ecommerce.html" class="sidebar-submenu-item">Ecommerce</a>
+            </li>
+          </ul>
+        </li>
+
+        <div class="sidebar-menu-header">Applications</div>
+
+        <!-- Email -->
+        <li>
+          <a href="./email.html" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="mail"></i>
+            </span>
+            <span class="sidebar-menu-text">Email</span>
+          </a>
+        </li>
+        <!-- Chat -->
+        <li>
+          <a href="./chat.html" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="message-square"></i>
+            </span>
+            <span class="sidebar-menu-text">Chat</span>
+          </a>
+        </li>
+        <!-- Calendar -->
+        <li>
+          <a href="./calendar.html" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="calendar"></i>
+            </span>
+            <span class="sidebar-menu-text">Calendar</span>
+          </a>
+        </li>
+        <!-- Order -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="file-text"></i>
+            </span>
+            <span class="sidebar-menu-text">Order</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./invoice-create.html" class="sidebar-submenu-item"> Create </a>
+            </li>
+
+            <li>
+              <a href="./invoice-details.html" class="sidebar-submenu-item"> Details </a>
+            </li>
+          </ul>
+        </li>
+        <!-- ecommnerce -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu active">
+            <span class="sidebar-menu-icon">
+              <i data-feather="shopping-bag"></i>
+            </span>
+            <span class="sidebar-menu-text">Ecommerce</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./product-list.html" class="sidebar-submenu-item"> Product List </a>
+            </li>
+            <li>
+              <a href="./product-edit.html" class="sidebar-submenu-item"> Product Edit </a>
+            </li>
+            <li>
+              <a href="./order-list.html" class="sidebar-submenu-item active"> Order List </a>
+            </li>
+            <li>
+              <a href="./order-details.html" class="sidebar-submenu-item"> Order Details </a>
+            </li>
+            <li>
+              <a href="./customer-list.html" class="sidebar-submenu-item"> Customer List </a>
+            </li>
+          </ul>
+        </li>
+        <!-- Users -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="users"></i>
+            </span>
+            <span class="sidebar-menu-text">Users</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./user-list.html" class="sidebar-submenu-item">List</a>
+            </li>
+            <li>
+              <a href="./profile.html" class="sidebar-submenu-item"> Profile </a>
+            </li>
+          </ul>
+        </li>
+        <!--  Commponents  -->
+        <div class="sidebar-menu-header">Components</div>
+        <!-- Common  -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="box"></i>
+            </span>
+            <span class="sidebar-menu-text">Common</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./accordion.html" class="sidebar-submenu-item"> Accordion </a>
+            </li>
+            <li>
+              <a href="./alert.html" class="sidebar-submenu-item">Alert</a>
+            </li>
+            <li>
+              <a href="./avatar.html" class="sidebar-submenu-item">Avatar</a>
+            </li>
+            <li>
+              <a href="./badge.html" class="sidebar-submenu-item">Badge</a>
+            </li>
+            <li>
+              <a href="./button.html" class="sidebar-submenu-item">Button</a>
+            </li>
+            <li>
+              <a href="./card.html" class="sidebar-submenu-item">Card</a>
+            </li>
+            <li>
+              <a href="./carousel.html" class="sidebar-submenu-item"> Carousel </a>
+            </li>
+
+            <li>
+              <a href="./drawer.html" class="sidebar-submenu-item">Drawer</a>
+            </li>
+            <li>
+              <a href="./dropdown.html" class="sidebar-submenu-item"> Dropdown </a>
+            </li>
+            <li>
+              <a href="./list-group.html" class="sidebar-submenu-item"> List Group </a>
+            </li>
+            <li>
+              <a href="./modal.html" class="sidebar-submenu-item">Modal</a>
+            </li>
+            <li>
+              <a href="./pagination.html" class="sidebar-submenu-item"> Pagination </a>
+            </li>
+            <li>
+              <a href="./progress-bar.html" class="sidebar-submenu-item"> Progress </a>
+            </li>
+
+            <li>
+              <a href="./skeleton.html" class="sidebar-submenu-item"> Skeleton </a>
+            </li>
+            <li>
+              <a href="./spinner.html" class="sidebar-submenu-item"> Spinner </a>
+            </li>
+            <li>
+              <a href="./tabs.html" class="sidebar-submenu-item">Tab</a>
+            </li>
+            <li>
+              <a href="./toast.html" class="sidebar-submenu-item">Toast</a>
+            </li>
+            <li>
+              <a href="./tooltip.html" class="sidebar-submenu-item"> Tooltip </a>
+            </li>
+          </ul>
+        </li>
+        <!-- Forms  -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="edit"></i>
+            </span>
+            <span class="sidebar-menu-text">Forms</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./input.html" class="sidebar-submenu-item">Input</a>
+            </li>
+            <li>
+              <a href="./input-group.html" class="sidebar-submenu-item"> Input Group </a>
+            </li>
+            <li>
+              <a href="./textarea.html" class="sidebar-submenu-item"> Textarea </a>
+            </li>
+            <li>
+              <a href="./checkbox.html" class="sidebar-submenu-item"> Checkbox </a>
+            </li>
+            <li>
+              <a href="./radio.html" class="sidebar-submenu-item">Radio</a>
+            </li>
+            <li>
+              <a href="./toggle.html" class="sidebar-submenu-item">Toggle</a>
+            </li>
+            <li>
+              <a href="./select.html" class="sidebar-submenu-item">Select</a>
+            </li>
+
+            <li>
+              <a href="./datepicker.html" class="sidebar-submenu-item"> Datepicker </a>
+            </li>
+            <li>
+              <a href="./editor.html" class="sidebar-submenu-item">Editor</a>
+            </li>
+            <li>
+              <a href="./uploader.html" class="sidebar-submenu-item"> Uploader </a>
+            </li>
+            <li>
+              <a href="./form-layout.html" class="sidebar-submenu-item">Layout</a>
+            </li>
+            <li>
+              <a href="./form-validation.html" class="sidebar-submenu-item"> Validation </a>
+            </li>
+          </ul>
+        </li>
+        <!-- Tables  -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="list"></i>
+            </span>
+            <span class="sidebar-menu-text">Tables</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./basic-table.html" class="sidebar-submenu-item"> Basic Table </a>
+            </li>
+            <li>
+              <a href="./data-table.html" class="sidebar-submenu-item"> Data Table </a>
+            </li>
+          </ul>
+        </li>
+        <!-- Charts  -->
+        <li>
+          <a href="./chart.html" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="pie-chart"></i>
+            </span>
+            <span class="sidebar-menu-text">Charts</span>
+          </a>
+        </li>
+        <!-- Icons-->
+        <li>
+          <a href="./icons.html" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="italic"></i>
+            </span>
+            <span class="sidebar-menu-text">Icons</span>
+          </a>
+        </li>
+        <!-- Typography-->
+        <li>
+          <a href="./typography.html" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="type"></i>
+            </span>
+            <span class="sidebar-menu-text">Typography</span>
+          </a>
+        </li>
+        <!--  Pages  -->
+        <div class="sidebar-menu-header">Pages</div>
+        <!-- Authentication  -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="lock"></i>
+            </span>
+            <span class="sidebar-menu-text">Authentication</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./login.html" class="sidebar-submenu-item">Login</a>
+            </li>
+            <li>
+              <a href="./register.html" class="sidebar-submenu-item"> Register </a>
+            </li>
+            <li>
+              <a href="./recover-password.html" class="sidebar-submenu-item"> Forgot Password </a>
+            </li>
+            <li>
+              <a href="./reset-password.html" class="sidebar-submenu-item"> Reset Password </a>
+            </li>
+          </ul>
+        </li>
+        <!-- Miscellaneous  -->
+        <li>
+          <a href="javascript:void(0);" class="sidebar-menu">
+            <span class="sidebar-menu-icon">
+              <i data-feather="grid"></i>
+            </span>
+            <span class="sidebar-menu-text">Miscellaneous</span>
+            <span class="sidebar-menu-arrow">
+              <i data-feather="chevron-right"></i>
+            </span>
+          </a>
+          <ul class="sidebar-submenu">
+            <li>
+              <a href="./starter.html" class="sidebar-submenu-item"> Starter Page </a>
+            </li>
+            <li>
+              <a href="./comming-soon.html" class="sidebar-submenu-item"> Coming Soon </a>
+            </li>
+            <li>
+              <a href="./maintenance.html" class="sidebar-submenu-item"> Maintenance </a>
+            </li>
+            <li>
+              <a href="./404-error.html" class="sidebar-submenu-item"> Error 404 </a>
+            </li>
+            <li>
+              <a href="./500-error.html" class="sidebar-submenu-item"> Error 500 </a>
+            </li>
+            <li>
+              <a href="./not-authorized.html" class="sidebar-submenu-item"> Not Authorized </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <!-- Sidebar Menu Ends -->
+    </aside>
+    <!-- Sidebar Ends -->
+
+    <!-- Wrapper Starts -->
+    <div class="wrapper">
+      <!-- Header Starts -->
+      <header class="header">
+        <div class="container-fluid flex items-center justify-between">
+          <!-- Sidebar Toggle & Search Starts -->
+          <div class="flex items-center space-x-6">
+            <button class="sidebar-toggle">
+              <span class="flex space-x-4">
+                <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" height="22" width="22"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16">
+                  </path>
+                </svg>
+              </span>
+            </button>
+
+            <!-- Mobile Search Starts -->
+            <div class="sm:hidden">
+              <button type="button" data-trigger="search-modal"
+                class="flex items-center justify-center rounded-full text-slate-500 transition-colors duration-150 hover:text-primary-500 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300">
+                <i width="22" height="22" data-feather="search"></i>
+              </button>
+            </div>
+            <!-- Mobile Search Ends -->
+
+            <!-- Searchbar Start -->
+            <button type="button" data-trigger="search-modal"
+              class="group hidden h-10 w-72 items-center overflow-hidden rounded-primary bg-slate-100 px-3 shadow-sm dark:border-transparent dark:bg-slate-700 sm:flex">
+              <i class="text-slate-400" width="1em" height="1em" data-feather="search"></i>
+              <span class="ml-2 text-sm text-slate-400">Search</span>
+            </button>
+            <!-- Searchbar Ends -->
+          </div>
+          <!-- Sidebar Toggle & Search Ends -->
+
+          <!-- Header Options Starts -->
+          <div class="flex items-center">
+            <!-- Language Dropdown Starts -->
+            <div class="dropdown" data-strategy="absolute">
+              <div class="dropdown-toggle px-3">
+                <button type="button"
+                  class="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-slate-700 focus:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-slate-300">
+                  <span class="fi fi-gb"></span>
+                  <span class="hidden font-medium md:inline-block">English</span>
+                  <span class="inline-block font-medium md:hidden">EN</span>
+                </button>
+              </div>
+
+              <div class="dropdown-content mt-3 w-40">
+                <ul class="dropdown-list">
+                  <li class="dropdown-list-item">
+                    <button class="dropdown-btn" type="button">
+                      <span class="fi fi-gb"></span>
+                      <span class="">English</span>
+                    </button>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <button class="dropdown-btn" type="button">
+                      <span class="fi fi-de"></span>
+                      <span class="">German</span>
+                    </button>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <button class="dropdown-btn" type="button">
+                      <span class="fi fi-gf"></span>
+                      <span class="">French</span>
+                    </button>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <button class="dropdown-btn" type="button">
+                      <span class="fi fi-sa"></span>
+                      <span class="">Arabic</span>
+                    </button>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <button class="dropdown-btn" type="button">
+                      <span class="fi fi-cn"></span>
+                      <span class="">Chinese</span>
+                    </button>
+                  </li>
+                  <li class="dropdown-list-item">
+                    <button class="dropdown-btn" type="button">
+                      <span class="fi fi-bd"></span>
+                      <span class="">Bangla</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Language Dropdown Ends -->
+
+            <!-- Dark Mood Toggle Starts -->
+            <div class="dropdown" data-strategy="absolute" id="theme-switcher-dropdown">
+              <button
+                class="dropdown-toggle px-3 text-slate-500 hover:text-slate-700 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500"
+                type="button">
+                <i class="hidden dark:block" width="24" height="24" data-feather="moon"></i>
+                <i class="block dark:hidden" width="24" height="24" data-feather="sun"></i>
+              </button>
+
+              <div class="dropdown-content mt-3 w-36">
+                <ul class="dropdown-list">
+                  <li class="dropdown-list-item">
+                    <button type="buttton" class="dropdown-btn" data-theme-mode="light">
+                      <i width="16" height="16" data-feather="sun"></i>
+                      <span>Light</span>
+                    </button>
+                  </li>
+
+                  <li class="dropdown-list-item">
+                    <button type="buttton" class="dropdown-btn" data-theme-mode="dark">
+                      <i width="16" height="16" data-feather="moon"></i>
+                      <span>Dark</span>
+                    </button>
+                  </li>
+
+                  <li class="dropdown-list-item">
+                    <button type="buttton" class="dropdown-btn" data-theme-mode="system">
+                      <i width="16" height="16" data-feather="monitor"></i>
+                      <span>System</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Dark Mood Toggle Ends -->
+
+            <!-- Notification Dropdown Starts -->
+            <div class="dropdown -mt-0.5" data-strategy="absolute">
+              <div class="dropdown-toggle px-3">
+                <button
+                  class="relative mt-1 flex items-center justify-center rounded-full text-slate-500 transition-colors duration-150 hover:text-slate-700 focus:text-primary-500 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:text-primary-500">
+                  <i width="24" height="24" data-feather="bell"></i>
+                  <span
+                    class="absolute -right-1 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-danger-500 text-[11px] text-slate-200">
+                    5
+                  </span>
+                </button>
+              </div>
+
+              <div class="dropdown-content mt-3 w-[17.5rem] divide-y dark:divide-slate-700 sm:w-80">
+                <div class="flex items-center justify-between px-4 py-4">
+                  <h6 class="text-slate-800 dark:text-slate-300">Notifications</h6>
+                  <button class="text-xs font-medium text-slate-600 hover:text-primary-500 dark:text-slate-300">
+                    Clear All
+                  </button>
+                </div>
+
+                <div class="h-80 w-full" data-simplebar>
+                  <ul>
+                    <li
+                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
+                      <div
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-500">
+                        <i data-feather="alert-circle" width="20" height="20"></i>
+                      </div>
+
+                      <div>
+                        <h6 class="text-sm font-normal">New order received</h6>
+                        <p class="text-xs text-slate-400">Order #1234 has been placed</p>
+                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                          <i data-feather="clock" width="1em" height="1em"></i>
+                          <span>2 min ago</span>
+                        </p>
+                      </div>
+                    </li>
+
+                    <li
+                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
+                      <div
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-yellow-100 text-yellow-500">
+                        <i data-feather="alert-triangle" width="20" height="20"></i>
+                      </div>
+
+                      <div>
+                        <h6 class="text-sm font-normal">High CPU usage</h6>
+                        <p class="text-xs text-slate-400">CPU usage is at 92%</p>
+                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                          <i data-feather="clock" width="1em" height="1em"></i>
+                          <span>5 min ago</span>
+                        </p>
+                      </div>
+                    </li>
+
+                    <li
+                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
+                      <div
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-500">
+                        <i data-feather="check-circle" width="20" height="20"></i>
+                      </div>
+
+                      <div>
+                        <h6 class="text-sm font-normal">Your order has been shipped</h6>
+                        <p class="text-xs text-slate-400">Order #1234 has been shipped</p>
+                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                          <i data-feather="clock" width="1em" height="1em"></i>
+                          <span>10 min ago</span>
+                        </p>
+                      </div>
+                    </li>
+
+                    <li
+                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
+                      <div
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-danger-100 text-danger-500">
+                        <i data-feather="x-circle" width="20" height="20"></i>
+                      </div>
+
+                      <div>
+                        <h6 class="text-sm font-normal">Something went wrong</h6>
+                        <p class="text-xs text-slate-400">Order #1234 has been placed</p>
+                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                          <i data-feather="clock" width="1em" height="1em"></i>
+                          <span>1 hour ago</span>
+                        </p>
+                      </div>
+                    </li>
+
+                    <li
+                      class="flex cursor-pointer gap-4 px-4 py-3 transition-colors duration-150 hover:bg-slate-100/70 dark:hover:bg-slate-700">
+                      <div
+                        class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-100 text-green-500">
+                        <i data-feather="check-circle" width="20" height="20"></i>
+                      </div>
+
+                      <div>
+                        <h6 class="text-sm font-normal">Your order has been shipped</h6>
+                        <p class="text-xs text-slate-400">Order #1234 has been shipped</p>
+                        <p class="mt-1 flex items-center gap-1 text-xs text-slate-400">
+                          <i data-feather="clock" width="1em" height="1em"></i>
+                          <span>10 min ago</span>
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="px-4 py-2">
+                  <button class="btn btn-primary-plain btn-sm w-full" type="button">
+                    <span>View More</span>
+                    <i data-feather="arrow-right" width="1rem" height="1rem"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Notification Dropdown Ends -->
+
+            <!-- Profile Dropdown Starts -->
+            <div class="dropdown" data-strategy="absolute">
+              <div class="dropdown-toggle pl-3">
+                <button class="group relative flex items-center gap-x-1.5" type="button">
+                  <div class="avatar avatar-circle avatar-indicator avatar-indicator-online">
+                    <img class="avatar-img group-focus-within:ring group-focus-within:ring-primary-500"
+                      src="/images/avatar1.png" alt="Avatar 1" />
+                  </div>
+                </button>
+              </div>
+
+              <div class="dropdown-content mt-1 w-56 divide-y dark:divide-slate-600">
+                <div class="px-4 py-3">
+                  <p class="text-sm">Signed in as</p>
+                  <p class="truncate text-sm font-medium">admin@example.com</p>
+                </div>
+                <div class="py-1">
+                  <a href="javascript:void(0)" class="dropdown-link">
+                    <i width="18" height="18" data-feather="user" class="text-slate-500"></i>
+                    <span>Profile</span>
+                  </a>
+                  <a href="javascript:void(0)" class="dropdown-link">
+                    <i width="18" height="18" data-feather="settings" class="text-slate-500"></i>
+                    <span>Settings</span>
+                  </a>
+                  <a href="javascript:void(0)" class="dropdown-link">
+                    <i width="18" height="18" data-feather="help-circle" class="text-slate-500"></i>
+                    <span>Support</span>
+                  </a>
+                </div>
+                <div class="py-1">
+                  <form method="POST" action="#">
+                    <button type="submit" class="dropdown-btn">
+                      <i width="18" height="18" data-feather="log-out" class="text-slate-500"></i>
+                      <span>Sign out</span>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-- Profile Dropdown Ends -->
+          </div>
+          <!-- Header Options Ends -->
+        </div>
+      </header>
+      <!-- Header Ends -->
+
+      <!-- Page Content Starts -->
+      <div class="content">
+        <!-- Main Content Starts -->
+        <main class="container flex-grow p-4 sm:p-6">
+          <!-- Page Title Starts -->
+          <div class="mb-6 flex flex-col justify-between gap-y-1 sm:flex-row sm:gap-y-0">
+            <h5>Order List</h5>
+
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="/">Home</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="#">Ecommerce</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="#">Order List</a>
+              </li>
+            </ol>
+          </div>
+          <!-- Page Title Ends -->
+
+          <!-- Order Listing Starts -->
+          <div class="space-y-4">
+            <!-- Order Header Starts -->
+            <div class="flex flex-col items-center justify-between gap-y-4 md:flex-row md:gap-y-0">
+              <!-- Order Search Starts -->
+              <form
+                class="group flex h-10 w-full items-center rounded-primary border border-transparent bg-white shadow-sm focus-within:border-primary-500 focus-within:ring-1 focus-within:ring-inset focus-within:ring-primary-500 dark:border-transparent dark:bg-slate-800 dark:focus-within:border-primary-500 md:w-72">
+                <div class="flex h-full items-center px-2">
+                  <i class="h-4 text-slate-400 group-focus-within:text-primary-500" data-feather="search"></i>
+                </div>
+                <input
+                  class="h-full w-full border-transparent bg-transparent px-0 text-sm placeholder-slate-400 placeholder:text-sm focus:border-transparent focus:outline-none focus:ring-0"
+                  type="text" placeholder="Search" />
+              </form>
+              <!-- Order Search Ends -->
+
+              <!-- Order Action Starts -->
+              <div class="flex w-full items-center justify-between gap-x-4 md:w-auto">
+                <div class="dropdown" data-placement="bottom-end">
+                  <div class="dropdown-toggle">
+                    <button type="button" class="btn bg-white font-medium shadow-sm dark:bg-slate-800">
+                      <i class="w-4" data-feather="filter"></i>
+                      <span>Filter</span>
+                      <i class="w-4" data-feather="chevron-down"></i>
+                    </button>
+                  </div>
+                  <div class="dropdown-content w-72 !overflow-visible">
+                    <ul class="dropdown-list space-y-4 p-4">
+                      <li class="dropdown-list-item">
+                        <h2 class="my-1 text-sm font-medium">Status</h2>
+                        <select class="select">
+                          <option value="">Select a Status</option>
+                          <option value="1">Delivered</option>
+                          <option value="2">Shipped</option>
+                          <option value="3">Processing</option>
+                          <option value="4">Refounded</option>
+                          <option value="5">Canceled</option>
+                        </select>
+                      </li>
+
+                      <li class="dropdown-list-item">
+                        <h2 class="my-1 text-sm font-medium">Ordered Date</h2>
+                        <select class="tom-select w-full" autocomplete="off">
+                          <option value="">Search Date</option>
+                          <option value="1">01 May 2022</option>
+                          <option value="2">20 Jun 2022</option>
+                          <option value="3">19 Aug 2022</option>
+                        </select>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <a class="btn btn-primary" href="#" role="button">
+                  <i data-feather="plus" height="1rem" width="1rem"></i>
+                  <span>New Order</span>
+                </a>
+              </div>
+              <!-- Order Action Ends -->
+            </div>
+            <!-- Order Header Ends -->
+
+            <!-- Order Table Starts -->
+            <div class="table-responsive whitespace-nowrap rounded-primary">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th class="w-[5%]">
+                      <input class="checkbox" type="checkbox" data-check-all data-check-all-target=".order-checkbox" />
+                    </th>
+                    <th class="w-[5%] uppercase">Order</th>
+                    <th class="w-[55%] uppercase">Customer</th>
+                    <th class="w-[10%] uppercase">Total</th>
+                    <th class="w-[10%] uppercase">Ordered At</th>
+                    <th class="w-[10%] uppercase">Status</th>
+                    <th class="w-[5%] !text-right uppercase">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <input class="checkbox order-checkbox" type="checkbox" />
+                    </td>
+                    <td>
+                      <a class="text-sm font-medium text-primary-500 transition duration-150 ease-in-out hover:underline"
+                        href="#">
+                        #2890
+                      </a>
+                    </td>
+                    <td>
+                      <div class="flex gap-2">
+                        <div class="avatar avatar-circle">
+                          <img class="avatar-img" src="/images/avatar1.png" alt="Avatar 1" />
+                        </div>
+
+                        <div>
+                          <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
+                            Korrie O'Crevy
+                          </h6>
+                          <p class="truncate text-xs text-slate-500 dark:text-slate-400">kocrevy0@thetimes.co.uk</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>$446.61</td>
+                    <td>19 Aug 2022, 10:39 pm</td>
+                    <td>
+                      <div class="badge badge-soft-primary">Processing</div>
+                    </td>
+                    <td>
+                      <div class="flex justify-end">
+                        <div class="dropdown" data-placement="bottom-start">
+                          <div class="dropdown-toggle">
+                            <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
+                          </div>
+                          <div class="dropdown-content w-40">
+                            <ul class="dropdown-list">
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                  <span>Details</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="file-text"></i>
+                                  <span>PDF</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="trash-2"></i>
+                                  <span>Delete</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input class="checkbox order-checkbox" type="checkbox" />
+                    </td>
+                    <td>
+                      <a class="text-sm font-medium text-primary-500 transition duration-150 ease-in-out hover:underline"
+                        href="#">
+                        #2891
+                      </a>
+                    </td>
+                    <td>
+                      <div class="flex gap-2">
+                        <div class="avatar avatar-circle">
+                          <img class="avatar-img" src="/images/avatar2.png" alt="Avatar 1" />
+                        </div>
+
+                        <div>
+                          <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
+                            Bailie Coulman
+                          </h6>
+                          <p class="truncate text-xs text-slate-500 dark:text-slate-400">bcoulman1@yolasite.com</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>$739.65</td>
+                    <td>20 Jun 2022, 05:00 pm</td>
+                    <td>
+                      <div class="badge badge-soft-primary">Processing</div>
+                    </td>
+                    <td>
+                      <div class="flex justify-end">
+                        <div class="dropdown" data-placement="bottom-start">
+                          <div class="dropdown-toggle">
+                            <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
+                          </div>
+                          <div class="dropdown-content w-40">
+                            <ul class="dropdown-list">
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                  <span>Details</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="file-text"></i>
+                                  <span>PDF</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="trash-2"></i>
+                                  <span>Delete</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input class="checkbox order-checkbox" type="checkbox" />
+                    </td>
+                    <td>
+                      <a class="text-sm font-medium text-primary-500 transition duration-150 ease-in-out hover:underline"
+                        href="#">
+                        #2892
+                      </a>
+                    </td>
+                    <td>
+                      <div class="flex gap-2">
+                        <div class="avatar avatar-circle">
+                          <img class="avatar-img" src="/images/avatar3.png" alt="Avatar 3" />
+                        </div>
+
+                        <div>
+                          <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
+                            Stella Ganderton
+                          </h6>
+                          <p class="truncate text-xs text-slate-500 dark:text-slate-400">sganderton2@tuttocitta.it</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>$475.22</td>
+                    <td>01 May 2022, 12:01 am</td>
+                    <td>
+                      <div class="badge badge-soft-danger">Canceled</div>
+                    </td>
+                    <td>
+                      <div class="flex justify-end">
+                        <div class="dropdown" data-placement="bottom-start">
+                          <div class="dropdown-toggle">
+                            <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
+                          </div>
+                          <div class="dropdown-content w-40">
+                            <ul class="dropdown-list">
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                  <span>Details</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="file-text"></i>
+                                  <span>PDF</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="trash-2"></i>
+                                  <span>Delete</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input class="checkbox order-checkbox" type="checkbox" />
+                    </td>
+                    <td>
+                      <a class="text-sm font-medium text-primary-500 transition duration-150 ease-in-out hover:underline"
+                        href="#">
+                        #2893
+                      </a>
+                    </td>
+                    <td>
+                      <div class="flex gap-2">
+                        <div class="avatar avatar-circle">
+                          <img class="avatar-img" src="/images/avatar4.png" alt="Avatar 4" />
+                        </div>
+
+                        <div>
+                          <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
+                            Dorolice Crossman
+                          </h6>
+                          <p class="truncate text-xs text-slate-500 dark:text-slate-400">dcrossman3@google.co.jp</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>$779.58</td>
+                    <td>15 Apr 2022, 01: 10 am</td>
+                    <td>
+                      <div class="badge badge-soft-success">Delivered</div>
+                    </td>
+                    <td>
+                      <div class="flex justify-end">
+                        <div class="dropdown" data-placement="bottom-start">
+                          <div class="dropdown-toggle">
+                            <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
+                          </div>
+                          <div class="dropdown-content w-40">
+                            <ul class="dropdown-list">
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                  <span>Details</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="file-text"></i>
+                                  <span>PDF</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="trash-2"></i>
+                                  <span>Delete</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input class="checkbox order-checkbox" type="checkbox" />
+                    </td>
+                    <td>
+                      <a class="text-sm font-medium text-primary-500 transition duration-150 ease-in-out hover:underline"
+                        href="#">
+                        #2894
+                      </a>
+                    </td>
+                    <td>
+                      <div class="flex gap-2">
+                        <div class="avatar avatar-circle">
+                          <img class="avatar-img"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDYuMC1jMDAyIDc5LjE2NDM2MCwgMjAyMC8wMi8xMy0wMTowNzoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIxLjEgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjIzMDI1RUZBQ0YwRDExRUQ5NThFOUFFOUVBRjFEOTc5IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjIzMDI1RUZCQ0YwRDExRUQ5NThFOUFFOUVBRjFEOTc5Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MjMwMjVFRjhDRjBEMTFFRDk1OEU5QUU5RUFGMUQ5NzkiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MjMwMjVFRjlDRjBEMTFFRDk1OEU5QUU5RUFGMUQ5NzkiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz49cjvrAAALx0lEQVR42sRaa2wc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"
+                            alt="Avatar 5" />
+                        </div>
+
+                        <div>
+                          <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
+                            Harmonia Nisius
+                          </h6>
+                          <p class="truncate text-xs text-slate-500 dark:text-slate-400">hnisius4@gnu.org</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>$169.43</td>
+                    <td>10 Apr 2022, 04:30 pm</td>
+                    <td>
+                      <div class="badge badge-soft-success">Delivered</div>
+                    </td>
+                    <td>
+                      <div class="flex justify-end">
+                        <div class="dropdown" data-placement="bottom-start">
+                          <div class="dropdown-toggle">
+                            <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
+                          </div>
+                          <div class="dropdown-content w-40">
+                            <ul class="dropdown-list">
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                  <span>Details</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="file-text"></i>
+                                  <span>PDF</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="trash-2"></i>
+                                  <span>Delete</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input class="checkbox order-checkbox" type="checkbox" />
+                    </td>
+                    <td>
+                      <a class="text-sm font-medium text-primary-500 transition duration-150 ease-in-out hover:underline"
+                        href="#">
+                        #2895
+                      </a>
+                    </td>
+                    <td>
+                      <div class="flex gap-2">
+                        <div class="avatar avatar-circle">
+                          <img class="avatar-img"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDYuMC1jMDAyIDc5LjE2NDM2MCwgMjAyMC8wMi8xMy0wMTowNzoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIxLjEgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjExNjBFQkY3Q0YwRDExRUQ5RDg0ODEyQjhDNjU4MTc2IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjExNjBFQkY4Q0YwRDExRUQ5RDg0ODEyQjhDNjU4MTc2Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MTE2MEVCRjVDRjBEMTFFRDlEODQ4MTJCOEM2NTgxNzYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MTE2MEVCRjZDRjBEMTFFRDlEODQ4MTJCOEM2NTgxNzYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4KrSqIAAAL5ElEQVR42sRaWYxk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"
+                            alt="Avatar 6" />
+                        </div>
+
+                        <div>
+                          <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
+                            Genevra Honeywood
+                          </h6>
+                          <p class="truncate text-xs text-slate-500 dark:text-slate-400">ghoneywood5@narod.ru</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>$576.28</td>
+                    <td>01 Mar 2022, 06: 25 pm</td>
+                    <td>
+                      <div class="badge badge-soft-warning">Shipped</div>
+                    </td>
+                    <td>
+                      <div class="flex justify-end">
+                        <div class="dropdown" data-placement="bottom-start">
+                          <div class="dropdown-toggle">
+                            <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
+                          </div>
+                          <div class="dropdown-content w-40">
+                            <ul class="dropdown-list">
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                  <span>Details</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="file-text"></i>
+                                  <span>PDF</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="trash-2"></i>
+                                  <span>Delete</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input class="checkbox order-checkbox" type="checkbox" />
+                    </td>
+                    <td>
+                      <a class="text-sm font-medium text-primary-500 transition duration-150 ease-in-out hover:underline"
+                        href="#">
+                        #2896
+                      </a>
+                    </td>
+                    <td>
+                      <div class="flex gap-2">
+                        <div class="avatar avatar-circle">
+                          <img class="avatar-img"
+                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDYuMC1jMDAyIDc5LjE2NDM2MCwgMjAyMC8wMi8xMy0wMTowNzoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QTY0RjZEMUFDRjBEMTFFRDk1MEFENkVFMkYwREY1RkMiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QTY0RjZEMTlDRjBEMTFFRDk1MEFENkVFMkYwREY1RkMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIxLjEgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RkJGMEIyQjlDRjBDMTFFRDlGNkFCQTVFRjQwREYxRkQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RkJGMEIyQkFDRjBDMTFFRDlGNkFCQTVFRjQwREYxRkQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5HckJwAAAKBklEQVR42uxYe4xc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"
+                            alt="Avatar 7" />
+                        </div>
+
+                        <div>
+                          <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
+                            Genevra Honeywood
+                          </h6>
+                          <p class="truncate text-xs text-slate-500 dark:text-slate-400">ghoneywood5@narod.ru</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>$630.44</td>
+                    <td>10 Feb 2022, 10:05 am</td>
+                    <td>
+                      <div class="badge badge-soft-success">Delivered</div>
+                    </td>
+                    <td>
+                      <div class="flex justify-end">
+                        <div class="dropdown" data-placement="bottom-start">
+                          <div class="dropdown-toggle">
+                            <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
+                          </div>
+                          <div class="dropdown-content w-40">
+                            <ul class="dropdown-list">
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                  <span>Details</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="file-text"></i>
+                                  <span>PDF</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="trash-2"></i>
+                                  <span>Delete</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input class="checkbox order-checkbox" type="checkbox" />
+                    </td>
+                    <td>
+                      <a class="text-sm font-medium text-primary-500 transition duration-150 ease-in-out hover:underline"
+                        href="#">
+                        #2897
+                      </a>
+                    </td>
+                    <td>
+                      <div class="flex gap-2">
+                        <div class="avatar avatar-circle">
+                          <img class="avatar-img" src="/images/avatar8.png" alt="Avatar 8" />
+                        </div>
+
+                        <div>
+                          <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
+                            Eileen Diehn
+                          </h6>
+                          <p class="truncate text-xs text-slate-500 dark:text-slate-400">ediehn6@163.com</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>$202.87</td>
+                    <td>01 Feb 2022, 03: 30 pm</td>
+                    <td>
+                      <div class="badge badge-soft-secondary">Refounded</div>
+                    </td>
+                    <td>
+                      <div class="flex justify-end">
+                        <div class="dropdown" data-placement="bottom-start">
+                          <div class="dropdown-toggle">
+                            <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
+                          </div>
+                          <div class="dropdown-content w-40">
+                            <ul class="dropdown-list">
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                  <span>Details</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="file-text"></i>
+                                  <span>PDF</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="trash-2"></i>
+                                  <span>Delete</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input class="checkbox order-checkbox" type="checkbox" />
+                    </td>
+                    <td>
+                      <a class="text-sm font-medium text-primary-500 transition duration-150 ease-in-out hover:underline"
+                        href="#">
+                        #2898
+                      </a>
+                    </td>
+                    <td>
+                      <div class="flex gap-2">
+                        <div class="avatar avatar-circle">
+                          <img class="avatar-img" src="/images/avatar9.png" alt="Avatar 9" />
+                        </div>
+
+                        <div>
+                          <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
+                            Richardo Aldren
+                          </h6>
+                          <p class="truncate text-xs text-slate-500 dark:text-slate-400">raldren7@mtv.com</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>$928.41</td>
+                    <td>25 Jan 2022, 08: 25 pm</td>
+                    <td>
+                      <div class="badge badge-soft-success">Delivered</div>
+                    </td>
+                    <td>
+                      <div class="flex justify-end">
+                        <div class="dropdown" data-placement="bottom-start">
+                          <div class="dropdown-toggle">
+                            <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
+                          </div>
+                          <div class="dropdown-content w-40">
+                            <ul class="dropdown-list">
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                  <span>Details</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="file-text"></i>
+                                  <span>PDF</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="trash-2"></i>
+                                  <span>Delete</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input class="checkbox order-checkbox" type="checkbox" />
+                    </td>
+                    <td>
+                      <a class="text-sm font-medium text-primary-500 transition duration-150 ease-in-out hover:underline"
+                        href="#">
+                        #2899
+                      </a>
+                    </td>
+                    <td>
+                      <div class="flex gap-2">
+                        <div class="avatar avatar-circle">
+                          <img class="avatar-img" src="/images/avatar10.png" alt="Avatar 10" />
+                        </div>
+
+                        <div>
+                          <h6 class="whitespace-nowrap text-sm font-medium text-slate-700 dark:text-slate-100">
+                            Allyson Moakler
+                          </h6>
+                          <p class="truncate text-xs text-slate-500 dark:text-slate-400">amoakler8@shareasale.com</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>$406.27</td>
+                    <td>01 Jan 2022, 09: 10 am</td>
+                    <td>
+                      <div class="badge badge-soft-success">Delivered</div>
+                    </td>
+                    <td>
+                      <div class="flex justify-end">
+                        <div class="dropdown" data-placement="bottom-start">
+                          <div class="dropdown-toggle">
+                            <i class="w-6 text-slate-400" data-feather="more-horizontal"></i>
+                          </div>
+                          <div class="dropdown-content w-40">
+                            <ul class="dropdown-list">
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="external-link"></i>
+                                  <span>Details</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="file-text"></i>
+                                  <span>PDF</span>
+                                </a>
+                              </li>
+                              <li class="dropdown-list-item">
+                                <a href="javascript:void(0)" class="dropdown-link">
+                                  <i class="h-5 text-slate-400" data-feather="trash-2"></i>
+                                  <span>Delete</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- Order Table Ends -->
+
+            <!-- Order Pagination Starts -->
+            <div class="flex flex-col items-center justify-between gap-y-4 md:flex-row">
+              <p class="text-xs font-normal text-slate-400">Showing 1 to 10 of 50 result</p>
+              <!-- Pagination -->
+              <nav class="pagination">
+                <ul class="pagination-list">
+                  <li class="pagination-item">
+                    <a class="pagination-link pagination-link-prev-icon" href="#">
+                      <i data-feather="chevron-left" width="1em" height="1em"></i>
+                    </a>
+                  </li>
+                  <li class="pagination-item active">
+                    <a class="pagination-link" href="#">1</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="pagination-link" href="#">2</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="pagination-link" href="#">3</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="pagination-link" href="#">4</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="pagination-link" href="#">5</a>
+                  </li>
+                  <li class="pagination-item">
+                    <a class="pagination-link pagination-link-next-icon" href="#">
+                      <i data-feather="chevron-right" width="1em" height="1em"></i>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <!-- Order Pagination Ends -->
+          </div>
+          <!-- Order Listing Ends -->
+        </main>
+        <!-- Main Content Ends -->
+
+        <!-- Footer Starts -->
+        <footer class="footer">
+          <p class="text-sm">
+            Copyright © 2023
+            <a class="text-primary-500 hover:underline" href="https://getadmintoolkit.com" target="_blank">
+              Admin Toolkit
+            </a>
+          </p>
+
+          <p class="flex items-center gap-1 text-sm">
+            Hand-crafted &amp; Made with
+            <i class="text-danger-500" data-feather="heart" height="1em" width="1em"></i>
+          </p>
+        </footer>
+        <!-- Footer Ends -->
+      </div>
+      <!-- Page Content Ends -->
+    </div>
+    <!-- Wrapper Ends -->
+
+    <!-- Search Modal Start -->
+    <div class="modal" id="search-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header px-4 sm:px-6">
+            <div class="group flex items-center">
+              <i data-feather="search"
+                class="text-slate-500 group-focus-within:text-slate-600 dark:text-slate-400 dark:group-focus-within:text-slate-300"></i>
+              <input type="text"
+                class="w-full border-none bg-transparent text-sm text-slate-700 outline-none placeholder:text-slate-400 focus:ring-0 dark:text-slate-200"
+                placeholder="Search" />
+              <button
+                class="rounded-primary bg-slate-100 px-2 py-1 text-[10px] font-semibold text-slate-600 hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600"
+                data-dismiss="modal">
+                ESC
+              </button>
+            </div>
+          </div>
+          <div class="modal-body max-h-[600px] px-4 py-6 sm:px-6"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Search Modal Ends -->
+  </div>
+
+</body>
+
+</html>
