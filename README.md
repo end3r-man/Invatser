@@ -3,7 +3,7 @@
 
 An open-source replacement for invoice management
 
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![GPL License](https://img.shields.io/badge/License-GPl-green.svg)](https://choosealicense.com/licenses/gpl-3.0/)
 ## Roadmap
 
 - Ai data analytics
