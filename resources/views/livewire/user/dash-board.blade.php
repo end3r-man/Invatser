@@ -23,14 +23,14 @@
                     <div class="flex gap-4 items-center card-body">
                         <div
                             class="flex flex-shrink-0 justify-center items-center w-12 h-12 bg-opacity-20 rounded-full bg-primary-500 text-primary-500">
-                            <i data-feather="box" class="text-3xl"></i>
+                            <iconify-icon class="text-3xl" icon="solar:user-line-duotone"></iconify-icon>
                         </div>
                         <div class="flex flex-col flex-1 gap-1">
-                            <p class="text-sm tracking-wide text-slate-500">Product Views</p>
+                            <p class="text-sm tracking-wide text-slate-500">Total Buyer</p>
                             <div class="flex flex-wrap gap-2 justify-between items-baseline">
-                                <h4>$24,92</h4>
-                                <span class="flex items-center text-xs font-medium text-success-500"><i class="w-3 h-3"
-                                        stroke-width="3px" data-feather="arrow-up-right"></i>2.2%</span>
+                                <h4>{{$percen['cont']}}</h4>
+                                <span class="flex items-center text-xs font-medium @if ($percen['per'] <= 20) text-danger-500 @else text-success-500 @endif"><i class="w-3 h-3"
+                                        stroke-width="3px" data-feather="arrow-up-right"></i>{{$percen['per']}}%</span>
                             </div>
                         </div>
                     </div>
@@ -45,10 +45,10 @@
                         <div class="flex flex-col flex-1 gap-1">
                             <p class="text-sm tracking-wide text-slate-500">Product Sold</p>
                             <div class="flex flex-wrap gap-2 justify-between items-baseline">
-                                <h4>8,430</h4>
-                                <span class="flex items-center text-xs font-medium text-danger-500">
+                                <h4>{{$mlsale['cont']}}</h4>
+                                <span class="flex items-center text-xs font-medium @if ($mlsale['per'] <= 20) text-danger-500 @else text-success-500 @endif">
                                     <i class="w-3 h-3" stroke-width="3px" data-feather="arrow-down-left"></i>
-                                    0.5%</span>
+                                    {{$mlsale['per']}}%</span>
                             </div>
                         </div>
                     </div>
@@ -524,7 +524,7 @@
                     <div class="space-y-2 card-body">
                         <!-- Header  -->
                         <div class="flex justify-between w-full">
-                            <h6>Top Sellers</h6>
+                            <h6>Top Buyer</h6>
                             <div class="dropdown" data-placement="bottom-end">
                                 <div class="dropdown-toggle">
                                     <i class="text-lg ti ti-dots-vertical text-slate-500"></i>
