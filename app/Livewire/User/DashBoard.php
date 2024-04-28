@@ -27,6 +27,8 @@ class DashBoard extends Component
 
     public $mlsale;
 
+    public $salem = false;
+
     public function render()
     {
         return view('livewire.user.dash-board');
@@ -37,7 +39,7 @@ class DashBoard extends Component
 
         $ucom = User::where('id', auth()->user()->id)->first();
 
-        $this->buyer = UserClient::where('active', true)->get();
+        $this->buyer = UserClient::where('active', true)->where('user_id', auth()->user()->id)->get();
 
         $today = Carbon::now()->startOfMonth();
 
@@ -62,19 +64,21 @@ class DashBoard extends Component
         } elseif ($bcont == 0) {
             $this->percen['per'] = 0;
         } else {
-            $this->percen['per'] = round(($bcont / $ocont) * 100, 2);
+            $this->percen['per'] = round(($bcont / $ocont) * 100, 1);
         }
 
         $this->code = $ucom->currency;
 
-        $invo = UserInvoice::whereMonth('created_at', date('m'))
-            ->whereYear('created_at', date('Y'))
-            ->where('user_id', auth()->user()->id)
-            ->get();
+        $invo = UserInvoice::whereMonth('created_at', $today)
+        ->where('user_id', auth()->user()->id)
+        ->get();
 
         $productData = []; // Initialize an array to store aggregated data for each product
 
-        foreach ($invo as $key => $value) {
+        foreach ($invo as $value) {
+            
+            dd(json_decode($value->product));
+
             $js = json_decode($value->product);
 
             foreach ($js as $item) {
@@ -133,6 +137,15 @@ class DashBoard extends Component
             $this->mlsale['per'] = 0;
         } else {
             $this->mlsale['per'] = round(($mltsotal / $pldata) * 100, 2);
+        }
+    }
+
+    public function sale()
+    {
+        if ($this->salem) {
+            $this->salem = false;
+        } else {
+            $this->salem = true;
         }
     }
 }

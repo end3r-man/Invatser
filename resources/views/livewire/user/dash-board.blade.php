@@ -40,12 +40,12 @@
                     <div class="flex gap-4 items-center card-body">
                         <div
                             class="flex flex-shrink-0 justify-center items-center w-12 h-12 bg-opacity-20 rounded-full bg-success-500 text-success-500">
-                            <i class="text-3xl bx bx-dollar-circle"></i>
+                            <iconify-icon class="text-3xl" icon="icon-park-twotone:view-list"></iconify-icon>
                         </div>
                         <div class="flex flex-col flex-1 gap-1">
                             <p class="text-sm tracking-wide text-slate-500">Product Sold</p>
                             <div class="flex flex-wrap gap-2 justify-between items-baseline">
-                                <h4>{{$mlsale['cont']}}</h4>
+                                <h4>{{Number::currency($mlsale['cont'], 'INR')}}</h4>
                                 <span class="flex items-center text-xs font-medium @if ($mlsale['per'] <= 20) text-danger-500 @else text-success-500 @endif">
                                     <i class="w-3 h-3" stroke-width="3px" data-feather="arrow-down-left"></i>
                                     {{$mlsale['per']}}%</span>
@@ -345,27 +345,31 @@
                         <!-- Header  -->
                         <div class="flex justify-between w-full">
                             <h6>Sales Analytics</h6>
-                            <div class="dropdown" data-placement="bottom-end">
-                                <div @click="open = ! open" class="dropdown-toggle">
-                                    <i class="text-lg ti ti-dots-vertical text-slate-500"></i>
-                                </div>
-                                <div class="dropdown-content w-[160px]">
-                                    <ul class="dropdown-list">
-                                        <li class="dropdown-list-item">
-                                            <a href="javascript:void(0)" class="gap-2 dropdown-link"> Action
-                                            </a>
-                                        </li>
-                                        <li class="dropdown-list-item">
-                                            <a href="javascript:void(0)" class="gap-2 dropdown-link"> Another
-                                                Action </a>
-                                        </li>
-                                    </ul>
+                            <div class="dropdown bg-white/30 rounded-md" data-placement="bottom-end">
+                                <div wire:click='sale' class="dropdown-toggle">
+                                    <iconify-icon class="text-2xl" icon="solar:arrow-down-bold"></iconify-icon>
                                 </div>
                             </div>
                         </div>
-                        <p class="my-1 text-sm text-slate-400">{!! $code !!} {{ number_format($tsales)}} Total Sales</p>
+                        <p class="my-1 text-sm text-slate-400">{{ Number::currency($tsales, 'INR')}} Total Sales</p>
                         <div class="mt-auto divide-y dark:divide-slate-600">
                             <!-- Emails  -->
+                            @if ($salem == true)
+                            @foreach ( $msales as $key => $item)
+                                <div class="flex gap-4 items-center py-2">
+                                    <div
+                                        class="flex justify-center items-center w-12 h-12 bg-opacity-20 min-w-12 rounded-primary bg-primary-500 text-primary-500">
+                                        <i class="text-3xl ti ti-refresh"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="text-sm font-medium text-slate-600 dark:text-slate-300">{{$key}}</h6>
+                                        <p class="text-sm text-slate-400">{{ $item['qty'] }}</p>
+                                    </div>
+                                    <span class="flex items-center ml-auto text-sm font-medium text-success-500"><i
+                                            class="w-3 h-3" stroke-width="3px" data-feather="arrow-up-right"></i>{{ $item['total'] }}</span>
+                                </div>
+                            @endforeach
+                            @else
                             @foreach ( array_slice($msales, 0, 5) as $key => $item)
                                 <div class="flex gap-4 items-center py-2">
                                     <div
@@ -380,6 +384,8 @@
                                             class="w-3 h-3" stroke-width="3px" data-feather="arrow-up-right"></i>{{ $item['total'] }}</span>
                                 </div>
                             @endforeach
+                            @endif
+                            
                             {{-- <!-- Opened  -->
                             <div class="flex gap-4 items-center py-2">
                                 <div
