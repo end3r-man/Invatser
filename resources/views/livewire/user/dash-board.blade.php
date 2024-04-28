@@ -46,6 +46,7 @@
                             <p class="text-sm tracking-wide text-slate-500">Product Sold</p>
                             <div class="flex flex-wrap gap-2 justify-between items-baseline">
                                 <h4>{{Number::currency($mlsale['cont'], 'INR')}}</h4>
+                                <h4>{{$mlsale['cont']}}</h4>
                                 <span class="flex items-center text-xs font-medium @if ($mlsale['per'] <= 20) text-danger-500 @else text-success-500 @endif">
                                     <i class="w-3 h-3" stroke-width="3px" data-feather="arrow-down-left"></i>
                                     {{$mlsale['per']}}%</span>

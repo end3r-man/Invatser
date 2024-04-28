@@ -15,7 +15,15 @@ An open-source replacement for invoice management
 - Mobile Apk
 
 
+## Demo Account Info
 
+Email Address
+
+`demo@example.com`
+
+Password
+
+`demo@2024`
 
 ## Authors
 

@@ -39,6 +39,7 @@ class DashBoard extends Component
 
         $ucom = User::where('id', auth()->user()->id)->first();
 
+
         $this->buyer = UserClient::where('active', true)->where('user_id', auth()->user()->id)->get();
 
         $today = Carbon::now()->startOfMonth();
@@ -66,6 +67,26 @@ class DashBoard extends Component
         } else {
             $this->percen['per'] = round(($bcont / $ocont) * 100, 1);
         }
+
+        foreach ($this->buyer as $value) {
+            if ($value->created_at->between($today, Carbon::now())) {
+                $bcont++;
+            } else {
+                $ocont++;
+            }
+        }
+
+        $this->percen['cont'] = $bcont;
+        
+        if ($ocont == 0 && $bcont != 0) {
+            $this->percen['per'] = 100;
+        } elseif ($bcont == 0) {
+            $this->percen['per'] = 0;
+        } else {
+            $this->percen['per'] = round(($bcont / $ocont) * 100, 2);
+        }
+
+        $this->code = $ucom->currency;
 
         $this->code = $ucom->currency;
 
