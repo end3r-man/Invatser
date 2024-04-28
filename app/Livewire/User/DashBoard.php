@@ -97,8 +97,6 @@ class DashBoard extends Component
         $productData = []; // Initialize an array to store aggregated data for each product
 
         foreach ($invo as $value) {
-            
-            dd(json_decode($value->product));
 
             $js = json_decode($value->product);
 
