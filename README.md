@@ -11,6 +11,12 @@
 
 Invatser is an open-source Laravel-based application, designed as a replacement for traditional invoice management systems.
 
+## Credits
+
+This project would not have been possible without the invaluable contribution of the open-source community. We would like to extend our heartfelt gratitude to the creators and maintainers of the following repository, whose admin template formed the foundation of our project:
+
+[AdminToolKit](https://github.com/mostafizurhimself/admintoolkit-html)
+
 ## Invatser Roadmap
 
 Here are some exciting features on our roadmap:
