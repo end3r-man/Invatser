@@ -347,7 +347,9 @@
                         <div class="flex justify-between w-full">
                             <h6>Sales Analytics</h6>
                             <div class="dropdown bg-white/30 rounded-md" data-placement="bottom-end">
+
                                 <div wire:click='sale' @click="sale = ! sale" x-data="{sale: false}" :class="sale ? 'rotate-180 duration-500 transition-all ease-linear':'rotate-0 duration-500 transition-all ease-linear'" class="dropdown-toggle">
+
                                     <iconify-icon class="text-2xl" icon="solar:arrow-down-bold"></iconify-icon>
                                 </div>
                             </div>
@@ -355,7 +357,7 @@
                         <p class="my-1 text-sm text-slate-400">{{ Number::currency($tsales, 'INR')}} Total Sales</p>
                         <div class="mt-auto divide-y dark:divide-slate-600">
                             <!-- Emails  -->
-                            <p>{{$salem}}</p>
+
                             @if ($salem == true)
                             @foreach ( $msales as $key => $item)
                                 <div class="flex gap-4 items-center py-2">

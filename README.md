@@ -1,59 +1,57 @@
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-# Invatser | Invoice Management
+<p align="center">
+<a href="https://github.com/ELG-Foundation/Invatser/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
+<a href="https://github.com/ELG-Foundation/Invatser/releases/tag/0.2-Beta"><img src="https://img.shields.io/github/downloads-pre/ELG-Foundation/Invatser/latest/total" alt="GitHub Downloads" ></a>
+<a href="https://github.com/ELG-Foundation/Invatser"><img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/t/ELG-Foundation/Invatser"></a>
+<a href="https://github.com/ELG-Foundation/Invatser/blob/main/LICENSE"><img alt="GitHub License" src="https://img.shields.io/github/license/ELG-Foundation/Invatser"></a>
+</p>
 
-An open-source replacement for invoice management
+## About Invatser
 
-[![GPL License](https://img.shields.io/badge/License-GPl-green.svg)](https://choosealicense.com/licenses/gpl-3.0/)
-## Roadmap
+Invatser is an open-source Laravel-based application, designed as a replacement for traditional invoice management systems.
 
-- Ai data analytics
+## Invatser Roadmap
 
-- Better mobile support
+Here are some exciting features on our roadmap:
 
-- Rest Api
+- AI data analytics
+- Enhanced mobile support
+- RESTful API integration
+- Mobile application (APK)
 
-- Mobile Apk
+## Contributing
 
+We welcome and appreciate all contributions to Invatser! Please refer to our [Contribution Guidelines](https://github.com/ELG-Foundation/Invatser/blob/main/CONTRIBUTING.md) for more details.
 
-## Demo Account Info
+## Security Vulnerabilities
 
-Email Address
-
-`demo@example.com`
-
-Password
-
-`demo@2024`
-
-## Authors
-
-- [@end3r-man](https://www.github.com/end3r-man)
-
-
-## Demo
-
-- [invatser](https://invatser.elg.foundation)
+If you discover any security vulnerabilities within Invatser, please reach out to us immediately at [enderman@elg.foundation](mailto:enderman@elg.foundation). We take security seriously and will address all reported vulnerabilities promptly.
 
 ## Environment Variables
 
-To run this project, you will need to add the following environment variables to your .env file
+To run Invatser locally, ensure the following environment variables are set in your `.env` file:
 
-`DB_CONNECTION`
-`DB_HOST`
-`DB_PORT`
-`DB_DATABASE`
-`DB_USERNAME`
-`DB_PASSWORD`
+- `DB_CONNECTION`
+- `DB_HOST`
+- `DB_PORT`
+- `DB_DATABASE`
+- `DB_USERNAME`
+- `DB_PASSWORD`
 
-For Email, add the following environment variables
+For email functionality, include the following environment variables:
 
-`MAIL_MAILER`
-`MAIL_HOST`
-`MAIL_PORT`
-`MAIL_USERNAME`
-`MAIL_PASSWORD`
-`MAIL_ENCRYPTION`
-## Run Locally
+- `MAIL_MAILER`
+- `MAIL_HOST`
+- `MAIL_PORT`
+- `MAIL_USERNAME`
+- `MAIL_PASSWORD`
+- `MAIL_ENCRYPTION`
+
+## Getting Started
+
+Follow these steps to set up Invatser locally:
+
 
 Clone the project
 
@@ -103,3 +101,6 @@ Start the vite server
   npm run dev
 ```
 
+## License
+
+The Laravel framework is open-sourced software licensed under the [GPL license](https://opensource.org/license/gpl-3-0).
