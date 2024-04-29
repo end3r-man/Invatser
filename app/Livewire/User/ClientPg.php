@@ -11,9 +11,11 @@ use Livewire\Attributes\Title;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 use Ramsey\Uuid\Type\Integer;
+use Livewire\WithPagination;
 
 class ClientPg extends Component
 {
+    use WithPagination;
 
     /** Public Counter */
     public $count;
@@ -205,5 +207,17 @@ class ClientPg extends Component
     public function paginationView()
     {
         return 'livewire.user.comp.pagination-user';
+    }
+    
+    public function delete($id)
+    {
+        $uinvo = UserClient::where('id', $id)->get();
+
+        if ($uinvo != null) {
+            UserClient::find($id)->delete();
+            $this->dispatch('success', title: 'Invoice Deleted Successfully!');
+        } else {
+            $this->dispatch('warning', title: 'Invoice Not Found!');
+        }
     }
 }

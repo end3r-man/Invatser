@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="{{ asset('/images/logo-small.svg') }}" type="image/svg+xml" />
-  <title>{{$title ?? 'Dash'}} - Invatser4</title>
+  <title>{{$title ?? 'Dash'}} - Invatser</title>
   <meta name="description"
     content="Admin Toolkit is a modern admin dashboard template based on Tailwindcss. It comes with a variety of useful ui components and pre-built pages" />
   {{-- <link rel="preconnect" href="https://fonts.googleapis.com" />
