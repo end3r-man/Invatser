@@ -16,7 +16,7 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="{{ asset('assets/scss/app.scss') }}" />
   <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
-  <link rel="stylesheet" href="{{ asset('build/assets/app-LMFL3xo1.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/app-yx_s9owq.css') }}">
   @vite('resources/css/app.css')
   
   <script>
@@ -66,7 +66,7 @@
 
   @livewireScripts
   <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
-  <script src="{{ asset('build/assets/app-D2jpX1vH.js') }}"></script>
+  <script src="{{ asset('assets/js/app-DkDdL2UM.js') }}"></script>
 </body>
 
 </html>
