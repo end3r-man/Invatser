@@ -34,6 +34,7 @@
 
 <body>
 
+  {{-- Dispatch Notification --}}
   @livewire('comp.notifi-cation')
   
   <div id="app">
