@@ -40,6 +40,7 @@
   <div id="app">
     
     {{$slot}}
+
   </div>
   
   @stack('js')
