@@ -34,10 +34,11 @@
 
 <body>
 
+  {{-- Dispatch Notification --}}
   @livewire('comp.notifi-cation')
   
   {{$slot}}
-  
+    
   @stack('js')
 
   @livewireScripts
