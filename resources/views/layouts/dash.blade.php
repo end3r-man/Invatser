@@ -37,12 +37,8 @@
   {{-- Dispatch Notification --}}
   @livewire('comp.notifi-cation')
   
-  <div id="app">
+  {{$slot}}
     
-    {{$slot}}
-
-  </div>
-  
   @stack('js')
 
   @livewireScripts
