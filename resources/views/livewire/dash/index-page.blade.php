@@ -2,5 +2,5 @@
 
     @livewire('component.side-bar')
 
-    <div class="h-full w-[calc(100%-320px)]"></div>
+    <div class="h-full w-[calc(100%-320px)] bg-[#474F7A]"></div>
 </div>

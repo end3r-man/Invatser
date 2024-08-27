@@ -39,7 +39,7 @@ class Login extends Component
         $this->validate();
 
         Auth::attempt(['email' => $this->email, 'password' => $this->pass], $this->check)
-            ? $this->redirect(route('auth.dash'))
+            ? $this->redirect(route('admin.dash'))
             : $this->addError('email', 'Password Not Match');
     }
 

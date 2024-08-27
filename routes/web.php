@@ -22,6 +22,6 @@ Route::group(['/'], function () {
 // ============= Auth Route ============= //
 Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
     
-    Route::get('dashboard', IndexPage::class)->name('auth.dash');
+    Route::get('dashboard', IndexPage::class)->name('admin.dash');
 
 });
