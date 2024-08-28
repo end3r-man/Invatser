@@ -61,5 +61,10 @@
         </div>
 
         {{-- User Table --}}
+        <table>
+            <thead>
+                <td></td>
+            </thead>
+        </table>
     </div>
 </div>
