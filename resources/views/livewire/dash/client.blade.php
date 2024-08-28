@@ -61,9 +61,5 @@
         </div>
 
         {{-- Client Table --}}
-        <table>
-            <thead></thead>
-            <th></th>
-        </table>
     </div>
 </div>
