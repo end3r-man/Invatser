@@ -50,7 +50,7 @@
         </div>
 
         {{-- Client Filter Area --}}
-        {{-- <div class="w-full h-auto flex items-center justify-between gap-x-2 mt-4">
+        <div class="w-full h-auto flex items-center justify-between gap-x-2 mt-4">
             <input class="py-2 px-4 w-80 bg-white rounded-md outline-none" type="text" name="search" placeholder="Search make by name...">
 
             <div class="w-auto p-2 center bg-[#81689D] gap-x-2 rounded-md">
@@ -58,7 +58,7 @@
                 <span class="text-white">:</span>
                 <iconify-icon class="text-white text-2xl" icon="ph:text-columns-duotone"></iconify-icon>
             </div>
-        </div> --}}
+        </div>
 
         {{-- Client Table --}}
     </div>
