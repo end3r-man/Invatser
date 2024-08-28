@@ -59,7 +59,5 @@
                 <iconify-icon class="text-white text-2xl" icon="ph:text-columns-duotone"></iconify-icon>
             </div>
         </div>
-
-        {{-- Client Table --}}
     </div>
 </div>
