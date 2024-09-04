@@ -23,4 +23,4 @@ Homestead.json
 .phpunit.result.cache
 
 # template folder
-resource/view/dist
+resources/views/dist
