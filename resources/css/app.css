@@ -20,4 +20,16 @@
     .end {
         @apply flex items-center justify-end
     }
+
+    .filter-btn {
+        @apply bg-white rounded-md text-black
+    }
+
+    .filter-btn > span {
+        @apply text-white
+    }
+
+    .filter-btn-active {
+        @apply bg-[#81689D] rounded-md text-white
+    }
 }

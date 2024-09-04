@@ -12,52 +12,75 @@
             <div class="w-auto flex items-center gap-x-3">
 
                 <button class="px-4 py-2 rounded-md bg-white">Export</button>
-                <button class="px-4 py-2 rounded-md bg-white">Clear</button>
+                <button
+                    class="px-4 py-2 rounded-md bg-white hover:bg-[#81689D] hover:text-white transition-all ease-linear flex items-center gap-x-2"><iconify-icon
+                        icon="ph:plus"></iconify-icon> New Invoice</button>
 
             </div>
 
         </div>
 
-        {{-- Client Details Tab --}}
-        <div class="w-full h-auto rounded-xl bg-white flex items-center justify-between">
-
-            <div class="w-auto h-auto flex items-center">
-                <div class="w-auto px-4 py-6 flex flex-row items-center gap-x-2 border-r border-[#81689D]">
-                    <iconify-icon class="text-3xl text-[#81689D]" icon="ph:users-three-fill"></iconify-icon>
-                    12 Total Clients
-                </div>
-
-                <div class="w-auto px-4 py-6 flex flex-row items-center gap-x-2 border-r border-[#81689D]">
-                    <iconify-icon class="text-3xl text-[#81689D]" icon="ph:list-checks-fill"></iconify-icon>
-                    36 Active Clients
-                </div>
-
-                <div class="w-auto px-4 py-6 flex flex-row items-center gap-x-2 border-r border-[#81689D]">
-                    <iconify-icon class="text-3xl text-[#81689D]" icon="ph:list-bullets-fill"></iconify-icon>
-                    50 In-Active Clients
-                </div>
-            </div>
-
-
-            <div
-                class="w-auto px-4 py-6 flex flex-row items-center gap-x-2 bg-[#81689D] cursor-pointer rounded-r-xl group/item">
-                <iconify-icon
-                    class="text-3xl text-white transition-all duration-150 ease-linear group-hover/item:rotate-45"
-                    icon="ph:plus-duotone"></iconify-icon>
-                New Clients
-            </div>
-
+        {{-- Table Filter Button --}}
+        <div class="w-full h-auto flex items-center gap-x-4 mb-8">
+            <button
+                class="px-2 py-1 flex items-center gap-x-2 @if ($filter_id == 1) filter-btn-active @else filter-btn @endif">All
+                Clients <span class="p-2 bg-[#474F7A] rounded-md">124</span></button>
+            <button
+                class="px-2 py-1 flex items-center gap-x-2 @if ($filter_id == 2) filter-btn-active @else filter-btn @endif">Active
+                Clients <span class="p-2 bg-[#474F7A] rounded-md">124</span></button>
+            <button
+                class="px-2 py-1 flex items-center gap-x-2 @if ($filter_id == 3) filter-btn-active @else filter-btn @endif">Idel
+                Clients <span class="p-2 bg-[#474F7A] rounded-md">124</span></button>
         </div>
 
-        {{-- Client Filter Area --}}
-        <div class="w-full h-auto flex items-center justify-between gap-x-2 mt-4">
-            <input class="py-2 px-4 w-80 bg-white rounded-md outline-none" type="text" name="search" placeholder="Search make by name...">
+        {{-- Table --}}
 
-            <div class="w-auto p-2 center bg-[#81689D] gap-x-2 rounded-md">
-                <iconify-icon class="text-white text-2xl" icon="ph:grid-four-fill"></iconify-icon>
-                <span class="text-white">:</span>
-                <iconify-icon class="text-white text-2xl" icon="ph:text-columns-duotone"></iconify-icon>
-            </div>
+
+        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+            <table class="w-full text-sm text-left rtl:text-right text-gray-500">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                    <tr>
+                        <th scope="col" class="px-6 py-3">
+                            Product name
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Color
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Category
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Price
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Action
+                        </th>
+                    </tr>
+                </thead>c
+                <tbody>
+                    <tr
+                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        <th scope="row"
+                            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            Apple MacBook Pro 17"
+                        </th>
+                        <td class="px-6 py-4">
+                            Silver
+                        </td>
+                        <td class="px-6 py-4">
+                            Laptop
+                        </td>
+                        <td class="px-6 py-4">
+                            $2999
+                        </td>
+                        <td class="px-6 py-4 text-right">
+                            <a href="#"
+                                class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
+
     </div>
 </div>
